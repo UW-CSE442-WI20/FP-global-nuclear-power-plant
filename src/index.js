@@ -8,17 +8,13 @@ const MyClass = require('./my-class');
 const myClassInstance = new MyClass();
 myClassInstance.sayHi();
 
+// Gets included in js bundle
+const data_nuclear_only = require('./nuclear-only.json');
 
-// You can load JSON files directly via require.
-// Note this does not add a network request, it adds
-// the data directly to your JavaScript bundle.
-const exampleData = require('./example-data.json');
-
-
-// Anything you put in the static folder will be available
-// over the network, e.g.
-d3.csv('carbon-emissions.csv')
+// Loaded over network due to size
+d3.csv('all_fuels.csv')
   .then((data) => {
     console.log('Dynamically loaded CSV data', data);
-  })
+    // Do stuff
+  });
 
