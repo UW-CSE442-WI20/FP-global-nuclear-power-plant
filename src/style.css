@@ -7,19 +7,60 @@ body {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 3fr 1fr;
 }
+
 #map-container {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
+
 #country-container {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
+
 #timeline-container {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
 }
-#grid-container>div { /* temporary until divs have content */
+
+#grid-container>div {
+    /* temporary until divs have content */
     min-height: 180px;
     border: 1px solid black;
+}
+
+/* map stuff */
+
+svg rect {
+    fill: #2A2C39;
+    /* map background colour */
+}
+
+.country {
+    fill: #d0d0d0;
+    /* country colour */
+    stroke: #2A2C39;
+    /* country border colour */
+    stroke-width: 1;
+    /* country border width */
+}
+
+.country-on {
+    fill: #4B5358;
+    /* highlight colour for selected country */
+}
+
+.countryLabel {
+    display: none;
+    /* hide all country labels by default */
+}
+
+.countryName {
+    fill: #FFFAFF;
+    /* country label text colour */
+}
+
+.countryLabelBg {
+    fill: #30BCED;
+    /* country label background colour */
 }
