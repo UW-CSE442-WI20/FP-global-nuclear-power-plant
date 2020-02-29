@@ -8,19 +8,27 @@ var min_zoom;
 var max_zoom;
 
 var country_nuclear_data;
+var countries_with_nuclear = [];
+var path;
+var svg;
 
 class Map {
     constructor(data) {
         country_nuclear_data = data;
+        this.centered = null;
+
+        for (let c of country_nuclear_data) {
+            if (c.operating > 0) {
+                countries_with_nuclear.push(c.country);
+            }
+        }
     }
 
     createMap() {
-        //let country_nuclear_counts = this.getCountryCounts();
         let color_scale = this.getColorScale();
-        console.log(color_scale('Brazil'));
-        console.log(    this.country_nuclear_data);
+        console.log(countries_with_nuclear);
 
-        let svg = d3.select("#map-container")
+        svg = d3.select("#map-container")
             .append("svg")
             .attr("width", width)
             .attr("height", height);
@@ -30,9 +38,9 @@ class Map {
             .scale(width / 2 / Math.PI)
             .translate([width / 2, height / 1.55])
 
-        let path = d3.geoPath()
+        path = d3.geoPath()
             .projection(projection);
-        
+
         svg.selectAll("path")
             .data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries)
                 .features)
@@ -41,32 +49,71 @@ class Map {
             .attr("d", path)
             .attr("fill", function (d) {
                 for (let c of country_nuclear_data) {
-                    if (c.country == d.properties.name) { return color_scale(c.operating);}
+                    if (c.country == d.properties.name) {
+                        if (countries_with_nuclear.includes(d.properties.name)) {
+                            return color_scale(c.operating);
+                        } else if (c.permanent_shutdown > 0) {
+                            return "#90ee90";
+                        } else if (c.abandoned_construction > 0) {
+                            return "#b19cd9";
+                        }
+                    }
                 }
                 return "#ececec";
-            });
-    }
-
-    getCountryCounts() {
-        let group_by_country = d3.nest()
-            .key(function (d) { return d.country_long })
-            .entries(country_nuclear_data);
-
-        let country_nuclear_count = [];
-        for (let country of group_by_country) {
-            country_nuclear_count.push({ country: country.key, count: country.values.length });
-        }
-
-        return country_nuclear_count
+            })
+            .on("click", this.clicked);
     }
 
     getColorScale() {
         // domain means input range means output
-
         let scale = d3.scaleLinear()
             .domain([0, d3.max(country_nuclear_data, function (d) { return d["operating"]; })])
-            .range(["#cecece", "#ea1616"]);
+            .range(["#ffc0cb", "#ff0000"]);
         return scale;
+    }
+
+    //clicked
+    clicked(d) {
+        var x, y, k;
+        //if not centered into that country and clicked country in visited countries
+        if ((d && this.centered !== d) & (countries_with_nuclear.includes(d.properties.name))) {
+            var centroid = path.centroid(d); //get center of country
+            var bounds = path.bounds(d); //get bounds of country
+            var dx = bounds[1][0] - bounds[0][0], //get bounding box
+                dy = bounds[1][1] - bounds[0][1];
+            //get transformation values
+            x = (bounds[0][0] + bounds[1][0]) / 2;
+            y = (bounds[0][1] + bounds[1][1]) / 2;
+            k = Math.min(width / dx, height / dy);
+            this.centered = d;
+        } else {
+            //else reset to world view
+            x = width / 2;
+            y = height / 2;
+            k = 1;
+            this.centered = null;
+        }
+        //set class of country to .active
+        svg.selectAll("path")
+            .classed("active", this.centered && function (d) { return d === this.centered; })
+
+
+        // make contours thinner before zoom for smoothness
+        if (this.centered !== null) {
+            svg.selectAll("path")
+                .style("stroke-width", (0.75 / k) + "px");
+        }
+
+        // map transition
+        svg.transition()
+            .duration(750)
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+            .on('end', function () {
+                if (centered === null) {
+                    svg.selectAll("path")
+                        .style("stroke-width", (0.75 / k) + "px");
+                }
+            });
     }
 }
 
