@@ -1,22 +1,24 @@
 const d3 = require('d3')
 
-const geomap_json = require('./world-map.json');
+const worldmap_geo_json = require('../static/world-map-geo.json'); // https://github.com/topojson/world-atlas
 
 const height = 546;
 const width = 1113;
 var min_zoom;
 var max_zoom;
 
+var country_nuclear_data;
+
 class Map {
-
-
     constructor(data) {
-        this.country_nuclear_data = data;
+        country_nuclear_data = data;
     }
 
     createMap() {
-        let country_nuclear_counts = this.getCountryCounts();
-        let color_scale = this.getColorScale(country_nuclear_counts);
+        //let country_nuclear_counts = this.getCountryCounts();
+        let color_scale = this.getColorScale();
+        console.log(color_scale('Brazil'));
+        console.log(    this.country_nuclear_data);
 
         let svg = d3.select("#map-container")
             .append("svg")
@@ -30,44 +32,40 @@ class Map {
 
         let path = d3.geoPath()
             .projection(projection);
-
-        svg.append("path").attr("d", path(geomap_json));
-
+        
         svg.selectAll("path")
+            .data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries)
+                .features)
+            .enter()
+            .append("path")
+            .attr("d", path)
             .attr("fill", function (d) {
-                console.log(d);
-                return color_scale(d["admin"]);
+                for (let c of country_nuclear_data) {
+                    if (c.country == d.properties.name) { return color_scale(c.operating);}
+                }
+                return "#ececec";
             });
     }
 
     getCountryCounts() {
         let group_by_country = d3.nest()
             .key(function (d) { return d.country_long })
-            .entries(this.country_nuclear_data);
+            .entries(country_nuclear_data);
 
         let country_nuclear_count = [];
         for (let country of group_by_country) {
             country_nuclear_count.push({ country: country.key, count: country.values.length });
         }
 
-        console.log(country_nuclear_count);
         return country_nuclear_count
     }
 
-    getColorScale(data) {
-        let country_list = [];
-        let counts = [];
-        for (let country of data) {
-            country_list.push(country.country);
-            counts.push(country.count);
-        }
-        console.log(country_list);
-        console.log(counts)
+    getColorScale() {
+        // domain means input range means output
 
         let scale = d3.scaleLinear()
-            .domain(country_list)
+            .domain([0, d3.max(country_nuclear_data, function (d) { return d["operating"]; })])
             .range(["#cecece", "#ea1616"]);
-
         return scale;
     }
 }

@@ -9,7 +9,7 @@ const myClassInstance = new MyClass();
 myClassInstance.sayHi();
 
 // Gets included in js bundle
-const data_nuclear_only = require('./nuclear-only.json');
+const data_nuclear_only = require('./country_nuclear_status.json');
 
 // Loaded over network due to size
 d3.csv('all_fuels.csv')
