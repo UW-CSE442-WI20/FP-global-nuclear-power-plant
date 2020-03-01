@@ -61,7 +61,8 @@ class Map {
                 }
                 return "#ececec";
             })
-            .on("click", this.clicked);
+            .on("click", this.clicked)
+            .on("click", this.getCountryInfo);
     }
 
     getColorScale() {
@@ -70,6 +71,11 @@ class Map {
             .domain([0, d3.max(country_nuclear_data, function (d) { return d["operating"]; })])
             .range(["#ffc0cb", "#ff0000"]);
         return scale;
+    }
+
+    getCountryInfo(d) {
+        // percentage and 
+        getLightBubls();
     }
 
     //clicked
