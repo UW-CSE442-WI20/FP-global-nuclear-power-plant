@@ -2,6 +2,22 @@ body {
     font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
 }
 
+.topic {
+    background: 
+    url("../static/Elektrownia_Jądrowa_w_Springfield_0.jpeg")
+    no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 500px;
+    background-color: brown;
+}
+
 #grid-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
