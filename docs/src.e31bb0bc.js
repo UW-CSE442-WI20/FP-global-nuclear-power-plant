@@ -31250,11 +31250,11 @@ function () {
       var all_bulbs = '';
 
       for (var i = 0; i < lightbulbs; i++) {
-        all_bulbs += '<img src="/LightBulb.png" style="width: 10%;">';
+        all_bulbs += '<img src="./LightBulb.png" style="width: 10%;">';
       }
 
       for (var i = 0; i < 100 - lightbulbs; i++) {
-        all_bulbs += '<img src="/Dimbulb.png" style="width: 10%;">';
+        all_bulbs += '<img src="./Dimbulb.png" style="width: 10%;">';
       }
 
       document.getElementById("lightbulbs").innerHTML += all_bulbs;
@@ -31266,15 +31266,15 @@ function () {
       var all_plants = '';
 
       for (var i = 0; i < working; i++) {
-        all_plants += '<img src="/workingPlant.png" style="width: 3%;">';
+        all_plants += '<img src="./workingPlant.png" style="width: 3%;">';
       }
 
       for (var i = 0; i < in_progress; i++) {
-        all_plants += '<img src="/inProgressPlant.png" style="width: 3%;">';
+        all_plants += '<img src="./inProgressPlant.png" style="width: 3%;">';
       }
 
       for (var i = 0; i < abandon; i++) {
-        all_plants += '<img src="/abandon.png" style="width: 3%;">';
+        all_plants += '<img src="./abandon.png" style="width: 3%;">';
       }
 
       document.getElementById("plants-container").innerHTML = all_plants;
@@ -31334,7 +31334,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62390" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49568" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
