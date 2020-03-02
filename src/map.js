@@ -159,8 +159,7 @@ class Map {
     getLightBulbs(percentage, country) {
         var string_p = percentage.toFixed(2).bold();
         document.getElementById("lightbulbs").innerHTML = "";
-        document.getElementById("info-text").innerHTML ='<h1 style="display:inline">' + string_p + '%</h1><p style="display:inline";> of the energy source in </p></br><h1 style="display:inline";> '
-            + country + '</h1><p style="display:inline";> is powered by nuclear energy</p></br>';
+        document.getElementById("info-text").innerHTML = `${country} produces ${string_p}% of the World's nuclear energy.`;
         var lightbulbs = Math.round(percentage);
         let all_bulbs = '';
         for (var i = 0; i < lightbulbs; i++) all_bulbs += '<img src="/LightBulb.png" style="width: 10%;">';

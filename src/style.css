@@ -73,3 +73,7 @@ a {
 .active {
     fill: #98f5ff;
 }
+
+#lightbulbs-container {
+    display: inline;
+}
