@@ -6,25 +6,39 @@ body {
     font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
 }
 
+h1 {
+    font-size: 65px;
+}
+
 a {
     text-decoration: none;
 }
 
 .topic {
     background: 
-    url("../static/Springfield.jpeg")
+    url("../static/nuclear_plant.jpg")
     no-repeat fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-position: center center;
+    /* background-position: center center; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: 100% 80%;
     min-height: 500px;
+}
+
+
+.more:link, .more:visited {
+    padding: 10px;
     background-color: brown;
+    color: white;
+}
+
+.more:hover {
+    background-color: red;
 }
 
 #grid-container {
