@@ -74,7 +74,7 @@ class Map {
                 }
                 return "#ececec";
             })
-            .on("click", function(d) {
+            .on("click", function (d) {
                 this.getCountryInfo(d);
                 this.clicked(d);
             }.bind(this));
@@ -114,7 +114,7 @@ class Map {
     //clicked
     clicked(d) {
         var dx, dy, k;
-        
+
         var country = d.properties.name;
 
         if (selected_country !== country && countries_with_nuclear.includes(country)) {
@@ -134,9 +134,17 @@ class Map {
             selected_country = country;
             svg.selectAll('path')
                 .classed('active', function (d) { return d.properties.name === selected_country; })
+
+            for (let c of country_nuclear_data) {
+                if (c.country == selected_country) {
+                    this.getLightBulbs((c.operating_total_capacity / this.world_operating_capacity) * 100, c.country);
+                    this.getFactories(c.operating, c.under_construction, c.abandoned_construction + c.longterm_outage + c.permanent_shutdown);
+                    break;
+                }
+            }
         } else {
             this.resetValuesToWorld();
-            dx = 0, dy = 0, k=1;
+            dx = 0, dy = 0, k = 1;
 
             selected_country = -1;
             svg.selectAll('path')
@@ -151,7 +159,7 @@ class Map {
     getLightBulbs(percentage, country) {
         var string_p = percentage.toFixed(2).bold();
         document.getElementById("lightbulbs").innerHTML = "";
-        document.getElementById("info-text").innerHTML = '<h1 style="display:inline">' + string_p + '%</h1><p style="display:inline";> of the energy source in </p></br><h1 style="display:inline";> '
+        document.getElementById("info-text").innerHTML ='<h1 style="display:inline">' + string_p + '%</h1><p style="display:inline";> of the energy source in </p></br><h1 style="display:inline";> '
             + country + '</h1><p style="display:inline";> is powered by nuclear energy</p></br>';
         var lightbulbs = Math.round(percentage);
         let all_bulbs = '';
