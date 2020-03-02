@@ -4,6 +4,7 @@ html {
 
 body {
     font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+    margin: 0px;
 }
 
 h1 {
@@ -42,6 +43,10 @@ a {
     background-color: red;
 }
 
+.grid {
+    margin: 20px;
+}
+
 #grid-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -67,7 +72,7 @@ a {
 #grid-container>div {
     /* temporary until divs have content */
     min-height: 180px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .active {
