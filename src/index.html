@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>nUCleAr iS BaD</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://unpkg.com/topojson-client@3"></script>
 
-  </head>
-  <body>
-    <div class="topic" id="top">
-      <h1>Nukes!</h1>
-      <h3>Do you know how much we rely on nuclear power in the world?</h3>
-      <img style="width: 20%; padding: 10px;" src="../static/giphy.gif"/>
-      <a href="#grid-container" class="more">See more!</a>
+<head>
+  <meta charset="UTF-8">
+  <title>nUCleAr iS BaD</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://unpkg.com/topojson-client@3"></script>
+
+</head>
+
+<body>
+  <div class="topic" id="top">
+    <h1>Nukes!</h1>
+    <h3>Do you know how much we rely on nuclear power in the world?</h3>
+    <img style="width: 20%; padding: 10px;" src="../static/giphy.gif" />
+    <a href="#grid-container" class="more">See more!</a>
+  </div>
+
+  <div id="grid-container">
+    <div id="map-container">
     </div>
-
-    <div id="grid-container">
-      <div id="map-container">
+    <div id="lightbulbs-container">
+      <div id="info-text">
+        <div id="country-text"></div>
+        <div id="percentage-text"></div>
       </div>
-      <div id="lightbulbs-container">
-        <div id="info-text"></div>
-        <div id="lightbulbs"></div>
-      </div>
-      <div id="plants">
-      </div>
-      <a href="#top">back to top</a>
+      <div id="lightbulbs"></div>
     </div>
+    <div id="plants">
+    </div>
+    <a href="#top">back to top</a>
+  </div>
 
-    <br />
-    <br />
+  <br />
+  <br />
 
-    <script src="./index.js"></script>
-  </body>
+  <script src="./index.js"></script>
+</body>
+
 </html>

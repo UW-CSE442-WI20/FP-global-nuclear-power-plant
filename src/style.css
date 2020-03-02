@@ -77,3 +77,14 @@ a {
 #lightbulbs-container {
     display: inline;
 }
+
+#info-text {
+    height: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+#country-text {
+    font-weight: bold;
+    font-size: 35px;
+}

@@ -87,7 +87,7 @@ class Map {
 
     resetValuesToWorld() {
         this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
-        this.getLightBulbs(100, "World");
+        this.getLightBulbs(100, "The World");
     }
 
     getColorScale() {
@@ -159,7 +159,8 @@ class Map {
     getLightBulbs(percentage, country) {
         var string_p = percentage.toFixed(2).bold();
         document.getElementById("lightbulbs").innerHTML = "";
-        document.getElementById("info-text").innerHTML = `${country} produces ${string_p}% of the World's nuclear energy.`;
+        document.getElementById("country-text").innerHTML = `${country}`;
+        document.getElementById("percentage-text").innerHTML = `produces ${string_p}% <br>of the World's nuclear energy.`;
         var lightbulbs = Math.round(percentage);
         let all_bulbs = '';
         for (var i = 0; i < lightbulbs; i++) all_bulbs += '<img src="/LightBulb.png" style="width: 10%;">';
