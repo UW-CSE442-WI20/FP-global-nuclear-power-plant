@@ -74,7 +74,10 @@ class Map {
                 }
                 return "#ececec";
             })
-            .on('click', this.clicked);
+            .on("click", function (d) {
+                this.getCountryInfo(d);
+                this.clicked(d);
+            }.bind(this));
 
         this.resetValuesToWorld();
 
@@ -83,8 +86,8 @@ class Map {
     }
 
     resetValuesToWorld() {
-        this.getLightBulbs(100, "World");
         this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
+        this.getLightBulbs(100, "World");
     }
 
     getColorScale() {
@@ -97,12 +100,21 @@ class Map {
 
     getCountryInfo(d) {
         console.log(d.properties.name);
+        for (let c of country_nuclear_data) {
+            if (c.country == d.properties.name) {
+                console.log(c.operating_total_capacity);
+                console.log(this.world_operating_capacity);
+                this.getLightBulbs((c.operating_total_capacity / this.world_operating_capacity) * 100, c.country);
+                this.getFactories(c.operating, c.under_construction, c.abandoned_construction + c.longterm_outage + c.permanent_shutdown);
+                break;
+            }
+        }
     }
 
     //clicked
     clicked(d) {
         var dx, dy, k;
-        
+
         var country = d.properties.name;
 
         if (selected_country !== country && countries_with_nuclear.includes(country)) {
@@ -122,8 +134,17 @@ class Map {
             selected_country = country;
             svg.selectAll('path')
                 .classed('active', function (d) { return d.properties.name === selected_country; })
+
+            for (let c of country_nuclear_data) {
+                if (c.country == selected_country) {
+                    this.getLightBulbs((c.operating_total_capacity / this.world_operating_capacity) * 100, c.country);
+                    this.getFactories(c.operating, c.under_construction, c.abandoned_construction + c.longterm_outage + c.permanent_shutdown);
+                    break;
+                }
+            }
         } else {
-            dx = 0, dy = 0, k=1;
+            this.resetValuesToWorld();
+            dx = 0, dy = 0, k = 1;
 
             selected_country = -1;
             svg.selectAll('path')
@@ -137,12 +158,13 @@ class Map {
 
     getLightBulbs(percentage, country) {
         var string_p = percentage.toFixed(2).bold();
-        document.getElementById("lightbulbs").innerHTML = '<h1 style="display:inline">' + string_p + '%</h1><p style="display:inline";> of the energy source in </p></br><h1 style="display:inline";> '
+        document.getElementById("lightbulbs").innerHTML = "";
+        document.getElementById("info-text").innerHTML ='<h1 style="display:inline">' + string_p + '%</h1><p style="display:inline";> of the energy source in </p></br><h1 style="display:inline";> '
             + country + '</h1><p style="display:inline";> is powered by nuclear energy</p></br>';
         var lightbulbs = Math.round(percentage);
         let all_bulbs = '';
-        for (var i = 0; i < lightbulbs; i++) all_bulbs += '<img src="/LightBulb.png" style="width: 11%;">';
-        for (var i = 0; i < 100 - lightbulbs; i++) all_bulbs += '<img src="/Dimbulb.44b548c1.png" style="width: 11%;">';
+        for (var i = 0; i < lightbulbs; i++) all_bulbs += '<img src="/LightBulb.png" style="width: 10%;">';
+        for (var i = 0; i < 100 - lightbulbs; i++) all_bulbs += '<img src="/Dimbulb.png" style="width: 10%;">';
         document.getElementById("lightbulbs").innerHTML += all_bulbs;
     }
 
