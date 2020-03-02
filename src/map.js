@@ -88,7 +88,7 @@ class Map {
 
     resetValuesToWorld() {
         this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
-        this.getLightBulbs(100, "The World");
+        this.getLightBulbs(10.15, "The World");
     }
 
     getColorScale() {
@@ -100,12 +100,9 @@ class Map {
     }
 
     getCountryInfo(d) {
-        console.log(d.properties.name);
         for (let c of country_nuclear_data) {
             if (c.country == d.properties.name) {
-                console.log(c.operating_total_capacity);
-                console.log(this.world_operating_capacity);
-                this.getLightBulbs((c.operating_total_capacity / this.world_operating_capacity) * 100, c.country);
+                this.getLightBulbs((c.nuclear_share_percentage), c.country);
                 this.getFactories(c.operating, c.under_construction, c.abandoned_construction + c.longterm_outage + c.permanent_shutdown);
                 break;
             }
@@ -138,7 +135,9 @@ class Map {
 
             for (let c of country_nuclear_data) {
                 if (c.country == selected_country) {
-                    this.getLightBulbs((c.operating_total_capacity / this.world_operating_capacity) * 100, c.country);
+                    let country = c.country;
+                    if (country === "United States of America") {country = "United States";}
+                    this.getLightBulbs(c.nuclear_share_percentage, country);
                     this.getFactories(c.operating, c.under_construction, c.abandoned_construction + c.longterm_outage + c.permanent_shutdown);
                     break;
                 }
@@ -162,7 +161,7 @@ class Map {
         document.getElementById("lightbulbs").innerHTML = "";
         if (country === "United States of American") {country = "United States"; }
         document.getElementById("country-text").innerHTML = `${country}`;
-        document.getElementById("percentage-text").innerHTML = `produces ${string_p}% <br>of the World's nuclear energy.`;
+        document.getElementById("percentage-text").innerHTML = `gets ${string_p}% <br>of its power from nuclear energy.`;
         var lightbulbs = Math.round(percentage);
         let all_bulbs = '';
         for (var i = 0; i < lightbulbs; i++) all_bulbs += '<img src="/LightBulb.png" style="width: 10%;">';
