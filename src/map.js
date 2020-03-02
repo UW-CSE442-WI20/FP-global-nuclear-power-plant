@@ -4,13 +4,15 @@ const worldmap_geo_json = require('../static/world-map-geo.json'); // https://gi
 
 const height = 546;
 const width = 1113;
-var min_zoom;
-var max_zoom;
+var min_zoom = 1;
+var max_zoom = 5;
 
 var country_nuclear_data;
 var countries_with_nuclear = [];
 var path;
 var svg;
+
+var selected_country;
 
 class Map {
     constructor(data) {
@@ -35,7 +37,7 @@ class Map {
 
 
         let projection = d3.geoMercator()
-            .scale(width / 2 / Math.PI)
+            .scale(1 * width / 2 / Math.PI)
             .translate([width / 2, height / 1.55])
 
         path = d3.geoPath()
@@ -62,6 +64,9 @@ class Map {
                 return "#ececec";
             })
             .on("click", this.clicked);
+
+        // temp fix
+        countries_with_nuclear.push('Philippines');
     }
 
     getColorScale() {
@@ -74,46 +79,38 @@ class Map {
 
     //clicked
     clicked(d) {
-        var x, y, k;
-        //if not centered into that country and clicked country in visited countries
-        if ((d && this.centered !== d) & (countries_with_nuclear.includes(d.properties.name))) {
-            var centroid = path.centroid(d); //get center of country
-            var bounds = path.bounds(d); //get bounds of country
-            var dx = bounds[1][0] - bounds[0][0], //get bounding box
-                dy = bounds[1][1] - bounds[0][1];
-            //get transformation values
-            x = (bounds[0][0] + bounds[1][0]) / 2;
-            y = (bounds[0][1] + bounds[1][1]) / 2;
-            k = Math.min(width / dx, height / dy);
-            this.centered = d;
-        } else {
-            //else reset to world view
-            x = width / 2;
-            y = height / 2;
-            k = 1;
-            this.centered = null;
-        }
-        //set class of country to .active
-        svg.selectAll("path")
-            .classed("active", this.centered && function (d) { return d === this.centered; })
+        var dx, dy, k;
+        
+        var country = d.properties.name;
 
+        if (selected_country !== country && countries_with_nuclear.includes(country)) {
+            var centroid = path.centroid(d);
 
-        // make contours thinner before zoom for smoothness
-        if (this.centered !== null) {
+            dx = width / 2 - centroid[0];
+            dy = height / 2 - centroid[1];
+
+            var bounds = path.bounds(d);
+            var boxw = bounds[1][0] - bounds[0][0];
+            var boxh = bounds[1][1] - bounds[0][1];
+
+            k = Math.min(width / (2 * boxw), height / (2 * boxh));
+            if (k < min_zoom) k = min_zoom;
+            if (k > max_zoom) k = max_zoom;
+
+            selected_country = country;
             svg.selectAll("path")
-                .style("stroke-width", (0.75 / k) + "px");
+                .classed("active", function (d) { return d.properties.name === selected_country; })
+        } else {
+            dx = 0, dy = 0, k=1;
+
+            selected_country = -1;
+            svg.selectAll('path')
+                .classed('active', false);
         }
 
-        // map transition
         svg.transition()
             .duration(750)
-            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-            .on('end', function () {
-                if (centered === null) {
-                    svg.selectAll("path")
-                        .style("stroke-width", (0.75 / k) + "px");
-                }
-            });
+            .attr("transform", `scale(${k})translate(${dx},${dy})`);
     }
 }
 

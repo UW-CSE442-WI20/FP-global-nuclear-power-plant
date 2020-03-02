@@ -11,6 +11,7 @@ body {
 #map-container {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    overflow: hidden;
 }
 
 #country-container {
