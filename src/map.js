@@ -160,6 +160,7 @@ class Map {
     getLightBulbs(percentage, country) {
         var string_p = percentage.toFixed(2).bold();
         document.getElementById("lightbulbs").innerHTML = "";
+        if (country === "United States of American") {country = "United States"; }
         document.getElementById("country-text").innerHTML = `${country}`;
         document.getElementById("percentage-text").innerHTML = `produces ${string_p}% <br>of the World's nuclear energy.`;
         var lightbulbs = Math.round(percentage);
@@ -172,9 +173,9 @@ class Map {
     getFactories(working, in_progress, abandon) {
         document.getElementById("plants-container").innerHTML = '';
         let all_plants = '';
-        for (var i = 0; i < working; i++) all_plants += '<img src="/workingPlant.png" style="width: 5%;">';
-        for (var i = 0; i < in_progress; i++) all_plants += '<img src="/inProgressPlant.png" style="width: 5%;">';
-        for (var i = 0; i < abandon; i++) all_plants += '<img src="/abandon.png" style="width: 5%;">';
+        for (var i = 0; i < working; i++) all_plants += '<img src="/workingPlant.png" style="width: 3%;">';
+        for (var i = 0; i < in_progress; i++) all_plants += '<img src="/inProgressPlant.png" style="width: 3%;">';
+        for (var i = 0; i < abandon; i++) all_plants += '<img src="/abandon.png" style="width: 3%;">';
         document.getElementById("plants-container").innerHTML = all_plants;
     }
 }
