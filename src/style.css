@@ -4,7 +4,7 @@ body {
 
 .topic {
     background: 
-    url("../static/Elektrownia_Jądrowa_w_Springfield_0.jpeg")
+    url("../static/Springfield.jpeg")
     no-repeat fixed;
     display: flex;
     flex-direction: column;

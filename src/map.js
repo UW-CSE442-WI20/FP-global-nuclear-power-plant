@@ -17,16 +17,27 @@ class Map {
         country_nuclear_data = data;
         this.centered = null;
 
+        this.world_operating_capacity = 0;
+        this.word_total_operating = 0;
+        this.world_total_inprogess = 0;
+        this.world_total_shutdown = 0;
         for (let c of country_nuclear_data) {
             if (c.operating > 0) {
                 countries_with_nuclear.push(c.country);
+            }
+            if (c.operating_total_capacity) {
+                this.world_operating_capacity += c.operating_total_capacity;
+            }
+            if (c.country == "World") {
+                this.word_total_operating = c.operating;
+                this.world_total_inprogess = c.under_construction;
+                this.world_total_shutdown = c.abandoned_construction + c.longterm_outage + c.permanent_shutdown;
             }
         }
     }
 
     createMap() {
         let color_scale = this.getColorScale();
-        console.log(countries_with_nuclear);
 
         svg = d3.select("#map-container")
             .append("svg")
@@ -61,8 +72,14 @@ class Map {
                 }
                 return "#ececec";
             })
-            .on("click", this.clicked)
             .on("click", this.getCountryInfo);
+
+            this.resetValuesToWorld();
+    }
+
+    resetValuesToWorld() {
+        this.getLightBulbs(100, "World");
+        this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
     }
 
     getColorScale() {
@@ -74,8 +91,7 @@ class Map {
     }
 
     getCountryInfo(d) {
-        // percentage and 
-        getLightBubls();
+        console.log(d.properties.name);
     }
 
     //clicked
@@ -123,23 +139,23 @@ class Map {
     }
 
     getLightBulbs(percentage, country) {
-        var stringP = percentage.toFixed(2).bold();
-        document.getElementById("lightbulbs").innerHTML = '<h1 style="display:inline">' + stringP + '%</h1><p style="display:inline";> of the energy source in </p></br><h1 style="display:inline";> '
+        var string_p = percentage.toFixed(2).bold();
+        document.getElementById("lightbulbs").innerHTML = '<h1 style="display:inline">' + string_p + '%</h1><p style="display:inline";> of the energy source in </p></br><h1 style="display:inline";> '
             + country + '</h1><p style="display:inline";> is powered by nuclear energy</p></br>';
-        var lightBulbs = Math.round(percentage);
-        let allBulb = '';
-        for (var i = 0; i < lightBulbs; i++) allBulb += '<img src="/LightBulb.png" style="width: 11%;">';
-        for (var i = 0; i < 100 - lightBulbs; i++) allBulb += '<img src="/Dimbulb.44b548c1.png" style="width: 11%;">';
-        document.getElementById("lightbulbs").innerHTML += allBulb;
+        var lightbulbs = Math.round(percentage);
+        let all_bulbs = '';
+        for (var i = 0; i < lightbulbs; i++) all_bulbs += '<img src="/LightBulb.png" style="width: 11%;">';
+        for (var i = 0; i < 100 - lightbulbs; i++) all_bulbs += '<img src="/Dimbulb.44b548c1.png" style="width: 11%;">';
+        document.getElementById("lightbulbs").innerHTML += all_bulbs;
     }
 
-    getFactories(working, inProgress, abandon) {
+    getFactories(working, in_progress, abandon) {
         document.getElementById("plants").innerHTML = '';
-        let allplants = '';
-        for (var i = 0; i < working; i++) allplants += '<img src="/workingPlant.png" style="width: 5%;">';
-        for (var i = 0; i < inProgress; i++) allplants += '<img src="/inProgressPlant.png" style="width: 5%;">';
-        for (var i = 0; i < abandon; i++) allplants += '<img src="/abandon.png" style="width: 5%;">';
-        document.getElementById("plants").innerHTML = allplants;
+        let all_plants = '';
+        for (var i = 0; i < working; i++) all_plants += '<img src="/workingPlant.png" style="width: 5%;">';
+        for (var i = 0; i < in_progress; i++) all_plants += '<img src="/inProgressPlant.png" style="width: 5%;">';
+        for (var i = 0; i < abandon; i++) all_plants += '<img src="/abandon.png" style="width: 5%;">';
+        document.getElementById("plants").innerHTML = all_plants;
     }
 }
 
