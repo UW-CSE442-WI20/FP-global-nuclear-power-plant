@@ -4,8 +4,9 @@ const worldmap_geo_json = require('../static/world-map-geo.json'); // https://gi
 
 const height = 546;
 const width = 1113;
-var min_zoom = 1.5;
+var min_zoom = 2;
 var max_zoom = 5;
+var zoom_scale = .5;
 
 var country_nuclear_data;
 var countries_with_nuclear = [];
@@ -127,7 +128,7 @@ class Map {
             var boxw = bounds[1][0] - bounds[0][0];
             var boxh = bounds[1][1] - bounds[0][1];
 
-            k = Math.min(width / (2 * boxw), height / (2 * boxh));
+            k = Math.min(width / boxw, height / boxh) * zoom_scale;
             if (k < min_zoom) k = min_zoom;
             if (k > max_zoom) k = max_zoom;
 
@@ -169,12 +170,12 @@ class Map {
     }
 
     getFactories(working, in_progress, abandon) {
-        document.getElementById("plants").innerHTML = '';
+        document.getElementById("plants-container").innerHTML = '';
         let all_plants = '';
         for (var i = 0; i < working; i++) all_plants += '<img src="/workingPlant.png" style="width: 5%;">';
         for (var i = 0; i < in_progress; i++) all_plants += '<img src="/inProgressPlant.png" style="width: 5%;">';
         for (var i = 0; i < abandon; i++) all_plants += '<img src="/abandon.png" style="width: 5%;">';
-        document.getElementById("plants").innerHTML = all_plants;
+        document.getElementById("plants-container").innerHTML = all_plants;
     }
 }
 
