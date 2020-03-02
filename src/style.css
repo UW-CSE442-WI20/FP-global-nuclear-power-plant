@@ -1,5 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .topic {
@@ -9,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
