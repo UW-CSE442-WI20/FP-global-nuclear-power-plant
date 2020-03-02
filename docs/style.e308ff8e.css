@@ -1,0 +1,105 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 65px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.topic {
+    background: 
+    url("/nuclear_plant.32cade17.jpg")
+    no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-position: center center; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+    /* background-size: contain; */
+    min-height: 100vh;
+}
+
+
+.more:link, .more:visited {
+    padding: 10px;
+    background-color: brown;
+    color: white;
+}
+
+.more:hover {
+    background-color: red;
+}
+
+.grid {
+    margin: 20px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+}
+
+#map-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    overflow: hidden;
+}
+#map-container>svg>path {
+    cursor: pointer;
+}
+
+#country-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#plants-container {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+#grid-container>div {
+    /* temporary until divs have content */
+    min-height: 180px;
+    /* border: 1px solid black; */
+}
+
+.active {
+    fill: #98f5ff;
+}
+
+#lightbulbs-container {
+    display: inline;
+}
+
+#info-text {
+    height: 125px;
+    text-align: center;
+    padding: 10px;
+}
+
+#country-text {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#percentage-text {
+    font-size: 20px;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
