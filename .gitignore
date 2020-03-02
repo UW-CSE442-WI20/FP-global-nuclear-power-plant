@@ -28,4 +28,4 @@ yarn-error.log*
 dist
 
 # just let parcel builder populate /docs locally
-docs/*
+# docs/*
