@@ -9,7 +9,7 @@
         "mean_age": 29.3,
         "nuclear_share_percentage": 4.7,
         "annual_load_factor": 48.3,
-        "operating_total_capcity": 1633
+        "operating_total_capacity": 1633
     },
     {
         "country": "Armenia",
@@ -21,7 +21,7 @@
         "mean_age": 39.5,
         "nuclear_share_percentage": 25.6,
         "annual_load_factor": 48.3,
-        "operating_total_capcity": 375
+        "operating_total_capacity": 375
     },
     {
         "country": "Bangladesh",
@@ -49,7 +49,7 @@
         "mean_age": 39.8,
         "nuclear_share_percentage": 39,
         "annual_load_factor": 48.6,
-        "operating_total_capcity": 5930
+        "operating_total_capacity": 5930
     },
     {
         "country": "Brazil",
@@ -61,7 +61,7 @@
         "mean_age": 28.5,
         "nuclear_share_percentage": 2.7,
         "annual_load_factor": 88.4,
-        "operating_total_capcity": 1884
+        "operating_total_capacity": 1884
     },
     {
         "country": "Bulgaria",
@@ -73,7 +73,7 @@
         "mean_age": 30.2,
         "nuclear_share_percentage": 34.7,
         "annual_load_factor": 91.9,
-        "operating_total_capcity": 1966
+        "operating_total_capacity": 1966
     },
     {
         "country": "Canada",
@@ -85,7 +85,7 @@
         "mean_age": 36.5,
         "nuclear_share_percentage": 14.9,
         "annual_load_factor": 66,
-        "operating_total_capcity": 13554
+        "operating_total_capacity": 13554
     },
     {
         "country": "China",
@@ -96,7 +96,7 @@
         "permanent_shutdown": 0,
         "mean_age": 7.7,
         "nuclear_share_percentage": 4.2,
-        "operating_total_capcity": 45518
+        "operating_total_capacity": 45518
     },
     {
         "country": "Czechia",
@@ -108,7 +108,7 @@
         "mean_age": 28.5,
         "nuclear_share_percentage": 34.5,
         "annual_load_factor": 83.3,
-        "operating_total_capcity": 3932
+        "operating_total_capacity": 3932
     },
     {
         "country": "Finland",
@@ -120,7 +120,7 @@
         "mean_age": 40.8,
         "nuclear_share_percentage": 32.4,
         "annual_load_factor": 89.8,
-        "operating_total_capcity": 2794
+        "operating_total_capacity": 2794
     },
     {
         "country": "France",
@@ -132,7 +132,7 @@
         "mean_age": 34.9,
         "nuclear_share_percentage": 71.7,
         "annual_load_factor": 69.6,
-        "operating_total_capcity": 62250
+        "operating_total_capacity": 62250
     },
     {
         "country": "Germany",
@@ -144,7 +144,7 @@
         "mean_age": 33.1,
         "nuclear_share_percentage": 11.7,
         "annual_load_factor": 86.7,
-        "operating_total_capcity": 8113
+        "operating_total_capacity": 8113
     },
     {
         "country": "Hungary",
@@ -156,7 +156,7 @@
         "mean_age": 34.4,
         "nuclear_share_percentage": 50.6,
         "annual_load_factor": 89,
-        "operating_total_capcity": 1902
+        "operating_total_capacity": 1902
     },
     {
         "country": "India",
@@ -168,7 +168,7 @@
         "mean_age": 22.8,
         "nuclear_share_percentage": 3.1,
         "annual_load_factor": 64,
-        "operating_total_capcity": 6255
+        "operating_total_capacity": 6255
     },
     {
         "country": "Iran",
@@ -179,7 +179,7 @@
         "permanent_shutdown": 0,
         "mean_age": 8.3,
         "nuclear_share_percentage": 2.1,
-        "operating_total_capcity": 915
+        "operating_total_capacity": 915
     },
     {
         "country": "Japan",
@@ -191,7 +191,7 @@
         "mean_age": 29,
         "nuclear_share_percentage": 6.2,
         "annual_load_factor": 13.9,
-        "operating_total_capcity": 7919
+        "operating_total_capacity": 7919
     },
     {
         "country": "Mexico",
@@ -203,7 +203,7 @@
         "mean_age": 27.9,
         "nuclear_share_percentage": 5.3,
         "annual_load_factor": 96.1,
-        "operating_total_capcity": 1552
+        "operating_total_capacity": 1552
     },
     {
         "country": "Netherlands",
@@ -215,7 +215,7 @@
         "mean_age": 46.5,
         "nuclear_share_percentage": 3,
         "annual_load_factor": 69.9,
-        "operating_total_capcity": 482
+        "operating_total_capacity": 482
     },
     {
         "country": "Pakistan",
@@ -227,7 +227,7 @@
         "mean_age": 16.4,
         "nuclear_share_percentage": 6.8,
         "annual_load_factor": 54.9,
-        "operating_total_capcity": 1318
+        "operating_total_capacity": 1318
     },
     {
         "country": "Philippines",
@@ -247,7 +247,7 @@
         "mean_age": 18,
         "nuclear_share_percentage": 17.2,
         "annual_load_factor": 92.4,
-        "operating_total_capcity": 1300
+        "operating_total_capacity": 1300
     },
     {
         "country": "Russia",
@@ -259,7 +259,7 @@
         "mean_age": 28,
         "nuclear_share_percentage": 17.9,
         "annual_load_factor": 77.5,
-        "operating_total_capcity": 28415
+        "operating_total_capacity": 28415
     },
     {
         "country": "Slovakia",
@@ -271,7 +271,7 @@
         "mean_age": 27.8,
         "nuclear_share_percentage": 55,
         "annual_load_factor": 88.3,
-        "operating_total_capcity": 1814
+        "operating_total_capacity": 1814
     },
     {
         "country": "Slovenia",
@@ -283,7 +283,7 @@
         "mean_age": 38.2,
         "nuclear_share_percentage": 35.9,
         "annual_load_factor": 90.7,
-        "operating_total_capcity": 688
+        "operating_total_capacity": 688
     },
     {
         "country": "South Africa",
@@ -295,7 +295,7 @@
         "mean_age": 35,
         "nuclear_share_percentage": 4.7,
         "annual_load_factor": 65.3,
-        "operating_total_capcity": 1860
+        "operating_total_capacity": 1860
     },
     {
         "country": "South Korea",
@@ -307,7 +307,7 @@
         "mean_age": 20.6,
         "nuclear_share_percentage": 23.7,
         "annual_load_factor": 63.8,
-        "operating_total_capcity": 22123
+        "operating_total_capacity": 22123
     },
     {
         "country": "Spain",
@@ -319,7 +319,7 @@
         "mean_age": 34.9,
         "nuclear_share_percentage": 20.4,
         "annual_load_factor": 85.2,
-        "operating_total_capcity": 7121
+        "operating_total_capacity": 7121
     },
     {
         "country": "Sweden",
@@ -331,7 +331,7 @@
         "mean_age": 38.6,
         "nuclear_share_percentage": 40.3,
         "annual_load_factor": 88,
-        "operating_total_capcity": 7725
+        "operating_total_capacity": 7725
     },
     {
         "country": "Switzerland",
@@ -343,7 +343,7 @@
         "mean_age": 43.8,
         "nuclear_share_percentage": 37.7,
         "annual_load_factor": 86.5,
-        "operating_total_capcity": 2960
+        "operating_total_capacity": 2960
     },
     {
         "country": "Taiwan",
@@ -355,7 +355,7 @@
         "mean_age": 36.6,
         "nuclear_share_percentage": 11.4,
         "annual_load_factor": 54.5,
-        "operating_total_capcity": 3844
+        "operating_total_capacity": 3844
     },
     
     {
@@ -375,7 +375,7 @@
         "permanent_shutdown": 4,
         "mean_age": 30.9,
         "nuclear_share_percentage": 53,
-        "operating_total_capcity": 13107
+        "operating_total_capacity": 13107
     },
     {
         "country": "United Arab Emirates",
@@ -395,7 +395,7 @@
         "mean_age": 35.9,
         "nuclear_share_percentage": 17.7,
         "annual_load_factor": 68.4,
-        "operating_total_capcity": 8923
+        "operating_total_capacity": 8923
     },
     {
         "country": "United States of America",
@@ -407,7 +407,7 @@
         "mean_age": 39.4,
         "nuclear_share_percentage": 19.3,
         "annual_load_factor": 89.8,
-        "operating_total_capcity": 97565
+        "operating_total_capacity": 97565
     },
     {
         "country": "World",
