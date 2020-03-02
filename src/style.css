@@ -30,7 +30,7 @@ a {
     -o-background-size: cover;
     background-size: 100% 100%;
     /* background-size: contain; */
-    min-height: 720px;
+    min-height: 800px;
 }
 
 
@@ -77,4 +77,8 @@ a {
 
 .active {
     fill: #98f5ff;
+}
+
+#lightbulbs-container {
+    display: inline;
 }
