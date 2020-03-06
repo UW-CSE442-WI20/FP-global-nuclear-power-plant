@@ -2,35 +2,50 @@ const d3 = require('d3')
 
 const worldmap_geo_json = require('../static/world-map-geo.json'); // https://github.com/topojson/world-atlas
 
-const height = 546;
-const width = 1113;
-var min_zoom = 2;
-var max_zoom = 5;
-var zoom_scale = .5;
-
 var country_nuclear_data;
-var countries_with_nuclear = [];
+var countries_with_data = [];
 var path;
 var svg;
 
+const height = 546;
+const width = 1113;
+
+// Minimum and maximum zoom levels when clicking on a country
+var min_zoom = 2;
+var max_zoom = 5;
+
+// Scale factor for zoom (1 means match bounding box of country)
+var zoom_scale = .5;
+
+// currently highlighted country
 var selected_country;
+
+// upper bounds for the color maps
+let bounds_percent = [0, 10, 30, 50, 100];
+let bounds_construction = [0, 1, 2, 5, 11];
+let bounds_ratio = [.2, .4, .6, .9, 1];
+
+// let teal_blue_colors = ['#bce4d8', '#81c4cb','#45a2b9', '#347da0', '#2c5985'];
+let teal_blue_colors = ['#ececec', '#bce4d8', '#81c4cb','#45a2b9', '#347da0', '#2c5985'];
+let orange_blue_colors = ['#d45b22', '#f69035', '#d9d5d9', '#78add3', '#5083af'];
+
+let color_scale_percent = createColorScale(bounds_percent, teal_blue_colors);
+let color_scale_construction = createColorScale(bounds_construction, teal_blue_colors);
+let color_scale_ratio = createColorScale(bounds_ratio, orange_blue_colors);
 
 class Map {
     constructor(data) {
         country_nuclear_data = data;
-        this.centered = null;
 
-        this.world_operating_capacity = 0;
+        // column to be color-encoded on the map: 'nuclear_share_percentage', 'under_construction', or 'active_total_ratio'
+        this.legend_choice = 'nuclear_share_percentage';
+
         this.word_total_operating = 0;
         this.world_total_inprogess = 0;
         this.world_total_shutdown = 0;
+
         for (let c of country_nuclear_data) {
-            if (c.operating > 0) {
-                countries_with_nuclear.push(c.country);
-            }
-            if (c.operating_total_capacity) {
-                this.world_operating_capacity += c.operating_total_capacity;
-            }
+            countries_with_data.push(c.country);
             if (c.country == "World") {
                 this.word_total_operating = c.operating;
                 this.world_total_inprogess = c.under_construction;
@@ -40,8 +55,6 @@ class Map {
     }
 
     createMap() {
-        let color_scale = this.getColorScale();
-
         svg = d3.select("#map-container")
             .append("svg")
             .attr("width", width)
@@ -55,35 +68,23 @@ class Map {
         path = d3.geoPath()
             .projection(projection);
 
-        svg.selectAll("path")
+        this.countryPath = svg.selectAll("path")
             .data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries)
                 .features)
             .enter()
             .append("path")
             .attr("d", path)
-            .attr("fill", function (d) {
-                for (let c of country_nuclear_data) {
-                    if (c.country == d.properties.name) {
-                        if (countries_with_nuclear.includes(d.properties.name)) {
-                            return color_scale(c.operating);
-                        } else if (c.permanent_shutdown > 0) {
-                            return "#90ee90";
-                        } else if (c.abandoned_construction > 0) {
-                            return "#b19cd9";
-                        }
-                    }
-                }
-                return "#ececec";
-            })
             .on("click", function (d) {
                 this.getCountryInfo(d);
                 this.clicked(d);
             }.bind(this));
 
+
+        this.refreshColorMap();
+
         this.resetValuesToWorld();
 
-        // temp fix
-        countries_with_nuclear.push('Philippines');
+        d3.select(`#${this.legend_choice}`).classed('selected', true);
     }
 
     resetValuesToWorld() {
@@ -91,12 +92,30 @@ class Map {
         this.getLightBulbs(10.15, "The World");
     }
 
-    getColorScale() {
-        // domain means input range means output
-        let scale = d3.scaleLinear()
-            .domain([0, d3.max(country_nuclear_data, function (d) { return d["operating"]; })])
-            .range(["#ffc0cb", "#ff0000"]);
-        return scale;
+    refreshColorMap() {
+        this.countryPath
+            .transition()
+            .duration(1000)
+            .attr('fill', function (d) {
+                for (let c of country_nuclear_data) {
+                    if (c.country == d.properties.name && countries_with_data.includes(d.properties.name)) {
+                        let color;
+                        switch (this.legend_choice) {
+                            case 'under_construction':
+                                color = color_scale_construction(c.under_construction);
+                                break;
+                            case 'active_total_ratio':
+                                color = color_scale_ratio(c.active_total_ratio);
+                                break;
+                            default:
+                                color = color_scale_percent(c.nuclear_share_percentage);
+                                break;
+                        }
+                        return color;
+                    }
+                }
+                return "#ececec"; // else no data
+            }.bind(this))
     }
 
     getCountryInfo(d) {
@@ -109,13 +128,13 @@ class Map {
         }
     }
 
-    //clicked
+    // runs whenever a *country* is clicked, TODO also run when background is clicked
     clicked(d) {
         var dx, dy, k;
 
         var country = d.properties.name;
 
-        if (selected_country !== country && countries_with_nuclear.includes(country)) {
+        if (selected_country !== country && countries_with_data.includes(country)) {
             var centroid = path.centroid(d);
 
             dx = width / 2 - centroid[0];
@@ -157,26 +176,36 @@ class Map {
     }
 
     getLightBulbs(percentage, country) {
+        let bulbNumber = 20;
         var string_p = percentage.toFixed(2).bold();
         document.getElementById("lightbulbs").innerHTML = "";
         if (country === "United States of American") {country = "United States"; }
         document.getElementById("country-text").innerHTML = `${country}`;
         document.getElementById("percentage-text").innerHTML = `gets ${string_p}% <br>of its power from nuclear energy.`;
-        var lightbulbs = Math.round(percentage);
+        var lightbulbs = Math.round(percentage * (bulbNumber / 100));
         let all_bulbs = '';
-        for (var i = 0; i < lightbulbs; i++) all_bulbs += '<img src="./LightBulb.png" style="width: 10%;">';
-        for (var i = 0; i < 100 - lightbulbs; i++) all_bulbs += '<img src="./Dimbulb.png" style="width: 10%;">';
+        for (var i = 0; i < lightbulbs; i++) all_bulbs += '<img src="./LightBulb.png" style="width: 17%;">';
+        for (var i = 0; i < bulbNumber - lightbulbs; i++) all_bulbs += '<img src="./Dimbulb.png" style="width: 17%;">';
         document.getElementById("lightbulbs").innerHTML += all_bulbs;
     }
 
     getFactories(working, in_progress, abandon) {
-        document.getElementById("plants-container").innerHTML = '';
-        let all_plants = '';
-        for (var i = 0; i < working; i++) all_plants += '<img src="./workingPlant.png" style="width: 3%;">';
-        for (var i = 0; i < in_progress; i++) all_plants += '<img src="./inProgressPlant.png" style="width: 3%;">';
-        for (var i = 0; i < abandon; i++) all_plants += '<img src="./abandon.png" style="width: 3%;">';
-        document.getElementById("plants-container").innerHTML = all_plants;
+        document.getElementById('plants-working').innerText = working;
+        document.getElementById('plants-ip').innerText = in_progress;
+        document.getElementById('plants-abandon').innerText = abandon;
     }
 }
 
 module.exports = Map;
+
+// upper_bounds is an int array of the inclusive upper bound of each bin (starting at 0)
+// colors is a string array of equal length
+// returns a callable function that functions like a d3 scale, but for colors
+function createColorScale(upper_bounds, colors) {
+    return function(value) {
+        for (var i = 0; i < upper_bounds.length; i++) {
+            if (value <= upper_bounds[i]) return colors[i];
+        }
+        return '#ececec';
+    }
+}

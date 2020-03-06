@@ -1,0 +1,117 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 65px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.topic {
+    background: 
+    url("https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/nuclear_plant.594af773.jpg")
+    no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-position: center center; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+    /* background-size: contain; */
+    min-height: 100vh;
+}
+
+
+.more:link, .more:visited {
+    padding: 10px;
+    background-color: brown;
+    color: white;
+}
+
+.more:hover {
+    background-color: red;
+}
+
+#dashboard {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+    padding: 40px 0;
+}
+
+#dashboard>div {
+    /* temporary until divs have content */
+    min-height: 180px;
+    /* border: 1px solid black; */
+}
+
+#map-container {
+    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    overflow: hidden;
+}
+#map-container>svg>path {
+    cursor: pointer;
+}
+#map-container .active {
+    fill: #98f5ff;
+}
+#map-container #map-legend {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#country-container {
+    display: inline;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+#info-text {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+#country-text {
+    font-weight: bold;
+    font-size: 35px;
+}
+#percentage-text {
+    font-size: 20px;
+}
+
+#lightbulbs {
+    margin: 20px 0 30px;
+    text-align: center;
+}
+
+#plants-info {
+    margin: 0 10px;
+    text-align: center;
+}
+#plants-info td {
+    width: 33%;
+    font-size: 16pt;
+}
+#plants-info td img {
+    width: 50%;
+}
+
+
+
+
+/*# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/style.4b9274b5.css.map */

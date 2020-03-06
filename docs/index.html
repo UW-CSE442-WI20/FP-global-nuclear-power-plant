@@ -4,41 +4,54 @@
 <head>
   <meta charset="UTF-8">
   <title>nUCleAr iS BaD</title>
-  <link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/style.8e3343da.css">
+  <link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/style.4b9274b5.css">
   <script src="https://unpkg.com/topojson-client@3"></script>
 
 </head>
 
 <body>
+
   <div class="topic" id="top">
     <h1>Nukes!</h1>
     <h3>Do you know how much we rely on nuclear power in the world?</h3>
     <img style="width: 20%; padding: 10px;" src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/giphy.8b87c8a4.gif">
-    <a href="#grid-container" class="more">See more!</a>
+    <a href="#dashboard" class="more">See more!</a>
   </div>
 
-
-  <div class="grid" id="grid-container">
+  <div id="dashboard">
     <div id="map-container">
+      <div id="map-legend">
+        <p>Legend</p>
+        <p>percentage of power from nuclear</p>
+        <p>number of plants under construction</p>
+        <p>ratio of active to inactive plants</p>
+      </div>
     </div>
-    <div id="lightbulbs-container">
+    <div id="country-container">
       <div id="info-text">
         <div id="country-text"></div>
         <div id="percentage-text"></div>
       </div>
       <div id="lightbulbs"></div>
+      <table id="plants-info">
+        <tr>
+          <td><img title="Active Plants" src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/workingPlant.0be76264.png"></td>
+          <td><img title="Plants Under Construction" src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/inProgressPlant.c781badf.png"></td>
+          <td><img title="Shutdown and Abandoned Plants" src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/abandon.c98a812c.png"></td>
+        </tr>
+        <tr>
+          <td id="plants-working">0</td>
+          <td id="plants-ip">0</td>
+          <td id="plants-abandon">0</td>
+        </tr>
+      </table>
     </div>
   </div>
-  <div id="plants-container">
-  </div>
-  
-  <a href="#top">back to top</a>
-  
 
   <br>
   <br>
 
-  <script src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/src.2f7a6fd6.js"></script>
+  <script src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/src.8f5681bc.js"></script>
 </body>
 
 </html>

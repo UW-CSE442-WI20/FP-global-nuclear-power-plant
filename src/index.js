@@ -21,3 +21,14 @@ d3.csv('all_fuels.csv')
 const Map = require('./map.js');
 const MapInstance = new Map(data_nuclear_only);
 MapInstance.createMap();
+
+var control_spans = d3.selectAll('#map-control span')
+    .on('click', function() {
+        if (MapInstance.legend_choice != this.id) {
+            MapInstance.legend_choice = this.id;
+            control_spans.classed('selected', false);
+            d3.select(`#${MapInstance.legend_choice}`)
+                .classed('selected', true);
+            MapInstance.refreshColorMap();
+        }
+    });

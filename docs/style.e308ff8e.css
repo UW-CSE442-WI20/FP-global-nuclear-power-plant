@@ -44,17 +44,22 @@ a {
     background-color: red;
 }
 
-.grid {
-    margin: 20px;
-}
-
-#grid-container {
+#dashboard {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: auto;
+    height: 100vh;
+    padding: 40px 0;
+}
+
+#dashboard>div {
+    /* temporary until divs have content */
+    min-height: 180px;
+    /* border: 1px solid black; */
 }
 
 #map-container {
+    position: relative;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     overflow: hidden;
@@ -62,44 +67,51 @@ a {
 #map-container>svg>path {
     cursor: pointer;
 }
+#map-container .active {
+    fill: #98f5ff;
+}
+#map-container #map-legend {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 #country-container {
+    display: inline;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
-
-#plants-container {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-}
-
-#grid-container>div {
-    /* temporary until divs have content */
-    min-height: 180px;
-    /* border: 1px solid black; */
-}
-
-.active {
-    fill: #98f5ff;
-}
-
-#lightbulbs-container {
-    display: inline;
-}
-
 #info-text {
-    height: 125px;
+    margin-top: 20px;
     text-align: center;
     padding: 10px;
 }
-
 #country-text {
     font-weight: bold;
     font-size: 35px;
 }
-
 #percentage-text {
     font-size: 20px;
 }
+
+#lightbulbs {
+    margin: 20px 0 30px;
+    text-align: center;
+}
+
+#plants-info {
+    margin: 0 10px;
+    text-align: center;
+}
+#plants-info td {
+    width: 33%;
+    font-size: 16pt;
+}
+#plants-info td img {
+    width: 50%;
+}
+
+
+
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

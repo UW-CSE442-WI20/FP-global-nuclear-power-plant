@@ -28922,7 +28922,8 @@ module.exports = [{
   "mean_age": 29.3,
   "nuclear_share_percentage": 4.7,
   "annual_load_factor": 48.3,
-  "operating_total_capacity": 1633
+  "operating_total_capacity": 1633,
+  "active_total_ratio": 1
 }, {
   "country": "Armenia",
   "abandoned_construction": 0,
@@ -28933,21 +28934,32 @@ module.exports = [{
   "mean_age": 39.5,
   "nuclear_share_percentage": 25.6,
   "annual_load_factor": 48.3,
-  "operating_total_capacity": 375
+  "operating_total_capacity": 375,
+  "active_total_ratio": 0.5
 }, {
   "country": "Bangladesh",
   "abandoned_construction": 0,
   "under_construction": 2,
   "operating": 0,
   "longterm_outage": 0,
-  "permanent_shutdown": 0
+  "permanent_shutdown": 0,
+  "mean_age": "",
+  "nuclear_share_percentage": "",
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 1
 }, {
   "country": "Belarus",
   "abandoned_construction": 0,
   "under_construction": 2,
   "operating": 0,
   "longterm_outage": 0,
-  "permanent_shutdown": 0
+  "permanent_shutdown": 0,
+  "mean_age": "",
+  "nuclear_share_percentage": "",
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 1
 }, {
   "country": "Belgium",
   "abandoned_construction": 0,
@@ -28958,7 +28970,8 @@ module.exports = [{
   "mean_age": 39.8,
   "nuclear_share_percentage": 39,
   "annual_load_factor": 48.6,
-  "operating_total_capacity": 5930
+  "operating_total_capacity": 5930,
+  "active_total_ratio": 0.875
 }, {
   "country": "Brazil",
   "abandoned_construction": 1,
@@ -28969,7 +28982,8 @@ module.exports = [{
   "mean_age": 28.5,
   "nuclear_share_percentage": 2.7,
   "annual_load_factor": 88.4,
-  "operating_total_capacity": 1884
+  "operating_total_capacity": 1884,
+  "active_total_ratio": 0.666666667
 }, {
   "country": "Bulgaria",
   "abandoned_construction": 2,
@@ -28980,7 +28994,8 @@ module.exports = [{
   "mean_age": 30.2,
   "nuclear_share_percentage": 34.7,
   "annual_load_factor": 91.9,
-  "operating_total_capacity": 1966
+  "operating_total_capacity": 1966,
+  "active_total_ratio": 0.25
 }, {
   "country": "Canada",
   "abandoned_construction": 0,
@@ -28991,7 +29006,8 @@ module.exports = [{
   "mean_age": 36.5,
   "nuclear_share_percentage": 14.9,
   "annual_load_factor": 66,
-  "operating_total_capacity": 13554
+  "operating_total_capacity": 13554,
+  "active_total_ratio": 0.72
 }, {
   "country": "China",
   "abandoned_construction": 0,
@@ -29001,7 +29017,9 @@ module.exports = [{
   "permanent_shutdown": 0,
   "mean_age": 7.7,
   "nuclear_share_percentage": 4.2,
-  "operating_total_capacity": 45518
+  "annual_load_factor": "",
+  "operating_total_capacity": 45518,
+  "active_total_ratio": 0.983050847
 }, {
   "country": "Czechia",
   "abandoned_construction": 2,
@@ -29012,7 +29030,8 @@ module.exports = [{
   "mean_age": 28.5,
   "nuclear_share_percentage": 34.5,
   "annual_load_factor": 83.3,
-  "operating_total_capacity": 3932
+  "operating_total_capacity": 3932,
+  "active_total_ratio": 0.75
 }, {
   "country": "Finland",
   "abandoned_construction": 0,
@@ -29023,7 +29042,8 @@ module.exports = [{
   "mean_age": 40.8,
   "nuclear_share_percentage": 32.4,
   "annual_load_factor": 89.8,
-  "operating_total_capacity": 2794
+  "operating_total_capacity": 2794,
+  "active_total_ratio": 1
 }, {
   "country": "France",
   "abandoned_construction": 0,
@@ -29034,7 +29054,8 @@ module.exports = [{
   "mean_age": 34.9,
   "nuclear_share_percentage": 71.7,
   "annual_load_factor": 69.6,
-  "operating_total_capacity": 62250
+  "operating_total_capacity": 62250,
+  "active_total_ratio": 0.816901408
 }, {
   "country": "Germany",
   "abandoned_construction": 6,
@@ -29045,7 +29066,8 @@ module.exports = [{
   "mean_age": 33.1,
   "nuclear_share_percentage": 11.7,
   "annual_load_factor": 86.7,
-  "operating_total_capacity": 8113
+  "operating_total_capacity": 8113,
+  "active_total_ratio": 0.142857143
 }, {
   "country": "Hungary",
   "abandoned_construction": 0,
@@ -29056,7 +29078,8 @@ module.exports = [{
   "mean_age": 34.4,
   "nuclear_share_percentage": 50.6,
   "annual_load_factor": 89,
-  "operating_total_capacity": 1902
+  "operating_total_capacity": 1902,
+  "active_total_ratio": 1
 }, {
   "country": "India",
   "abandoned_construction": 0,
@@ -29067,7 +29090,8 @@ module.exports = [{
   "mean_age": 22.8,
   "nuclear_share_percentage": 3.1,
   "annual_load_factor": 64,
-  "operating_total_capacity": 6255
+  "operating_total_capacity": 6255,
+  "active_total_ratio": 0.965517241
 }, {
   "country": "Iran",
   "abandoned_construction": 0,
@@ -29077,7 +29101,9 @@ module.exports = [{
   "permanent_shutdown": 0,
   "mean_age": 8.3,
   "nuclear_share_percentage": 2.1,
-  "operating_total_capacity": 915
+  "annual_load_factor": "",
+  "operating_total_capacity": 915,
+  "active_total_ratio": 1
 }, {
   "country": "Japan",
   "abandoned_construction": 1,
@@ -29088,7 +29114,8 @@ module.exports = [{
   "mean_age": 29,
   "nuclear_share_percentage": 6.2,
   "annual_load_factor": 13.9,
-  "operating_total_capacity": 7919
+  "operating_total_capacity": 7919,
+  "active_total_ratio": 0.161290323
 }, {
   "country": "Mexico",
   "abandoned_construction": 0,
@@ -29099,7 +29126,8 @@ module.exports = [{
   "mean_age": 27.9,
   "nuclear_share_percentage": 5.3,
   "annual_load_factor": 96.1,
-  "operating_total_capacity": 1552
+  "operating_total_capacity": 1552,
+  "active_total_ratio": 1
 }, {
   "country": "Netherlands",
   "abandoned_construction": 0,
@@ -29110,7 +29138,8 @@ module.exports = [{
   "mean_age": 46.5,
   "nuclear_share_percentage": 3,
   "annual_load_factor": 69.9,
-  "operating_total_capacity": 482
+  "operating_total_capacity": 482,
+  "active_total_ratio": 0.5
 }, {
   "country": "Pakistan",
   "abandoned_construction": 0,
@@ -29121,14 +29150,20 @@ module.exports = [{
   "mean_age": 16.4,
   "nuclear_share_percentage": 6.8,
   "annual_load_factor": 54.9,
-  "operating_total_capacity": 1318
+  "operating_total_capacity": 1318,
+  "active_total_ratio": 1
 }, {
   "country": "Philippines",
   "abandoned_construction": 1,
   "under_construction": 0,
   "operating": 0,
   "longterm_outage": 0,
-  "permanent_shutdown": 0
+  "permanent_shutdown": 0,
+  "mean_age": "",
+  "nuclear_share_percentage": "",
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 0
 }, {
   "country": "Romania",
   "abandoned_construction": 3,
@@ -29139,7 +29174,8 @@ module.exports = [{
   "mean_age": 18,
   "nuclear_share_percentage": 17.2,
   "annual_load_factor": 92.4,
-  "operating_total_capacity": 1300
+  "operating_total_capacity": 1300,
+  "active_total_ratio": 0.4
 }, {
   "country": "Russia",
   "abandoned_construction": 12,
@@ -29150,7 +29186,8 @@ module.exports = [{
   "mean_age": 28,
   "nuclear_share_percentage": 17.9,
   "annual_load_factor": 77.5,
-  "operating_total_capacity": 28415
+  "operating_total_capacity": 28415,
+  "active_total_ratio": 0.672131148
 }, {
   "country": "Slovakia",
   "abandoned_construction": 0,
@@ -29161,7 +29198,8 @@ module.exports = [{
   "mean_age": 27.8,
   "nuclear_share_percentage": 55,
   "annual_load_factor": 88.3,
-  "operating_total_capacity": 1814
+  "operating_total_capacity": 1814,
+  "active_total_ratio": 0.666666667
 }, {
   "country": "Slovenia",
   "abandoned_construction": 0,
@@ -29172,7 +29210,8 @@ module.exports = [{
   "mean_age": 38.2,
   "nuclear_share_percentage": 35.9,
   "annual_load_factor": 90.7,
-  "operating_total_capacity": 688
+  "operating_total_capacity": 688,
+  "active_total_ratio": 1
 }, {
   "country": "South Africa",
   "abandoned_construction": 0,
@@ -29183,7 +29222,8 @@ module.exports = [{
   "mean_age": 35,
   "nuclear_share_percentage": 4.7,
   "annual_load_factor": 65.3,
-  "operating_total_capacity": 1860
+  "operating_total_capacity": 1860,
+  "active_total_ratio": 1
 }, {
   "country": "South Korea",
   "abandoned_construction": 0,
@@ -29194,7 +29234,8 @@ module.exports = [{
   "mean_age": 20.6,
   "nuclear_share_percentage": 23.7,
   "annual_load_factor": 63.8,
-  "operating_total_capacity": 22123
+  "operating_total_capacity": 22123,
+  "active_total_ratio": 0.9
 }, {
   "country": "Spain",
   "abandoned_construction": 4,
@@ -29205,7 +29246,8 @@ module.exports = [{
   "mean_age": 34.9,
   "nuclear_share_percentage": 20.4,
   "annual_load_factor": 85.2,
-  "operating_total_capacity": 7121
+  "operating_total_capacity": 7121,
+  "active_total_ratio": 0.5
 }, {
   "country": "Sweden",
   "abandoned_construction": 1,
@@ -29216,7 +29258,8 @@ module.exports = [{
   "mean_age": 38.6,
   "nuclear_share_percentage": 40.3,
   "annual_load_factor": 88,
-  "operating_total_capacity": 7725
+  "operating_total_capacity": 7725,
+  "active_total_ratio": 0.5
 }, {
   "country": "Switzerland",
   "abandoned_construction": 0,
@@ -29227,7 +29270,8 @@ module.exports = [{
   "mean_age": 43.8,
   "nuclear_share_percentage": 37.7,
   "annual_load_factor": 86.5,
-  "operating_total_capacity": 2960
+  "operating_total_capacity": 2960,
+  "active_total_ratio": 0.8
 }, {
   "country": "Taiwan",
   "abandoned_construction": 2,
@@ -29238,14 +29282,20 @@ module.exports = [{
   "mean_age": 36.6,
   "nuclear_share_percentage": 11.4,
   "annual_load_factor": 54.5,
-  "operating_total_capacity": 3844
+  "operating_total_capacity": 3844,
+  "active_total_ratio": 0.5
 }, {
   "country": "Turkey",
   "abandoned_construction": 0,
   "under_construction": 1,
   "operating": 0,
   "longterm_outage": 0,
-  "permanent_shutdown": 0
+  "permanent_shutdown": 0,
+  "mean_age": "",
+  "nuclear_share_percentage": "",
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 1
 }, {
   "country": "Ukraine",
   "abandoned_construction": 6,
@@ -29255,14 +29305,21 @@ module.exports = [{
   "permanent_shutdown": 4,
   "mean_age": 30.9,
   "nuclear_share_percentage": 53,
-  "operating_total_capacity": 13107
+  "annual_load_factor": "",
+  "operating_total_capacity": 13107,
+  "active_total_ratio": 0.6
 }, {
   "country": "United Arab Emirates",
-  "abandoned_construction": "0",
-  "under_construction": "4",
-  "operating": "0",
-  "longterm_outage": "0",
-  "permanent_shutdown": "0"
+  "abandoned_construction": 0,
+  "under_construction": 4,
+  "operating": 0,
+  "longterm_outage": 0,
+  "permanent_shutdown": 0,
+  "mean_age": "",
+  "nuclear_share_percentage": "",
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 1
 }, {
   "country": "United Kingdom",
   "abandoned_construction": 0,
@@ -29273,7 +29330,8 @@ module.exports = [{
   "mean_age": 35.9,
   "nuclear_share_percentage": 17.7,
   "annual_load_factor": 68.4,
-  "operating_total_capacity": 8923
+  "operating_total_capacity": 8923,
+  "active_total_ratio": 0.347826087
 }, {
   "country": "United States of America",
   "abandoned_construction": 42,
@@ -29284,7 +29342,8 @@ module.exports = [{
   "mean_age": 39.4,
   "nuclear_share_percentage": 19.3,
   "annual_load_factor": 89.8,
-  "operating_total_capacity": 97565
+  "operating_total_capacity": 97565,
+  "active_total_ratio": 0.553672316
 }, {
   "country": "World",
   "abandoned_construction": 93,
@@ -29293,7 +29352,10 @@ module.exports = [{
   "longterm_outage": 27,
   "permanent_shutdown": 187,
   "mean_age": 30.5,
-  "nuclear_share_percentage": 10.15
+  "nuclear_share_percentage": 10.15,
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 0.599739244
 }];
 },{}],"../static/world-map-geo.json":[function(require,module,exports) {
 module.exports = {
@@ -31012,16 +31074,27 @@ var d3 = require('d3');
 var worldmap_geo_json = require('../static/world-map-geo.json'); // https://github.com/topojson/world-atlas
 
 
-var height = 546;
-var width = 1113;
-var min_zoom = 2;
-var max_zoom = 5;
-var zoom_scale = .5;
 var country_nuclear_data;
-var countries_with_nuclear = [];
+var countries_with_data = [];
 var path;
 var svg;
-var selected_country;
+var height = 546;
+var width = 1113; // Minimum and maximum zoom levels when clicking on a country
+
+var min_zoom = 2;
+var max_zoom = 5; // Scale factor for zoom (1 means match bounding box of country)
+
+var zoom_scale = .5; // currently highlighted country
+
+var selected_country; // column to be color-encoded on the map: 'nuclear_share_percentage', 'under_construction', or 'active_total_ratio'
+
+var legend_choice = 'under_construction'; // upper bounds for the color maps
+
+var bounds_percent = [0, 10, 30, 50, 100];
+var bounds_construction = [0, 1, 2, 5, 11];
+var bounds_ratio = [.2, .4, .6, .9, 1];
+var teal_blue_colors = ['#bce4d8', '#81c4cb', '#45a2b9', '#347da0', '#2c5985'];
+var orange_blue_colors = ['#d45b22', '#f69035', '#d9d5d9', '#78add3', '#5083af'];
 
 var Map =
 /*#__PURE__*/
@@ -31030,8 +31103,6 @@ function () {
     _classCallCheck(this, Map);
 
     country_nuclear_data = data;
-    this.centered = null;
-    this.world_operating_capacity = 0;
     this.word_total_operating = 0;
     this.world_total_inprogess = 0;
     this.world_total_shutdown = 0;
@@ -31042,14 +31113,7 @@ function () {
     try {
       for (var _iterator = country_nuclear_data[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
         var c = _step.value;
-
-        if (c.operating > 0) {
-          countries_with_nuclear.push(c.country);
-        }
-
-        if (c.operating_total_capacity) {
-          this.world_operating_capacity += c.operating_total_capacity;
-        }
+        countries_with_data.push(c.country);
 
         if (c.country == "World") {
           this.word_total_operating = c.operating;
@@ -31071,12 +31135,16 @@ function () {
         }
       }
     }
+
+    this.color_scale_percent = this.createColorScale(bounds_percent, teal_blue_colors);
+    this.color_scale_construction = this.createColorScale(bounds_construction, teal_blue_colors);
+    this.color_scale_ratio = this.createColorScale(bounds_ratio, orange_blue_colors);
+    console.log(this.color_scale_construction);
   }
 
   _createClass(Map, [{
     key: "createMap",
     value: function createMap() {
-      var color_scale = this.getColorScale();
       svg = d3.select("#map-container").append("svg").attr("width", width).attr("height", height);
       var projection = d3.geoMercator().scale(1 * width / 2 / Math.PI).translate([width / 2, height / 1.55]);
       path = d3.geoPath().projection(projection);
@@ -31089,13 +31157,16 @@ function () {
           for (var _iterator2 = country_nuclear_data[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
             var c = _step2.value;
 
-            if (c.country == d.properties.name) {
-              if (countries_with_nuclear.includes(d.properties.name)) {
-                return color_scale(c.operating);
-              } else if (c.permanent_shutdown > 0) {
-                return "#90ee90";
-              } else if (c.abandoned_construction > 0) {
-                return "#b19cd9";
+            if (c.country == d.properties.name && countries_with_data.includes(d.properties.name)) {
+              switch (legend_choice) {
+                case 'under_construction':
+                  return this.color_scale_construction(c.under_construction);
+
+                case 'active_total_ratio':
+                  return this.color_scale_ratio(c.active_total_ratio);
+
+                default:
+                  return this.color_scale_percent(c.nuclear_share_percentage);
               }
             }
           }
@@ -31114,29 +31185,20 @@ function () {
           }
         }
 
-        return "#ececec";
+        return "#ececec"; // else no data
       }).on("click", function (d) {
         this.getCountryInfo(d);
         this.clicked(d);
       }.bind(this));
       this.resetValuesToWorld(); // temp fix
 
-      countries_with_nuclear.push('Philippines');
+      countries_with_data.push('Philippines');
     }
   }, {
     key: "resetValuesToWorld",
     value: function resetValuesToWorld() {
       this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
       this.getLightBulbs(10.15, "The World");
-    }
-  }, {
-    key: "getColorScale",
-    value: function getColorScale() {
-      // domain means input range means output
-      var scale = d3.scaleLinear().domain([0, d3.max(country_nuclear_data, function (d) {
-        return d["operating"];
-      })]).range(["#ffc0cb", "#ff0000"]);
-      return scale;
     }
   }, {
     key: "getCountryInfo",
@@ -31169,7 +31231,7 @@ function () {
           }
         }
       }
-    } //clicked
+    } // runs whenever a *country* is clicked, TODO also run when background is clicked
 
   }, {
     key: "clicked",
@@ -31177,7 +31239,7 @@ function () {
       var dx, dy, k;
       var country = d.properties.name;
 
-      if (selected_country !== country && countries_with_nuclear.includes(country)) {
+      if (selected_country !== country && countries_with_data.includes(country)) {
         var centroid = path.centroid(d);
         dx = width / 2 - centroid[0];
         dy = height / 2 - centroid[1];
@@ -31237,6 +31299,7 @@ function () {
   }, {
     key: "getLightBulbs",
     value: function getLightBulbs(percentage, country) {
+      var bulbNumber = 20;
       var string_p = percentage.toFixed(2).bold();
       document.getElementById("lightbulbs").innerHTML = "";
 
@@ -31246,15 +31309,15 @@ function () {
 
       document.getElementById("country-text").innerHTML = "".concat(country);
       document.getElementById("percentage-text").innerHTML = "gets ".concat(string_p, "% <br>of its power from nuclear energy.");
-      var lightbulbs = Math.round(percentage);
+      var lightbulbs = Math.round(percentage * (bulbNumber / 100));
       var all_bulbs = '';
 
       for (var i = 0; i < lightbulbs; i++) {
-        all_bulbs += '<img src="./LightBulb.png" style="width: 10%;">';
+        all_bulbs += '<img src="./LightBulb.png" style="width: 17%;">';
       }
 
-      for (var i = 0; i < 100 - lightbulbs; i++) {
-        all_bulbs += '<img src="./Dimbulb.png" style="width: 10%;">';
+      for (var i = 0; i < bulbNumber - lightbulbs; i++) {
+        all_bulbs += '<img src="./Dimbulb.png" style="width: 17%;">';
       }
 
       document.getElementById("lightbulbs").innerHTML += all_bulbs;
@@ -31262,22 +31325,23 @@ function () {
   }, {
     key: "getFactories",
     value: function getFactories(working, in_progress, abandon) {
-      document.getElementById("plants-container").innerHTML = '';
-      var all_plants = '';
+      document.getElementById('plants-working').innerText = working;
+      document.getElementById('plants-ip').innerText = in_progress;
+      document.getElementById('plants-abandon').innerText = abandon;
+    } // upper_bounds is an int array of the inclusive upper bound of each bin (starting at 0)
+    // colors is a string array of equal length
+    // returns a callable function that functions like a d3 scale, but for colors
 
-      for (var i = 0; i < working; i++) {
-        all_plants += '<img src="./workingPlant.png" style="width: 3%;">';
-      }
+  }, {
+    key: "createColorScale",
+    value: function createColorScale(upper_bounds, colors) {
+      return function (value) {
+        for (var i = 0; i <= upper_bounds.length; i++) {
+          if (value < upper_bounds[i]) return colors[i];
+        }
 
-      for (var i = 0; i < in_progress; i++) {
-        all_plants += '<img src="./inProgressPlant.png" style="width: 3%;">';
-      }
-
-      for (var i = 0; i < abandon; i++) {
-        all_plants += '<img src="./abandon.png" style="width: 3%;">';
-      }
-
-      document.getElementById("plants-container").innerHTML = all_plants;
+        return '#ececec';
+      };
     }
   }]);
 
@@ -31334,7 +31398,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49568" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59026" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

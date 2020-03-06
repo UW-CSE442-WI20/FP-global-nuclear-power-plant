@@ -10,29 +10,50 @@
 </head>
 
 <body>
+
   <div class="topic" id="top">
     <h1>Nukes!</h1>
     <h3>Do you know how much we rely on nuclear power in the world?</h3>
     <img style="width: 20%; padding: 10px;" src="../static/giphy.gif" />
-    <a href="#grid-container" class="more">See more!</a>
+    <a href="#dashboard" class="more">See more!</a>
   </div>
 
-
-  <div class="grid" id="grid-container">
+  <div id="dashboard">
     <div id="map-container">
+      <div id="map-control">
+        <table>
+          <tr>
+            <td>Change Display:</td>
+            <td><span id="nuclear_share_percentage">Percentage of Power from Nuclear</span></td>
+            <td><span id="under_construction">Number of Plants Under Construction</span></td>
+            <td><span id="active_total_ratio">Ratio of Active to Shut-down Plants</span></td>
+          </tr>
+        </table>
+      </div>
+      <div id="map-legend">
+        <p>Legend</p>
+        <p>Yay</p>
+      </div>
     </div>
-    <div id="lightbulbs-container">
+    <div id="country-container">
       <div id="info-text">
         <div id="country-text"></div>
         <div id="percentage-text"></div>
       </div>
       <div id="lightbulbs"></div>
+      <table id="plants-info">
+        <tr>
+          <td><img title="Active Plants" src="../static/workingPlant.png" /></td>
+          <td><img title="Plants Under Construction" src="../static/inProgressPlant.png" /></td>
+          <td><img title="Shutdown and Abandoned Plants" src="../static/abandon.png" /></td>
+        </tr>
+        <tr>
+          <td id="plants-working">0</td>
+          <td id="plants-ip">0</td>
+          <td id="plants-abandon">0</td>
+        </tr>
+      </table>
     </div>
-  </div>
-  <div id="plants-container">
-  </div>
-  </div>
-  <a href="#top">back to top</a>
   </div>
 
   <br />
