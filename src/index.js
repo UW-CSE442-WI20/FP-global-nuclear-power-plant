@@ -18,6 +18,12 @@ d3.csv('all_fuels.csv')
     // Do stuff
   });
 
-const Map = require('./map.js');
+/*const Map = require('./map.js');
 const MapInstance = new Map(data_nuclear_only);
-MapInstance.createMap();
+MapInstance.createMap();*/
+
+const nuclear_powerplant_locations = require('./nuclear-only.json');
+
+const CountryMap = require('./country_map.js');
+const CountryMapInstance = new CountryMap(nuclear_powerplant_locations);
+CountryMapInstance.makeCountryMap("France");
