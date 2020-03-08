@@ -20,19 +20,15 @@
 
   <div id="dashboard">
     <div id="map-container">
-      <div id="map-control">
-        <table>
-          <tr>
-            <td>Change Display:</td>
-            <td><span id="nuclear_share_percentage">Percentage of Power from Nuclear</span></td>
-            <td><span id="under_construction">Number of Plants Under Construction</span></td>
-            <td><span id="active_total_ratio">Ratio of Active to Shut-down Plants</span></td>
-          </tr>
-        </table>
-      </div>
       <div id="map-legend">
-        <p>Legend</p>
-        <p>Yay</p>
+        <table>
+          <tr class="c0"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c1"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c2"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c3"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c4"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c5"><td class="color"></td><td class="text"></td></tr>
+        </table>
       </div>
     </div>
     <div id="country-container">
@@ -40,7 +36,7 @@
         <div id="country-text"></div>
         <div id="percentage-text"></div>
       </div>
-      <div id="lightbulbs"></div>
+      <div id="lightbulbs" title="Each bulb represents 5% of this country's power"></div>
       <table id="plants-info">
         <tr>
           <td><img title="Active Plants" src="../static/workingPlant.png" /></td>
@@ -51,6 +47,16 @@
           <td id="plants-working">0</td>
           <td id="plants-ip">0</td>
           <td id="plants-abandon">0</td>
+        </tr>
+      </table>
+    </div>
+    <div id="map-control">
+      <table>
+        <tr>
+          <td>Change Display:</td>
+          <td><span id="nuclear_share_percentage">Percentage of Power from Nuclear</span></td>
+          <td><span id="under_construction">Number of Plants Under Construction</span></td>
+          <td><span id="active_total_ratio">Percentage of Plants Still Active</span></td>
         </tr>
       </table>
     </div>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>nUCleAr iS BaD</title>
-  <link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/style.4b9274b5.css">
+  <link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/style.2c7b5794.css">
   <script src="https://unpkg.com/topojson-client@3"></script>
 
 </head>
@@ -21,10 +21,14 @@
   <div id="dashboard">
     <div id="map-container">
       <div id="map-legend">
-        <p>Legend</p>
-        <p>percentage of power from nuclear</p>
-        <p>number of plants under construction</p>
-        <p>ratio of active to inactive plants</p>
+        <table>
+          <tr class="c0"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c1"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c2"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c3"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c4"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c5"><td class="color"></td><td class="text"></td></tr>
+        </table>
       </div>
     </div>
     <div id="country-container">
@@ -46,12 +50,22 @@
         </tr>
       </table>
     </div>
+    <div id="map-control">
+      <table>
+        <tr>
+          <td>Change Display:</td>
+          <td><span id="nuclear_share_percentage">Percentage of Power from Nuclear</span></td>
+          <td><span id="under_construction">Number of Plants Under Construction</span></td>
+          <td><span id="active_total_ratio">Percentage of Plants Still Active</span></td>
+        </tr>
+      </table>
+    </div>
   </div>
 
   <br>
   <br>
 
-  <script src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/src.8f5681bc.js"></script>
+  <script src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/src.c236c515.js"></script>
 </body>
 
 </html>

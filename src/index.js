@@ -18,17 +18,17 @@ d3.csv('all_fuels.csv')
     // Do stuff
   });
 
-const Map = require('./map.js');
-const MapInstance = new Map(data_nuclear_only);
-MapInstance.createMap();
+const Dashboard = require('./dashboard.js');
+const DashboardInstance = new Dashboard(data_nuclear_only);
+DashboardInstance.createMap();
 
 var control_spans = d3.selectAll('#map-control span')
     .on('click', function() {
-        if (MapInstance.legend_choice != this.id) {
-            MapInstance.legend_choice = this.id;
+        if (DashboardInstance.legend_choice != this.id) {
+            DashboardInstance.legend_choice = this.id;
             control_spans.classed('selected', false);
-            d3.select(`#${MapInstance.legend_choice}`)
+            d3.select(`#${DashboardInstance.legend_choice}`)
                 .classed('selected', true);
-            MapInstance.refreshColorMap();
+            DashboardInstance.refreshColorMap();
         }
     });

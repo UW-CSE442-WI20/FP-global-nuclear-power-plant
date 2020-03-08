@@ -47,7 +47,7 @@ a {
 #dashboard {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 546px auto;
     height: 100vh;
     padding: 40px 0;
 }
@@ -71,10 +71,18 @@ a {
     z-index: 10;
     background-color: white;
 }
+#map-legend table {
+    border-spacing: 10px;
+}
+#map-legend table td.color {
+    height: 10px;
+    width: 10px;
+    background-color: blue;
+}
 
 #map-control {
-    /*grid-column: 1 / 2;
-    grid-row: 1 / 2;*/
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 #map-control table {
     text-align: center;
@@ -83,13 +91,13 @@ a {
 }
 #map-control td:first-child {
     width: 130px;
-    text-align: left;
+    text-align: right;
     font-weight: bold;
 }
 #map-control td span {
     padding: 2px 6px;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.3;
     border: 1px solid black;
     border-radius: 6px;
 }
@@ -118,6 +126,9 @@ a {
 #lightbulbs {
     margin: 20px 0 30px;
     text-align: center;
+}
+#lightbulbs img {
+    width: 17%; /* 5 bulbs across */
 }
 
 #plants-info {

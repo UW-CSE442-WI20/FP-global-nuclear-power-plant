@@ -30483,7 +30483,7 @@ module.exports = {
         }
       }, {
         "type": "MultiPolygon",
-        "arcs": [[[1302]], [[-374, -1025, 1303, -873, 1304, -411, 1305, -409, 1306, 1307, -928, -1283]], [[1308]], [[1309]], [[1310]], [[1311]], [[1312]], [[1313]], [[1314]], [[-386, 1315, 1316]]],
+        "arcs": [[[-374, -1025, 1303, -873, 1304, -411, 1305, -409, 1306, 1307, -928, -1283]]],
         "id": "250",
         "properties": {
           "name": "France"
@@ -31062,7 +31062,7 @@ module.exports = {
     "translate": [-180, -89.999]
   }
 };
-},{}],"map.js":[function(require,module,exports) {
+},{}],"dashboard.js":[function(require,module,exports) {
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -31086,23 +31086,30 @@ var max_zoom = 5; // Scale factor for zoom (1 means match bounding box of countr
 
 var zoom_scale = .5; // currently highlighted country
 
-var selected_country; // column to be color-encoded on the map: 'nuclear_share_percentage', 'under_construction', or 'active_total_ratio'
+var selected_country; // upper bounds for the color maps
 
-var legend_choice = 'under_construction'; // upper bounds for the color maps
+var bounds_percent = [0, 10, 30, 50, 70, 100];
+var bounds_construction = [0, 1, 2, 5, 8, 11];
+var bounds_ratio = [0, .2, .4, .6, .9, 1]; // legend descriptions
 
-var bounds_percent = [0, 10, 30, 50, 100];
-var bounds_construction = [0, 1, 2, 5, 11];
-var bounds_ratio = [.2, .4, .6, .9, 1];
-var teal_blue_colors = ['#bce4d8', '#81c4cb', '#45a2b9', '#347da0', '#2c5985'];
+var legend_text_percent = ['0%', '1-10%', '11-30%', '31-50%', '51-70%', '71-100%'];
+var legend_text_construction = ['0', '1', '2', '3-5', '6-10', '11+'];
+var legend_text_ratio = ['0%', '1-20%', '21-40%', '41-60%', '61-90%', '91-100%'];
+var teal_blue_colors = ['#ececec', '#bce4d8', '#81c4cb', '#45a2b9', '#347da0', '#2c5985'];
 var orange_blue_colors = ['#d45b22', '#f69035', '#d9d5d9', '#78add3', '#5083af'];
+var color_scale_percent = createColorScale(bounds_percent, teal_blue_colors);
+var color_scale_construction = createColorScale(bounds_construction, teal_blue_colors);
+var color_scale_ratio = createColorScale(bounds_ratio, teal_blue_colors);
 
-var Map =
+var Dashboard =
 /*#__PURE__*/
 function () {
-  function Map(data) {
-    _classCallCheck(this, Map);
+  function Dashboard(data) {
+    _classCallCheck(this, Dashboard);
 
-    country_nuclear_data = data;
+    country_nuclear_data = data; // column to be color-encoded on the map: 'nuclear_share_percentage', 'under_construction', or 'active_total_ratio'
+
+    this.legend_choice = 'nuclear_share_percentage';
     this.word_total_operating = 0;
     this.world_total_inprogess = 0;
     this.world_total_shutdown = 0;
@@ -31135,20 +31142,58 @@ function () {
         }
       }
     }
-
-    this.color_scale_percent = this.createColorScale(bounds_percent, teal_blue_colors);
-    this.color_scale_construction = this.createColorScale(bounds_construction, teal_blue_colors);
-    this.color_scale_ratio = this.createColorScale(bounds_ratio, orange_blue_colors);
-    console.log(this.color_scale_construction);
   }
 
-  _createClass(Map, [{
+  _createClass(Dashboard, [{
     key: "createMap",
     value: function createMap() {
       svg = d3.select("#map-container").append("svg").attr("width", width).attr("height", height);
       var projection = d3.geoMercator().scale(1 * width / 2 / Math.PI).translate([width / 2, height / 1.55]);
       path = d3.geoPath().projection(projection);
-      svg.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append("path").attr("d", path).attr("fill", function (d) {
+      this.countryPath = svg.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append("path").attr("d", path).on("click", function (d) {
+        this.getCountryInfo(d);
+        this.clicked(d);
+      }.bind(this));
+      this.refreshColorMap();
+      this.resetValuesToWorld();
+      d3.select("#".concat(this.legend_choice)).classed('selected', true);
+    }
+  }, {
+    key: "resetValuesToWorld",
+    value: function resetValuesToWorld() {
+      this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
+      this.getLightBulbs(10.15, "The World");
+    }
+  }, {
+    key: "refreshColorMap",
+    value: function refreshColorMap() {
+      var color_list, text_list;
+
+      switch (this.legend_choice) {
+        case 'under_construction':
+          color_list = teal_blue_colors;
+          text_list = legend_text_construction;
+          break;
+
+        case 'active_total_ratio':
+          color_list = teal_blue_colors;
+          text_list = legend_text_ratio;
+          break;
+
+        default:
+          color_list = teal_blue_colors;
+          text_list = legend_text_percent;
+          break;
+      }
+
+      var legend_table = d3.select('#map-legend table');
+
+      for (var i = 0; i < 6; i++) {
+        legend_table.select(".c".concat(i, " .color")).style('background-color', color_list[i]);
+        legend_table.select(".c".concat(i, " .text")).text(text_list[i]);
+      }
+
+      this.countryPath.transition().duration(1000).attr('fill', function (d) {
         var _iteratorNormalCompletion2 = true;
         var _didIteratorError2 = false;
         var _iteratorError2 = undefined;
@@ -31158,16 +31203,23 @@ function () {
             var c = _step2.value;
 
             if (c.country == d.properties.name && countries_with_data.includes(d.properties.name)) {
-              switch (legend_choice) {
+              var color = void 0;
+
+              switch (this.legend_choice) {
                 case 'under_construction':
-                  return this.color_scale_construction(c.under_construction);
+                  color = color_scale_construction(c.under_construction);
+                  break;
 
                 case 'active_total_ratio':
-                  return this.color_scale_ratio(c.active_total_ratio);
+                  color = color_scale_ratio(c.active_total_ratio);
+                  break;
 
                 default:
-                  return this.color_scale_percent(c.nuclear_share_percentage);
+                  color = color_scale_percent(c.nuclear_share_percentage);
+                  break;
               }
+
+              return color;
             }
           }
         } catch (err) {
@@ -31186,19 +31238,7 @@ function () {
         }
 
         return "#ececec"; // else no data
-      }).on("click", function (d) {
-        this.getCountryInfo(d);
-        this.clicked(d);
       }.bind(this));
-      this.resetValuesToWorld(); // temp fix
-
-      countries_with_data.push('Philippines');
-    }
-  }, {
-    key: "resetValuesToWorld",
-    value: function resetValuesToWorld() {
-      this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
-      this.getLightBulbs(10.15, "The World");
     }
   }, {
     key: "getCountryInfo",
@@ -31328,27 +31368,25 @@ function () {
       document.getElementById('plants-working').innerText = working;
       document.getElementById('plants-ip').innerText = in_progress;
       document.getElementById('plants-abandon').innerText = abandon;
-    } // upper_bounds is an int array of the inclusive upper bound of each bin (starting at 0)
-    // colors is a string array of equal length
-    // returns a callable function that functions like a d3 scale, but for colors
-
-  }, {
-    key: "createColorScale",
-    value: function createColorScale(upper_bounds, colors) {
-      return function (value) {
-        for (var i = 0; i <= upper_bounds.length; i++) {
-          if (value < upper_bounds[i]) return colors[i];
-        }
-
-        return '#ececec';
-      };
     }
   }]);
 
-  return Map;
+  return Dashboard;
 }();
 
-module.exports = Map;
+module.exports = Dashboard; // upper_bounds is an int array of the inclusive upper bound of each bin (starting at 0)
+// colors is a string array of equal length
+// returns a callable function that functions like a d3 scale, but for colors
+
+function createColorScale(upper_bounds, colors) {
+  return function (value) {
+    for (var i = 0; i < upper_bounds.length; i++) {
+      if (value <= upper_bounds[i]) return colors[i];
+    }
+
+    return '#ececec';
+  };
+}
 },{"d3":"../node_modules/d3/index.js","../static/world-map-geo.json":"../static/world-map-geo.json"}],"index.js":[function(require,module,exports) {
 // You can require libraries
 var d3 = require('d3'); // You can include local JS files:
@@ -31366,11 +31404,19 @@ d3.csv('all_fuels.csv').then(function (data) {// console.log('Dynamically loaded
   // Do stuff
 });
 
-var Map = require('./map.js');
+var Dashboard = require('./dashboard.js');
 
-var MapInstance = new Map(data_nuclear_only);
-MapInstance.createMap();
-},{"d3":"../node_modules/d3/index.js","./my-class":"my-class.js","./country_nuclear_status.json":"country_nuclear_status.json","./map.js":"map.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var DashboardInstance = new Dashboard(data_nuclear_only);
+DashboardInstance.createMap();
+var control_spans = d3.selectAll('#map-control span').on('click', function () {
+  if (DashboardInstance.legend_choice != this.id) {
+    DashboardInstance.legend_choice = this.id;
+    control_spans.classed('selected', false);
+    d3.select("#".concat(DashboardInstance.legend_choice)).classed('selected', true);
+    DashboardInstance.refreshColorMap();
+  }
+});
+},{"d3":"../node_modules/d3/index.js","./my-class":"my-class.js","./country_nuclear_status.json":"country_nuclear_status.json","./dashboard.js":"dashboard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -31398,7 +31444,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59026" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51680" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
