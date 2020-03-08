@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>nUCleAr iS BaD</title>
-  <link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/style.8610233c.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/style.8a97fc99.css">
   <script src="https://unpkg.com/topojson-client@3"></script>
-
 </head>
 
 <body>
@@ -16,30 +15,56 @@
       <h1>Nukes!</h1>
       <h3>Do you know how much we rely on nuclear power?</h3>
       <img style="width: 20%; padding: 10px;" src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/giphy.8b87c8a4.gif">
-      <a href="#grid-container" class="more">See more!</a>
+      <a href="#dashboard" class="more">See more!</a>
     </div>
     <div class="nuclear-intro-container">
       intro goes here
     </div>
-    <div class="america-container">
-      america info here
+    <div id="america-container">
+      <div id="america-map" class="map"></div>
+      <div id="america-text" class="info-text">I AM USA</div>
     </div>
     <div class="menu">
-      <button>button 1</button>
-      <button>button 2</button>
-      <button>button 3</button>
-      <h1>MENU is here</h1>
+      <h1>Let's take a look at other countries!</h1>
+      <div style="display: flex;">
+        <a href="#countries" id="china" class="more country-button">China</a>
+        <a href="#countries" id="japan" class="more country-button">Japan</a>
+        <a href="#countries" id="france" class="more country-button">France</a>
+        <a href="#countries" id="australia" class="more country-button">Australia</a>
+      </div>
     </div>
-    <div class="countries-container w3-display-container">
-      <div class="slide slide1">foo</div>
-      <div class="slide slide2">foo</div>
-      <div class="slide slide3">foo</div>
+    <div id="countries" class="countries-container w3-display-container">
+      <div class="slide slide1">
+        <div style="display: flex">
+          <div id="china-map" class="map">china</div>
+          <div id="china-text" class="info-text">wo shi china</div>
+        </div>
+      </div>
+      <div class="slide slide2">
+        <div style="display: flex">
+          <div id="japan-map" class="map">japan</div>
+          <div id="japan-text" class="info-text">watashi wa nihon</div>
+        </div>
+      </div>
+      <div class="slide slide3">
+        <div style="display: flex">
+          <div id="france-map" class="map">france</div>
+          <div id="france-text" class="info-text">je suis la france</div>
+        </div>
+      </div>
+      <div class="slide slide4">
+        <div style="display: flex">
+          <div id="australia-map" class="map">australia</div>
+          <div id="australia-text" class="info-text">i guess i speak english</div>
+        </div>
+      </div>
       <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
         <div id="left" class="w3-left w3-hover-text-khaki">&#10094;</div>
         <div id="right" class="w3-right w3-hover-text-khaki">&#10095;</div>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        <span id="dot1" class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+        <span id="dot2" class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+        <span id="dot3" class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+        <span id="dot4" class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
       </div>
     </div>
   </div>
@@ -88,11 +113,7 @@
     </div>
   </div>
 
-  <br>
-  <br>
-
-  <script src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/src.eca3e659.js"></script>
-  <script src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/slideshow.3fb245c8.js"></script>
+  <script src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/src.5c378889.js"></script>
 </body>
 
 </html>
