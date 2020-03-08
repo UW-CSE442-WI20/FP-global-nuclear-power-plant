@@ -248,4 +248,10 @@ a {
     width: 50%;
 }
 
-
+.tooltip {
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 2px;
+    background: transparent;
+    font-weight: 700;
+}
