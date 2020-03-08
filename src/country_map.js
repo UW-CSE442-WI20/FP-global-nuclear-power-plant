@@ -37,75 +37,84 @@ const country_position = [
 ]
 
 class CountryMap {
-    constructor(data) {
+    constructor(data, container, country_name) {
         this.nuclear_powerplant_locations = data;
+        this.container = container;
+        this.country_name = country_name;
+        this.svg = null;
+        this.projection = null;
+        
+        this.dotsID = `#${country_name}dots`;
+        this.tooltipsID = `#${country_name}tooltips`;
     }
 
     // pass in the name of the country and the div it should be in
-    makeCountryMap(country_name, container) {
-        let svg = d3.select(container)
+    makeCountryMap() {
+        this.svg = d3.select(this.container)
             .append("svg")
             .attr("width", width)
             .attr("height", height);
 
         country_coord = {};
         for (let c of country_position) {
-            if (c.country == country_name) {
+            if (c.country == this.country_name) {
                 country_coord.scale = c.scale;
                 country_coord.center = c.center;
             }
         }
 
-        let projection = d3.geoMercator()
+        this.projection = d3.geoMercator()
             .center(country_coord.center) // x, y lower y higher up it is
             .scale(country_coord.scale)
             .translate([width / 2, height / 2])
 
         let path = d3.geoPath()
-            .projection(projection);
+            .projection(this.projection);
 
-        svg.selectAll("path")
+        this.svg.selectAll("path")
             .data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries)
-                .features.filter(function (d) { return country_name == d.properties.name; }))
+                .features.filter(function (d) {
+                    return this.country_name === d.properties.name;
+                }.bind(this)))
             .enter()
             .append("path")
             .attr("d", path)
             .attr("fill", "#aaaaaa");
 
-
-        console.log(country_name);
-        this.plotPlants(country_name, svg, projection);
+        //this.plotPlants();
     }
 
-    plotPlants(country_name, svg, projection) {
+    plotPlants() {
         let powerplants = [];
         for (let c of this.nuclear_powerplant_locations) {
-            if (c.country_long == country_name) {
+            if (c.country_long == this.country_name) {
                 powerplants.push(c);
             }
         }
 
         console.log(powerplants);
 
-        let tooltip = d3.select("body")
+        let tooltip = d3.select(this.container)
             .append("div")
             .style("position", "absolute")
             .style("z-index", "10")
             .style("visibility", "hidden")
             .style("background", "#ffff")
+            .attr("id", this.tooltipsID)
             .text("a simple tooltip");
 
-        let circles = svg.selectAll(".pin")
+        let circles = this.svg.selectAll(".pin")
             .data(powerplants)
             .enter()
             .append("circle", ".pin")
             .attr("r", 5)
+            .attr("id", this.dotsID)
             .attr("transform", function (d) {
-                return "translate(" + projection([
+                return "translate(" + this.projection([
                     d.longitude,
                     800
                 ]) + ")";
-            })
+            }.bind(this))
             .style("fill", "#000")
             .style("stroke", "#90ee90")
             .style("stroke-width", 2)
@@ -133,11 +142,11 @@ class CountryMap {
             .duration(800)
             .ease(this.customBounce(.08))
             .attr("transform", function (d) {
-                return "translate(" + projection([
+                return "translate(" + this.projection([
                     d.longitude,
                     d.latitude
                 ]) + ")";
-            });
+            }.bind(this));
     }
 
     customBounce(h) {
@@ -162,6 +171,15 @@ class CountryMap {
                         : t < t2 ? a * (t -= m1) * t + b1
                             : a * (t -= m2) * t + b2;
         };
+    }
+
+    /* call this function like this
+    d3.select('#button').on('click', () => {
+        CountryMapInstance.clearDots()
+    });
+    */
+    clearDots() {
+        d3.select(this.container).selectAll("circle").remove();
     }
 }
 

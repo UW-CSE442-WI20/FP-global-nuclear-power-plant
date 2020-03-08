@@ -25,5 +25,14 @@ MapInstance.createMap();*/
 const nuclear_powerplant_locations = require('./nuclear-only.json');
 
 const CountryMap = require('./country_map.js');
-const CountryMapInstance = new CountryMap(nuclear_powerplant_locations);
-CountryMapInstance.makeCountryMap("United States of America", "#country-map-container");
+const CountryMapInstance = new CountryMap(nuclear_powerplant_locations, "#country-map-container", "France");
+CountryMapInstance.makeCountryMap();
+CountryMapInstance.plotPlants();
+
+d3.select('#button1').on('click', () => {
+  CountryMapInstance.clearDots()
+});
+
+d3.select('#button2').on('click', () => {
+  CountryMapInstance.plotPlants()
+});
