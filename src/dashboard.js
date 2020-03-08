@@ -2,58 +2,63 @@ const d3 = require('d3')
 
 const worldmap_geo_json = require('../static/world-map-geo.json'); // https://github.com/topojson/world-atlas
 
+// SVG height and width (TODO: why are these set to such arbitrary values??)
+const height = 546;
+const width = 1113;
+
+// Minimum and maximum zoom levels when clicking on a country
+const min_zoom = 2;
+const max_zoom = 5;
+
+// Scale factor for zoom (1 means match bounding box of country)
+const zoom_scale = .5;
+
+// Upper bounds for the color maps
+const bounds_percent = [0, 10, 30, 50, 70, 100];
+const bounds_construction = [0, 1, 2, 5, 8, 11];
+const bounds_ratio = [0, .2, .4, .6, .8, 1];
+
+// Legend descriptions
+const legend_text_percent = ['0%', '1-10%', '11-30%', '31-50%', '51-70%' , '71-100%'];
+const legend_text_construction = ['0', '1', '2', '3-5', '6-10', '11+'];
+const legend_text_ratio = ['No Nuclear', '0-20%', '21-40%', '41-60%', '61-80%', '81-100%'];
+
+const teal_blue_colors = ['#ececec', '#bce4d8', '#81c4cb','#45a2b9', '#347da0', '#2c5985'];
+const orange_blue_colors = ['#ececec', '#d45b22', '#f69035', '#AAA194', '#78add3', '#5083af'];
+
+// Color scale functions
+const color_scale_percent = createColorScale(bounds_percent, teal_blue_colors);
+const color_scale_construction = createColorScale(bounds_construction, teal_blue_colors);
+const color_scale_ratio = createColorScale(bounds_ratio, orange_blue_colors);
+
+
+// Currently highlighted country
+var selected_country;
+
 var country_nuclear_data;
 var countries_with_data = [];
 var geo_path;
 var map_container;
 
-const height = 546;
-const width = 1113;
-
-// Minimum and maximum zoom levels when clicking on a country
-var min_zoom = 2;
-var max_zoom = 5;
-
-// Scale factor for zoom (1 means match bounding box of country)
-var zoom_scale = .5;
-
-// currently highlighted country
-var selected_country;
-
-// upper bounds for the color maps
-let bounds_percent = [0, 10, 30, 50, 70, 100];
-let bounds_construction = [0, 1, 2, 5, 8, 11];
-let bounds_ratio = [0, .2, .4, .6, .8, 1];
-
-// legend descriptions
-let legend_text_percent = ['0%', '1-10%', '11-30%', '31-50%', '51-70%' , '71-100%'];
-let legend_text_construction = ['0', '1', '2', '3-5', '6-10', '11+'];
-let legend_text_ratio = ['No Nuclear', '0-20%', '21-40%', '41-60%', '61-80%', '81-100%'];
-
-let teal_blue_colors = ['#ececec', '#bce4d8', '#81c4cb','#45a2b9', '#347da0', '#2c5985'];
-let orange_blue_colors = ['#ececec', '#d45b22', '#f69035', '#AAA194', '#78add3', '#5083af'];
-
-let color_scale_percent = createColorScale(bounds_percent, teal_blue_colors);
-let color_scale_construction = createColorScale(bounds_construction, teal_blue_colors);
-let color_scale_ratio = createColorScale(bounds_ratio, orange_blue_colors);
+// World info values
+world_total_operating = 0;
+world_total_inprogess = 0;
+world_total_shutdown = 0;
 
 class Dashboard {
     constructor(data) {
         country_nuclear_data = data;
 
         // column to be color-encoded on the map: 'nuclear_share_percentage', 'under_construction', or 'active_total_ratio'
+        // created as class variable to be accessible from outside this file (temp hack for #map-control functionality)
         this.legend_choice = 'nuclear_share_percentage';
-
-        this.word_total_operating = 0;
-        this.world_total_inprogess = 0;
-        this.world_total_shutdown = 0;
 
         for (let c of country_nuclear_data) {
             countries_with_data.push(c.country);
             if (c.country == "World") {
-                this.word_total_operating = c.operating;
-                this.world_total_inprogess = c.under_construction;
-                this.world_total_shutdown = c.abandoned_construction + c.longterm_outage + c.permanent_shutdown;
+                world_total_operating = c.operating;
+                world_total_inprogess = c.under_construction;
+                world_total_shutdown = c.abandoned_construction + c.longterm_outage + c.permanent_shutdown;
             }
         }
     }
@@ -188,7 +193,7 @@ class Dashboard {
 
     resetToWorld() {
         this.getLightBulbs(10.15, "The World");
-        this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
+        this.getFactories(world_total_operating, world_total_inprogess, world_total_shutdown);
         
         selected_country = -1;
         map_container.selectAll('path')
