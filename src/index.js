@@ -3,6 +3,10 @@ const d3 = require('d3')
 
 // Gets included in js bundle
 const data_nuclear_only = require('./country_nuclear_status.json');
+const nuclear_powerplants = require('./nuclear-only.json');
+
+const Map = require('./country_map.js');
+//const USMapInstance = new Map(nuclear_powerplants, "", "United States of America");
 
 const Dashboard = require('./dashboard.js');
 const DashboardInstance = new Dashboard(data_nuclear_only);
