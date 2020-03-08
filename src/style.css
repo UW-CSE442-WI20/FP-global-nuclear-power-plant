@@ -58,6 +58,17 @@ a {
   .parallax .america-container {
     background-color: lightblue;
     height: 100vh;
+    display: flex;
+  }
+
+  .america-map {
+    background-color: red;
+    width: 100%
+  }
+
+  .america-text {
+    background-color: orange;
+    width: 100%;
   }
 
   .parallax .nuclear-intro-container {
