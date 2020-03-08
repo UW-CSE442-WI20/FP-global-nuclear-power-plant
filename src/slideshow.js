@@ -29,6 +29,22 @@ document.getElementById("left").addEventListener("click", function() {
     plusDivs(-1);
 })
 
-document.getElementById("right").addEventListener("click", () => {
-    this.plusDivs(-1);
+document.getElementById("right").addEventListener("click", function() {
+    plusDivs(1);
+})
+
+document.getElementById("dot1").addEventListener("click", function() {
+    currentDiv(1);
+})
+
+document.getElementById("dot2").addEventListener("click", function() {
+    currentDiv(2);
+})
+
+document.getElementById("dot3").addEventListener("click", function() {
+    currentDiv(3);
+})
+
+document.getElementById("dot4").addEventListener("click", function() {
+    currentDiv(4);
 })
