@@ -4,8 +4,8 @@ const worldmap_geo_json = require('../static/world-map-geo.json'); // https://gi
 
 var country_nuclear_data;
 var countries_with_data = [];
-var path;
-var svg;
+var geo_path;
+var map_container;
 
 const height = 546;
 const width = 1113;
@@ -59,38 +59,43 @@ class Dashboard {
     }
 
     createMap() {
-        svg = d3.select("#map-container")
+        map_container = d3.select("#map-container")
             .append("svg")
             .attr("width", width)
             .attr("height", height);
-
 
         let projection = d3.geoMercator()
             .scale(1 * width / 2 / Math.PI)
             .translate([width / 2, height / 1.55])
 
-        path = d3.geoPath()
+        geo_path = d3.geoPath()
             .projection(projection);
 
-        this.countryPath = svg.selectAll("path")
+        this.country_path = map_container.selectAll("path")
             .data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries)
                 .features)
             .enter()
             .append("path")
-            .attr("d", path)
+            .attr("d", geo_path)
             .on('click', function (d) {
+                d3.event.stopPropagation();
                 this.getCountryInfo(d);
                 this.clicked(d);
             }.bind(this))
 
-
         this.refreshColorMap();
-
-        this.resetValuesToWorld();
+        this.resetToWorld();
 
         d3.select(`#${this.legend_choice}`).classed('selected', true);
+
+        // return to world view if the ocean is clicked
+        d3.select('#map-container>svg')
+            .on('click', function () {
+                this.resetToWorld();
+            }.bind(this))
     }
 
+    // updates the legend and the map to reflect a new encoding selection
     refreshColorMap() {
         let color_list, text_list;
         switch(this.legend_choice) {
@@ -116,7 +121,7 @@ class Dashboard {
                 .text(text_list[i])
         }
 
-        this.countryPath
+        this.country_path
             .transition()
             .duration(1000)
             .attr('fill', function (d) {
@@ -141,19 +146,19 @@ class Dashboard {
             }.bind(this))
     }
 
-    // runs whenever a *country* is clicked, TODO also run when background is clicked
+    // runs whenever a *country* is clicked
     clicked(d) {
         var dx, dy, k;
 
         var country = d.properties.name;
 
         if (selected_country !== country) {
-            var centroid = path.centroid(d);
+            var centroid = geo_path.centroid(d);
 
             dx = width / 2 - centroid[0];
             dy = height / 2 - centroid[1];
 
-            var bounds = path.bounds(d);
+            var bounds = geo_path.bounds(d);
             var boxw = bounds[1][0] - bounds[0][0];
             var boxh = bounds[1][1] - bounds[0][1];
 
@@ -162,7 +167,7 @@ class Dashboard {
             if (k > max_zoom) k = max_zoom;
 
             selected_country = country;
-            svg.selectAll('path')
+            map_container.selectAll('path')
                 .classed('active', function (d) { return d.properties.name === selected_country; })
 
             for (let c of country_nuclear_data) {
@@ -174,23 +179,28 @@ class Dashboard {
                     break;
                 }
             }
+
+            this.zoomMap(k, dx, dy);
         } else {
-            this.resetValuesToWorld();
-            dx = 0, dy = 0, k = 1;
-
-            selected_country = -1;
-            svg.selectAll('path')
-                .classed('active', false);
+            this.resetToWorld();
         }
-
-        svg.transition()
-            .duration(750)
-            .attr('transform', `scale(${k})translate(${dx},${dy})`);
     }
 
-    resetValuesToWorld() {
+    resetToWorld() {
         this.getLightBulbs(10.15, "The World");
         this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
+        
+        selected_country = -1;
+        map_container.selectAll('path')
+            .classed('active', false)
+
+        this.zoomMap(1, 0, 0);
+    }
+
+    zoomMap(k, dx, dy) {
+        map_container.transition()
+            .duration(750)
+            .attr('transform', `scale(${k})translate(${dx},${dy})`);
     }
 
     getCountryInfo(d) {

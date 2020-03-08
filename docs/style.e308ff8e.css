@@ -91,7 +91,7 @@ a {
 }
 #map-control td:first-child {
     width: 130px;
-    text-align: left;
+    text-align: right;
     font-weight: bold;
 }
 #map-control td span {
@@ -126,6 +126,9 @@ a {
 #lightbulbs {
     margin: 20px 0 30px;
     text-align: center;
+}
+#lightbulbs img {
+    width: 17%; /* 5 bulbs across */
 }
 
 #plants-info {

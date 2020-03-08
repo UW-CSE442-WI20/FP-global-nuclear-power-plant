@@ -31090,16 +31090,16 @@ var selected_country; // upper bounds for the color maps
 
 var bounds_percent = [0, 10, 30, 50, 70, 100];
 var bounds_construction = [0, 1, 2, 5, 8, 11];
-var bounds_ratio = [0, .2, .4, .6, .9, 1]; // legend descriptions
+var bounds_ratio = [0, .2, .4, .6, .8, 1]; // legend descriptions
 
 var legend_text_percent = ['0%', '1-10%', '11-30%', '31-50%', '51-70%', '71-100%'];
 var legend_text_construction = ['0', '1', '2', '3-5', '6-10', '11+'];
-var legend_text_ratio = ['0%', '1-20%', '21-40%', '41-60%', '61-90%', '91-100%'];
+var legend_text_ratio = ['No Nuclear', '0-20%', '21-40%', '41-60%', '61-80%', '81-100%'];
 var teal_blue_colors = ['#ececec', '#bce4d8', '#81c4cb', '#45a2b9', '#347da0', '#2c5985'];
-var orange_blue_colors = ['#d45b22', '#f69035', '#d9d5d9', '#78add3', '#5083af'];
+var orange_blue_colors = ['#ececec', '#d45b22', '#f69035', '#AAA194', '#78add3', '#5083af'];
 var color_scale_percent = createColorScale(bounds_percent, teal_blue_colors);
 var color_scale_construction = createColorScale(bounds_construction, teal_blue_colors);
-var color_scale_ratio = createColorScale(bounds_ratio, teal_blue_colors);
+var color_scale_ratio = createColorScale(bounds_ratio, orange_blue_colors);
 
 var Dashboard =
 /*#__PURE__*/
@@ -31150,19 +31150,13 @@ function () {
       svg = d3.select("#map-container").append("svg").attr("width", width).attr("height", height);
       var projection = d3.geoMercator().scale(1 * width / 2 / Math.PI).translate([width / 2, height / 1.55]);
       path = d3.geoPath().projection(projection);
-      this.countryPath = svg.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append("path").attr("d", path).on("click", function (d) {
+      this.countryPath = svg.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append("path").attr("d", path).on('click', function (d) {
         this.getCountryInfo(d);
         this.clicked(d);
       }.bind(this));
       this.refreshColorMap();
       this.resetValuesToWorld();
       d3.select("#".concat(this.legend_choice)).classed('selected', true);
-    }
-  }, {
-    key: "resetValuesToWorld",
-    value: function resetValuesToWorld() {
-      this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
-      this.getLightBulbs(10.15, "The World");
     }
   }, {
     key: "refreshColorMap",
@@ -31176,7 +31170,7 @@ function () {
           break;
 
         case 'active_total_ratio':
-          color_list = teal_blue_colors;
+          color_list = orange_blue_colors;
           text_list = legend_text_ratio;
           break;
 
@@ -31239,38 +31233,6 @@ function () {
 
         return "#ececec"; // else no data
       }.bind(this));
-    }
-  }, {
-    key: "getCountryInfo",
-    value: function getCountryInfo(d) {
-      var _iteratorNormalCompletion3 = true;
-      var _didIteratorError3 = false;
-      var _iteratorError3 = undefined;
-
-      try {
-        for (var _iterator3 = country_nuclear_data[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-          var c = _step3.value;
-
-          if (c.country == d.properties.name) {
-            this.getLightBulbs(c.nuclear_share_percentage, c.country);
-            this.getFactories(c.operating, c.under_construction, c.abandoned_construction + c.longterm_outage + c.permanent_shutdown);
-            break;
-          }
-        }
-      } catch (err) {
-        _didIteratorError3 = true;
-        _iteratorError3 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
-            _iterator3.return();
-          }
-        } finally {
-          if (_didIteratorError3) {
-            throw _iteratorError3;
-          }
-        }
-      }
     } // runs whenever a *country* is clicked, TODO also run when background is clicked
 
   }, {
@@ -31279,7 +31241,7 @@ function () {
       var dx, dy, k;
       var country = d.properties.name;
 
-      if (selected_country !== country && countries_with_data.includes(country)) {
+      if (selected_country !== country) {
         var centroid = path.centroid(d);
         dx = width / 2 - centroid[0];
         dy = height / 2 - centroid[1];
@@ -31293,13 +31255,13 @@ function () {
         svg.selectAll('path').classed('active', function (d) {
           return d.properties.name === selected_country;
         });
-        var _iteratorNormalCompletion4 = true;
-        var _didIteratorError4 = false;
-        var _iteratorError4 = undefined;
+        var _iteratorNormalCompletion3 = true;
+        var _didIteratorError3 = false;
+        var _iteratorError3 = undefined;
 
         try {
-          for (var _iterator4 = country_nuclear_data[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-            var c = _step4.value;
+          for (var _iterator3 = country_nuclear_data[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+            var c = _step3.value;
 
             if (c.country == selected_country) {
               var _country = c.country;
@@ -31314,16 +31276,16 @@ function () {
             }
           }
         } catch (err) {
-          _didIteratorError4 = true;
-          _iteratorError4 = err;
+          _didIteratorError3 = true;
+          _iteratorError3 = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
-              _iterator4.return();
+            if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
+              _iterator3.return();
             }
           } finally {
-            if (_didIteratorError4) {
-              throw _iteratorError4;
+            if (_didIteratorError3) {
+              throw _iteratorError3;
             }
           }
         }
@@ -31337,37 +31299,86 @@ function () {
       svg.transition().duration(750).attr('transform', "scale(".concat(k, ")translate(").concat(dx, ",").concat(dy, ")"));
     }
   }, {
-    key: "getLightBulbs",
-    value: function getLightBulbs(percentage, country) {
-      var bulbNumber = 20;
-      var string_p = percentage.toFixed(2).bold();
-      document.getElementById("lightbulbs").innerHTML = "";
+    key: "resetValuesToWorld",
+    value: function resetValuesToWorld() {
+      this.getLightBulbs(10.15, "The World");
+      this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
+    }
+  }, {
+    key: "getCountryInfo",
+    value: function getCountryInfo(d) {
+      var _iteratorNormalCompletion4 = true;
+      var _didIteratorError4 = false;
+      var _iteratorError4 = undefined;
 
-      if (country === "United States of American") {
-        country = "United States";
+      try {
+        for (var _iterator4 = country_nuclear_data[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+          var c = _step4.value;
+
+          if (c.country == d.properties.name) {
+            this.getLightBulbs(c.nuclear_share_percentage, c.country);
+            this.getFactories(c.operating, c.under_construction, c.abandoned_construction + c.longterm_outage + c.permanent_shutdown);
+            return;
+          }
+        }
+      } catch (err) {
+        _didIteratorError4 = true;
+        _iteratorError4 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
+            _iterator4.return();
+          }
+        } finally {
+          if (_didIteratorError4) {
+            throw _iteratorError4;
+          }
+        }
       }
 
-      document.getElementById("country-text").innerHTML = "".concat(country);
-      document.getElementById("percentage-text").innerHTML = "gets ".concat(string_p, "% <br>of its power from nuclear energy.");
-      var lightbulbs = Math.round(percentage * (bulbNumber / 100));
+      this.nonNuclearCountry(d.properties.name);
+    }
+  }, {
+    key: "getLightBulbs",
+    value: function getLightBulbs(percentage, country) {
+      var TOTAL_BULBS = 20; // fix crashes when a country doesn't have a percentage
+
+      if (percentage == '') percentage = 0; // fix text overflow
+
+      if (country === 'United States of American') country = 'United States';
+      var string_p = percentage.toFixed(2).bold();
+      var lightbulbs = Math.round(percentage * (TOTAL_BULBS / 100));
       var all_bulbs = '';
 
       for (var i = 0; i < lightbulbs; i++) {
-        all_bulbs += '<img src="./LightBulb.png" style="width: 17%;">';
+        all_bulbs += '<img src="./LightBulb.png">';
       }
 
-      for (var i = 0; i < bulbNumber - lightbulbs; i++) {
-        all_bulbs += '<img src="./Dimbulb.png" style="width: 17%;">';
+      for (var i = 0; i < TOTAL_BULBS - lightbulbs; i++) {
+        all_bulbs += '<img src="./Dimbulb.png">';
       }
 
-      document.getElementById("lightbulbs").innerHTML += all_bulbs;
+      document.getElementById('country-text').innerHTML = country;
+      document.getElementById('percentage-text').innerHTML = "gets ".concat(string_p, "% <br>of its power from nuclear energy.");
+      document.getElementById('lightbulbs').innerHTML = all_bulbs;
     }
   }, {
     key: "getFactories",
     value: function getFactories(working, in_progress, abandon) {
+      if (working == '') working = 0;
+      if (in_progress == '') in_progress = 0;
+      if (abandon == '') abandon = 0;
       document.getElementById('plants-working').innerText = working;
       document.getElementById('plants-ip').innerText = in_progress;
       document.getElementById('plants-abandon').innerText = abandon;
+    }
+  }, {
+    key: "nonNuclearCountry",
+    value: function nonNuclearCountry(country) {
+      document.getElementById('country-text').innerHTML = country;
+      document.getElementById('percentage-text').innerHTML = '<br />has no nuclear power plants';
+      document.getElementById('lightbulbs').innerHTML = '';
+      this.getFactories(0, 0, 0);
     }
   }]);
 
@@ -31444,7 +31455,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51680" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52725" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
