@@ -13,6 +13,9 @@ const max_zoom = 5;
 // Scale factor for zoom (1 means match bounding box of country)
 const zoom_scale = .5;
 
+// Country border thickness when zoomed out
+const default_stroke_width = 0.5;
+
 // Upper bounds for the color maps
 const bounds_percent = [0, 10, 30, 50, 70, 100];
 const bounds_construction = [0, 1, 2, 5, 8, 11];
@@ -64,10 +67,10 @@ class Dashboard {
     }
 
     createMap() {
-        map_container = d3.select("#map-container")
-            .append("svg")
-            .attr("width", width)
-            .attr("height", height);
+        map_container = d3.select('#map-container')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height);
 
         let projection = d3.geoMercator()
             .scale(1 * width / 2 / Math.PI)
@@ -76,12 +79,14 @@ class Dashboard {
         geo_path = d3.geoPath()
             .projection(projection);
 
-        this.country_path = map_container.selectAll("path")
+        this.country_path = map_container.selectAll('path')
             .data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries)
                 .features)
             .enter()
-            .append("path")
-            .attr("d", geo_path)
+            .append('path')
+            .attr('d', geo_path)
+            .style('stroke', '#ffffff')
+            .style('stroke-width', default_stroke_width)
             .on('click', function (d) {
                 d3.event.stopPropagation();
                 this.getCountryInfo(d);
@@ -198,6 +203,8 @@ class Dashboard {
     }
 
     zoomMap(k, dx, dy) {
+        this.country_path.style('stroke-width', default_stroke_width / k);
+
         map_container.transition()
             .duration(750)
             .attr('transform', `scale(${k})translate(${dx},${dy})`);
@@ -215,7 +222,7 @@ class Dashboard {
     }
 
     getLightBulbs(percentage, country) {
-        const TOTAL_BULBS = 20;
+        const total_bulbs = 20;
 
         // fix crashes when a country doesn't have a percentage
         if (percentage == '') percentage = 0;
@@ -224,10 +231,10 @@ class Dashboard {
         if (country === 'United States of American') country = 'United States';
 
         var string_p = percentage.toFixed(2).bold();
-        var lightbulbs = Math.round(percentage * (TOTAL_BULBS / 100));
+        var lightbulbs = Math.round(percentage * (total_bulbs / 100));
         var all_bulbs = '';
         for (var i = 0; i < lightbulbs; i++) all_bulbs += '<img src="./LightBulb.png">';
-        for (var i = 0; i < TOTAL_BULBS - lightbulbs; i++) all_bulbs += '<img src="./Dimbulb.png">';
+        for (var i = 0; i < total_bulbs - lightbulbs; i++) all_bulbs += '<img src="./Dimbulb.png">';
 
         document.getElementById('country-text').innerHTML = country;
         document.getElementById('percentage-text').innerHTML = `gets ${string_p}% <br>of its power from nuclear energy.`;
