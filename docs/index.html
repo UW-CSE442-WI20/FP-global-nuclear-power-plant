@@ -4,41 +4,95 @@
 <head>
   <meta charset="UTF-8">
   <title>nUCleAr iS BaD</title>
-  <link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/style.8e3343da.css">
+  <link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/style.8610233c.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://unpkg.com/topojson-client@3"></script>
 
 </head>
 
 <body>
-  <div class="topic" id="top">
-    <h1>Nukes!</h1>
-    <h3>Do you know how much we rely on nuclear power in the world?</h3>
-    <img style="width: 20%; padding: 10px;" src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/giphy.8b87c8a4.gif">
-    <a href="#grid-container" class="more">See more!</a>
+  <div class="parallax">
+    <div class="topic one">
+      <h1>Nukes!</h1>
+      <h3>Do you know how much we rely on nuclear power?</h3>
+      <img style="width: 20%; padding: 10px;" src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/giphy.8b87c8a4.gif">
+      <a href="#grid-container" class="more">See more!</a>
+    </div>
+    <div class="nuclear-intro-container">
+      intro goes here
+    </div>
+    <div class="america-container">
+      america info here
+    </div>
+    <div class="menu">
+      <button>button 1</button>
+      <button>button 2</button>
+      <button>button 3</button>
+      <h1>MENU is here</h1>
+    </div>
+    <div class="countries-container w3-display-container">
+      <div class="slide slide1">foo</div>
+      <div class="slide slide2">foo</div>
+      <div class="slide slide3">foo</div>
+      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+        <div id="left" class="w3-left w3-hover-text-khaki">&#10094;</div>
+        <div id="right" class="w3-right w3-hover-text-khaki">&#10095;</div>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
+    </div>
   </div>
 
-
-  <div class="grid" id="grid-container">
+  <div id="dashboard">
     <div id="map-container">
+      <div id="map-legend">
+        <table>
+          <tr class="c0"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c1"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c2"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c3"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c4"><td class="color"></td><td class="text"></td></tr>
+          <tr class="c5"><td class="color"></td><td class="text"></td></tr>
+        </table>
+      </div>
     </div>
-    <div id="lightbulbs-container">
+    <div id="country-container">
       <div id="info-text">
         <div id="country-text"></div>
         <div id="percentage-text"></div>
       </div>
-      <div id="lightbulbs"></div>
+      <div id="lightbulbs" title="Each bulb represents 5% of this country's power"></div>
+      <table id="plants-info">
+        <tr>
+          <td><img title="Active Plants" src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/workingPlant.0be76264.png"></td>
+          <td><img title="Plants Under Construction" src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/inProgressPlant.c781badf.png"></td>
+          <td><img title="Shutdown and Abandoned Plants" src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/abandon.c98a812c.png"></td>
+        </tr>
+        <tr>
+          <td id="plants-working">0</td>
+          <td id="plants-ip">0</td>
+          <td id="plants-abandon">0</td>
+        </tr>
+      </table>
+    </div>
+    <div id="map-control">
+      <table>
+        <tr>
+          <td>Change Display:</td>
+          <td><span id="nuclear_share_percentage">Percentage of Power from Nuclear</span></td>
+          <td><span id="under_construction">Number of Plants Under Construction</span></td>
+          <td><span id="active_total_ratio">Percentage of Plants Still Active</span></td>
+        </tr>
+      </table>
     </div>
   </div>
-  <div id="plants-container">
-  </div>
-  
-  <a href="#top">back to top</a>
-  
 
   <br>
   <br>
 
-  <script src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/src.2f7a6fd6.js"></script>
+  <script src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/src.eca3e659.js"></script>
+  <script src="https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/slideshow.3fb245c8.js"></script>
 </body>
 
 </html>

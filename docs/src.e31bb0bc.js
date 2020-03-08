@@ -28884,34 +28884,7 @@ Object.keys(_d3Zoom).forEach(function (key) {
     }
   });
 });
-},{"./dist/package.js":"../node_modules/d3/dist/package.js","d3-array":"../node_modules/d3-array/src/index.js","d3-axis":"../node_modules/d3-axis/src/index.js","d3-brush":"../node_modules/d3-brush/src/index.js","d3-chord":"../node_modules/d3-chord/src/index.js","d3-collection":"../node_modules/d3-collection/src/index.js","d3-color":"../node_modules/d3-color/src/index.js","d3-contour":"../node_modules/d3-contour/src/index.js","d3-dispatch":"../node_modules/d3-dispatch/src/index.js","d3-drag":"../node_modules/d3-drag/src/index.js","d3-dsv":"../node_modules/d3-dsv/src/index.js","d3-ease":"../node_modules/d3-ease/src/index.js","d3-fetch":"../node_modules/d3-fetch/src/index.js","d3-force":"../node_modules/d3-force/src/index.js","d3-format":"../node_modules/d3-format/src/index.js","d3-geo":"../node_modules/d3-geo/src/index.js","d3-hierarchy":"../node_modules/d3-hierarchy/src/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js","d3-path":"../node_modules/d3-path/src/index.js","d3-polygon":"../node_modules/d3-polygon/src/index.js","d3-quadtree":"../node_modules/d3-quadtree/src/index.js","d3-random":"../node_modules/d3-random/src/index.js","d3-scale":"../node_modules/d3-scale/src/index.js","d3-scale-chromatic":"../node_modules/d3-scale-chromatic/src/index.js","d3-selection":"../node_modules/d3-selection/src/index.js","d3-shape":"../node_modules/d3-shape/src/index.js","d3-time":"../node_modules/d3-time/src/index.js","d3-time-format":"../node_modules/d3-time-format/src/index.js","d3-timer":"../node_modules/d3-timer/src/index.js","d3-transition":"../node_modules/d3-transition/src/index.js","d3-voronoi":"../node_modules/d3-voronoi/src/index.js","d3-zoom":"../node_modules/d3-zoom/src/index.js"}],"my-class.js":[function(require,module,exports) {
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-// You can separate your code out into modules to
-// keep code clean.
-var MyClass =
-/*#__PURE__*/
-function () {
-  function MyClass() {
-    _classCallCheck(this, MyClass);
-  }
-
-  _createClass(MyClass, [{
-    key: "sayHi",
-    value: function sayHi() {
-      console.log('[MyClass]', 'Hello World.');
-    }
-  }]);
-
-  return MyClass;
-}();
-
-module.exports = MyClass;
-},{}],"country_nuclear_status.json":[function(require,module,exports) {
+},{"./dist/package.js":"../node_modules/d3/dist/package.js","d3-array":"../node_modules/d3-array/src/index.js","d3-axis":"../node_modules/d3-axis/src/index.js","d3-brush":"../node_modules/d3-brush/src/index.js","d3-chord":"../node_modules/d3-chord/src/index.js","d3-collection":"../node_modules/d3-collection/src/index.js","d3-color":"../node_modules/d3-color/src/index.js","d3-contour":"../node_modules/d3-contour/src/index.js","d3-dispatch":"../node_modules/d3-dispatch/src/index.js","d3-drag":"../node_modules/d3-drag/src/index.js","d3-dsv":"../node_modules/d3-dsv/src/index.js","d3-ease":"../node_modules/d3-ease/src/index.js","d3-fetch":"../node_modules/d3-fetch/src/index.js","d3-force":"../node_modules/d3-force/src/index.js","d3-format":"../node_modules/d3-format/src/index.js","d3-geo":"../node_modules/d3-geo/src/index.js","d3-hierarchy":"../node_modules/d3-hierarchy/src/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js","d3-path":"../node_modules/d3-path/src/index.js","d3-polygon":"../node_modules/d3-polygon/src/index.js","d3-quadtree":"../node_modules/d3-quadtree/src/index.js","d3-random":"../node_modules/d3-random/src/index.js","d3-scale":"../node_modules/d3-scale/src/index.js","d3-scale-chromatic":"../node_modules/d3-scale-chromatic/src/index.js","d3-selection":"../node_modules/d3-selection/src/index.js","d3-shape":"../node_modules/d3-shape/src/index.js","d3-time":"../node_modules/d3-time/src/index.js","d3-time-format":"../node_modules/d3-time-format/src/index.js","d3-timer":"../node_modules/d3-timer/src/index.js","d3-transition":"../node_modules/d3-transition/src/index.js","d3-voronoi":"../node_modules/d3-voronoi/src/index.js","d3-zoom":"../node_modules/d3-zoom/src/index.js"}],"country_nuclear_status.json":[function(require,module,exports) {
 module.exports = [{
   "country": "Argentina",
   "abandoned_construction": 0,
@@ -28922,7 +28895,8 @@ module.exports = [{
   "mean_age": 29.3,
   "nuclear_share_percentage": 4.7,
   "annual_load_factor": 48.3,
-  "operating_total_capacity": 1633
+  "operating_total_capacity": 1633,
+  "active_total_ratio": 1
 }, {
   "country": "Armenia",
   "abandoned_construction": 0,
@@ -28933,21 +28907,32 @@ module.exports = [{
   "mean_age": 39.5,
   "nuclear_share_percentage": 25.6,
   "annual_load_factor": 48.3,
-  "operating_total_capacity": 375
+  "operating_total_capacity": 375,
+  "active_total_ratio": 0.5
 }, {
   "country": "Bangladesh",
   "abandoned_construction": 0,
   "under_construction": 2,
   "operating": 0,
   "longterm_outage": 0,
-  "permanent_shutdown": 0
+  "permanent_shutdown": 0,
+  "mean_age": "",
+  "nuclear_share_percentage": "",
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 1
 }, {
   "country": "Belarus",
   "abandoned_construction": 0,
   "under_construction": 2,
   "operating": 0,
   "longterm_outage": 0,
-  "permanent_shutdown": 0
+  "permanent_shutdown": 0,
+  "mean_age": "",
+  "nuclear_share_percentage": "",
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 1
 }, {
   "country": "Belgium",
   "abandoned_construction": 0,
@@ -28958,7 +28943,8 @@ module.exports = [{
   "mean_age": 39.8,
   "nuclear_share_percentage": 39,
   "annual_load_factor": 48.6,
-  "operating_total_capacity": 5930
+  "operating_total_capacity": 5930,
+  "active_total_ratio": 0.875
 }, {
   "country": "Brazil",
   "abandoned_construction": 1,
@@ -28969,7 +28955,8 @@ module.exports = [{
   "mean_age": 28.5,
   "nuclear_share_percentage": 2.7,
   "annual_load_factor": 88.4,
-  "operating_total_capacity": 1884
+  "operating_total_capacity": 1884,
+  "active_total_ratio": 0.666666667
 }, {
   "country": "Bulgaria",
   "abandoned_construction": 2,
@@ -28980,7 +28967,8 @@ module.exports = [{
   "mean_age": 30.2,
   "nuclear_share_percentage": 34.7,
   "annual_load_factor": 91.9,
-  "operating_total_capacity": 1966
+  "operating_total_capacity": 1966,
+  "active_total_ratio": 0.25
 }, {
   "country": "Canada",
   "abandoned_construction": 0,
@@ -28991,7 +28979,8 @@ module.exports = [{
   "mean_age": 36.5,
   "nuclear_share_percentage": 14.9,
   "annual_load_factor": 66,
-  "operating_total_capacity": 13554
+  "operating_total_capacity": 13554,
+  "active_total_ratio": 0.72
 }, {
   "country": "China",
   "abandoned_construction": 0,
@@ -29001,7 +28990,9 @@ module.exports = [{
   "permanent_shutdown": 0,
   "mean_age": 7.7,
   "nuclear_share_percentage": 4.2,
-  "operating_total_capacity": 45518
+  "annual_load_factor": "",
+  "operating_total_capacity": 45518,
+  "active_total_ratio": 0.983050847
 }, {
   "country": "Czechia",
   "abandoned_construction": 2,
@@ -29012,7 +29003,8 @@ module.exports = [{
   "mean_age": 28.5,
   "nuclear_share_percentage": 34.5,
   "annual_load_factor": 83.3,
-  "operating_total_capacity": 3932
+  "operating_total_capacity": 3932,
+  "active_total_ratio": 0.75
 }, {
   "country": "Finland",
   "abandoned_construction": 0,
@@ -29023,7 +29015,8 @@ module.exports = [{
   "mean_age": 40.8,
   "nuclear_share_percentage": 32.4,
   "annual_load_factor": 89.8,
-  "operating_total_capacity": 2794
+  "operating_total_capacity": 2794,
+  "active_total_ratio": 1
 }, {
   "country": "France",
   "abandoned_construction": 0,
@@ -29034,7 +29027,8 @@ module.exports = [{
   "mean_age": 34.9,
   "nuclear_share_percentage": 71.7,
   "annual_load_factor": 69.6,
-  "operating_total_capacity": 62250
+  "operating_total_capacity": 62250,
+  "active_total_ratio": 0.816901408
 }, {
   "country": "Germany",
   "abandoned_construction": 6,
@@ -29045,7 +29039,8 @@ module.exports = [{
   "mean_age": 33.1,
   "nuclear_share_percentage": 11.7,
   "annual_load_factor": 86.7,
-  "operating_total_capacity": 8113
+  "operating_total_capacity": 8113,
+  "active_total_ratio": 0.142857143
 }, {
   "country": "Hungary",
   "abandoned_construction": 0,
@@ -29056,7 +29051,8 @@ module.exports = [{
   "mean_age": 34.4,
   "nuclear_share_percentage": 50.6,
   "annual_load_factor": 89,
-  "operating_total_capacity": 1902
+  "operating_total_capacity": 1902,
+  "active_total_ratio": 1
 }, {
   "country": "India",
   "abandoned_construction": 0,
@@ -29067,7 +29063,8 @@ module.exports = [{
   "mean_age": 22.8,
   "nuclear_share_percentage": 3.1,
   "annual_load_factor": 64,
-  "operating_total_capacity": 6255
+  "operating_total_capacity": 6255,
+  "active_total_ratio": 0.965517241
 }, {
   "country": "Iran",
   "abandoned_construction": 0,
@@ -29077,7 +29074,9 @@ module.exports = [{
   "permanent_shutdown": 0,
   "mean_age": 8.3,
   "nuclear_share_percentage": 2.1,
-  "operating_total_capacity": 915
+  "annual_load_factor": "",
+  "operating_total_capacity": 915,
+  "active_total_ratio": 1
 }, {
   "country": "Japan",
   "abandoned_construction": 1,
@@ -29088,7 +29087,8 @@ module.exports = [{
   "mean_age": 29,
   "nuclear_share_percentage": 6.2,
   "annual_load_factor": 13.9,
-  "operating_total_capacity": 7919
+  "operating_total_capacity": 7919,
+  "active_total_ratio": 0.161290323
 }, {
   "country": "Mexico",
   "abandoned_construction": 0,
@@ -29099,7 +29099,8 @@ module.exports = [{
   "mean_age": 27.9,
   "nuclear_share_percentage": 5.3,
   "annual_load_factor": 96.1,
-  "operating_total_capacity": 1552
+  "operating_total_capacity": 1552,
+  "active_total_ratio": 1
 }, {
   "country": "Netherlands",
   "abandoned_construction": 0,
@@ -29110,7 +29111,8 @@ module.exports = [{
   "mean_age": 46.5,
   "nuclear_share_percentage": 3,
   "annual_load_factor": 69.9,
-  "operating_total_capacity": 482
+  "operating_total_capacity": 482,
+  "active_total_ratio": 0.5
 }, {
   "country": "Pakistan",
   "abandoned_construction": 0,
@@ -29121,14 +29123,20 @@ module.exports = [{
   "mean_age": 16.4,
   "nuclear_share_percentage": 6.8,
   "annual_load_factor": 54.9,
-  "operating_total_capacity": 1318
+  "operating_total_capacity": 1318,
+  "active_total_ratio": 1
 }, {
   "country": "Philippines",
   "abandoned_construction": 1,
   "under_construction": 0,
   "operating": 0,
   "longterm_outage": 0,
-  "permanent_shutdown": 0
+  "permanent_shutdown": 0,
+  "mean_age": "",
+  "nuclear_share_percentage": "",
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 0
 }, {
   "country": "Romania",
   "abandoned_construction": 3,
@@ -29139,7 +29147,8 @@ module.exports = [{
   "mean_age": 18,
   "nuclear_share_percentage": 17.2,
   "annual_load_factor": 92.4,
-  "operating_total_capacity": 1300
+  "operating_total_capacity": 1300,
+  "active_total_ratio": 0.4
 }, {
   "country": "Russia",
   "abandoned_construction": 12,
@@ -29150,7 +29159,8 @@ module.exports = [{
   "mean_age": 28,
   "nuclear_share_percentage": 17.9,
   "annual_load_factor": 77.5,
-  "operating_total_capacity": 28415
+  "operating_total_capacity": 28415,
+  "active_total_ratio": 0.672131148
 }, {
   "country": "Slovakia",
   "abandoned_construction": 0,
@@ -29161,7 +29171,8 @@ module.exports = [{
   "mean_age": 27.8,
   "nuclear_share_percentage": 55,
   "annual_load_factor": 88.3,
-  "operating_total_capacity": 1814
+  "operating_total_capacity": 1814,
+  "active_total_ratio": 0.666666667
 }, {
   "country": "Slovenia",
   "abandoned_construction": 0,
@@ -29172,7 +29183,8 @@ module.exports = [{
   "mean_age": 38.2,
   "nuclear_share_percentage": 35.9,
   "annual_load_factor": 90.7,
-  "operating_total_capacity": 688
+  "operating_total_capacity": 688,
+  "active_total_ratio": 1
 }, {
   "country": "South Africa",
   "abandoned_construction": 0,
@@ -29183,7 +29195,8 @@ module.exports = [{
   "mean_age": 35,
   "nuclear_share_percentage": 4.7,
   "annual_load_factor": 65.3,
-  "operating_total_capacity": 1860
+  "operating_total_capacity": 1860,
+  "active_total_ratio": 1
 }, {
   "country": "South Korea",
   "abandoned_construction": 0,
@@ -29194,7 +29207,8 @@ module.exports = [{
   "mean_age": 20.6,
   "nuclear_share_percentage": 23.7,
   "annual_load_factor": 63.8,
-  "operating_total_capacity": 22123
+  "operating_total_capacity": 22123,
+  "active_total_ratio": 0.9
 }, {
   "country": "Spain",
   "abandoned_construction": 4,
@@ -29205,7 +29219,8 @@ module.exports = [{
   "mean_age": 34.9,
   "nuclear_share_percentage": 20.4,
   "annual_load_factor": 85.2,
-  "operating_total_capacity": 7121
+  "operating_total_capacity": 7121,
+  "active_total_ratio": 0.5
 }, {
   "country": "Sweden",
   "abandoned_construction": 1,
@@ -29216,7 +29231,8 @@ module.exports = [{
   "mean_age": 38.6,
   "nuclear_share_percentage": 40.3,
   "annual_load_factor": 88,
-  "operating_total_capacity": 7725
+  "operating_total_capacity": 7725,
+  "active_total_ratio": 0.5
 }, {
   "country": "Switzerland",
   "abandoned_construction": 0,
@@ -29227,7 +29243,8 @@ module.exports = [{
   "mean_age": 43.8,
   "nuclear_share_percentage": 37.7,
   "annual_load_factor": 86.5,
-  "operating_total_capacity": 2960
+  "operating_total_capacity": 2960,
+  "active_total_ratio": 0.8
 }, {
   "country": "Taiwan",
   "abandoned_construction": 2,
@@ -29238,14 +29255,20 @@ module.exports = [{
   "mean_age": 36.6,
   "nuclear_share_percentage": 11.4,
   "annual_load_factor": 54.5,
-  "operating_total_capacity": 3844
+  "operating_total_capacity": 3844,
+  "active_total_ratio": 0.5
 }, {
   "country": "Turkey",
   "abandoned_construction": 0,
   "under_construction": 1,
   "operating": 0,
   "longterm_outage": 0,
-  "permanent_shutdown": 0
+  "permanent_shutdown": 0,
+  "mean_age": "",
+  "nuclear_share_percentage": "",
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 1
 }, {
   "country": "Ukraine",
   "abandoned_construction": 6,
@@ -29255,14 +29278,21 @@ module.exports = [{
   "permanent_shutdown": 4,
   "mean_age": 30.9,
   "nuclear_share_percentage": 53,
-  "operating_total_capacity": 13107
+  "annual_load_factor": "",
+  "operating_total_capacity": 13107,
+  "active_total_ratio": 0.6
 }, {
   "country": "United Arab Emirates",
-  "abandoned_construction": "0",
-  "under_construction": "4",
-  "operating": "0",
-  "longterm_outage": "0",
-  "permanent_shutdown": "0"
+  "abandoned_construction": 0,
+  "under_construction": 4,
+  "operating": 0,
+  "longterm_outage": 0,
+  "permanent_shutdown": 0,
+  "mean_age": "",
+  "nuclear_share_percentage": "",
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 1
 }, {
   "country": "United Kingdom",
   "abandoned_construction": 0,
@@ -29273,7 +29303,8 @@ module.exports = [{
   "mean_age": 35.9,
   "nuclear_share_percentage": 17.7,
   "annual_load_factor": 68.4,
-  "operating_total_capacity": 8923
+  "operating_total_capacity": 8923,
+  "active_total_ratio": 0.347826087
 }, {
   "country": "United States of America",
   "abandoned_construction": 42,
@@ -29284,7 +29315,8 @@ module.exports = [{
   "mean_age": 39.4,
   "nuclear_share_percentage": 19.3,
   "annual_load_factor": 89.8,
-  "operating_total_capacity": 97565
+  "operating_total_capacity": 97565,
+  "active_total_ratio": 0.553672316
 }, {
   "country": "World",
   "abandoned_construction": 93,
@@ -29293,7 +29325,10 @@ module.exports = [{
   "longterm_outage": 27,
   "permanent_shutdown": 187,
   "mean_age": 30.5,
-  "nuclear_share_percentage": 10.15
+  "nuclear_share_percentage": 10.15,
+  "annual_load_factor": "",
+  "operating_total_capacity": "",
+  "active_total_ratio": 0.599739244
 }];
 },{}],"../static/world-map-geo.json":[function(require,module,exports) {
 module.exports = {
@@ -30421,7 +30456,7 @@ module.exports = {
         }
       }, {
         "type": "MultiPolygon",
-        "arcs": [[[1302]], [[-374, -1025, 1303, -873, 1304, -411, 1305, -409, 1306, 1307, -928, -1283]], [[1308]], [[1309]], [[1310]], [[1311]], [[1312]], [[1313]], [[1314]], [[-386, 1315, 1316]]],
+        "arcs": [[[-374, -1025, 1303, -873, 1304, -411, 1305, -409, 1306, 1307, -928, -1283]]],
         "id": "250",
         "properties": {
           "name": "France"
@@ -31000,7 +31035,7 @@ module.exports = {
     "translate": [-180, -89.999]
   }
 };
-},{}],"map.js":[function(require,module,exports) {
+},{}],"dashboard.js":[function(require,module,exports) {
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -31010,31 +31045,51 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var d3 = require('d3');
 
 var worldmap_geo_json = require('../static/world-map-geo.json'); // https://github.com/topojson/world-atlas
+// SVG height and width (TODO: why are these set to such arbitrary values??)
 
 
 var height = 546;
-var width = 1113;
-var min_zoom = 2;
-var max_zoom = 5;
-var zoom_scale = .5;
-var country_nuclear_data;
-var countries_with_nuclear = [];
-var path;
-var svg;
-var selected_country;
+var width = 1113; // Minimum and maximum zoom levels when clicking on a country
 
-var Map =
+var min_zoom = 2;
+var max_zoom = 5; // Scale factor for zoom (1 means match bounding box of country)
+
+var zoom_scale = .5; // Upper bounds for the color maps
+
+var bounds_percent = [0, 10, 30, 50, 70, 100];
+var bounds_construction = [0, 1, 2, 5, 8, 11];
+var bounds_ratio = [0, .2, .4, .6, .8, 1]; // Legend descriptions
+
+var legend_text_percent = ['0%', '1-10%', '11-30%', '31-50%', '51-70%', '71-100%'];
+var legend_text_construction = ['0', '1', '2', '3-5', '6-10', '11+'];
+var legend_text_ratio = ['No Nuclear', '0-20%', '21-40%', '41-60%', '61-80%', '81-100%'];
+var teal_blue_colors = ['#ececec', '#bce4d8', '#81c4cb', '#45a2b9', '#347da0', '#2c5985'];
+var orange_blue_colors = ['#ececec', '#d45b22', '#f69035', '#AAA194', '#78add3', '#5083af']; // Color scale functions
+
+var color_scale_percent = createColorScale(bounds_percent, teal_blue_colors);
+var color_scale_construction = createColorScale(bounds_construction, teal_blue_colors);
+var color_scale_ratio = createColorScale(bounds_ratio, orange_blue_colors); // Currently highlighted country
+
+var selected_country;
+var country_nuclear_data;
+var countries_with_data = [];
+var geo_path;
+var map_container; // World info values
+
+world_total_operating = 0;
+world_total_inprogess = 0;
+world_total_shutdown = 0;
+
+var Dashboard =
 /*#__PURE__*/
 function () {
-  function Map(data) {
-    _classCallCheck(this, Map);
+  function Dashboard(data) {
+    _classCallCheck(this, Dashboard);
 
-    country_nuclear_data = data;
-    this.centered = null;
-    this.world_operating_capacity = 0;
-    this.word_total_operating = 0;
-    this.world_total_inprogess = 0;
-    this.world_total_shutdown = 0;
+    country_nuclear_data = data; // column to be color-encoded on the map: 'nuclear_share_percentage', 'under_construction', or 'active_total_ratio'
+    // created as class variable to be accessible from outside this file (temp hack for #map-control functionality)
+
+    this.legend_choice = 'nuclear_share_percentage';
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
@@ -31042,19 +31097,12 @@ function () {
     try {
       for (var _iterator = country_nuclear_data[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
         var c = _step.value;
-
-        if (c.operating > 0) {
-          countries_with_nuclear.push(c.country);
-        }
-
-        if (c.operating_total_capacity) {
-          this.world_operating_capacity += c.operating_total_capacity;
-        }
+        countries_with_data.push(c.country);
 
         if (c.country == "World") {
-          this.word_total_operating = c.operating;
-          this.world_total_inprogess = c.under_construction;
-          this.world_total_shutdown = c.abandoned_construction + c.longterm_outage + c.permanent_shutdown;
+          world_total_operating = c.operating;
+          world_total_inprogess = c.under_construction;
+          world_total_shutdown = c.abandoned_construction + c.longterm_outage + c.permanent_shutdown;
         }
       }
     } catch (err) {
@@ -31073,14 +31121,56 @@ function () {
     }
   }
 
-  _createClass(Map, [{
+  _createClass(Dashboard, [{
     key: "createMap",
     value: function createMap() {
-      var color_scale = this.getColorScale();
-      svg = d3.select("#map-container").append("svg").attr("width", width).attr("height", height);
+      map_container = d3.select("#map-container").append("svg").attr("width", width).attr("height", height);
       var projection = d3.geoMercator().scale(1 * width / 2 / Math.PI).translate([width / 2, height / 1.55]);
-      path = d3.geoPath().projection(projection);
-      svg.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append("path").attr("d", path).attr("fill", function (d) {
+      geo_path = d3.geoPath().projection(projection);
+      this.country_path = map_container.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append("path").attr("d", geo_path).on('click', function (d) {
+        d3.event.stopPropagation();
+        this.getCountryInfo(d);
+        this.clicked(d);
+      }.bind(this));
+      this.refreshColorMap();
+      this.resetToWorld();
+      d3.select("#".concat(this.legend_choice)).classed('selected', true); // return to world view if the ocean is clicked
+
+      d3.select('#map-container>svg').on('click', function () {
+        this.resetToWorld();
+      }.bind(this));
+    } // updates the legend and the map to reflect a new encoding selection
+
+  }, {
+    key: "refreshColorMap",
+    value: function refreshColorMap() {
+      var color_list, text_list;
+
+      switch (this.legend_choice) {
+        case 'under_construction':
+          color_list = teal_blue_colors;
+          text_list = legend_text_construction;
+          break;
+
+        case 'active_total_ratio':
+          color_list = orange_blue_colors;
+          text_list = legend_text_ratio;
+          break;
+
+        default:
+          color_list = teal_blue_colors;
+          text_list = legend_text_percent;
+          break;
+      }
+
+      var legend_table = d3.select('#map-legend table');
+
+      for (var i = 0; i < 6; i++) {
+        legend_table.select(".c".concat(i, " .color")).style('background-color', color_list[i]);
+        legend_table.select(".c".concat(i, " .text")).text(text_list[i]);
+      }
+
+      this.country_path.transition().duration(1000).attr('fill', function (d) {
         var _iteratorNormalCompletion2 = true;
         var _didIteratorError2 = false;
         var _iteratorError2 = undefined;
@@ -31089,14 +31179,24 @@ function () {
           for (var _iterator2 = country_nuclear_data[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
             var c = _step2.value;
 
-            if (c.country == d.properties.name) {
-              if (countries_with_nuclear.includes(d.properties.name)) {
-                return color_scale(c.operating);
-              } else if (c.permanent_shutdown > 0) {
-                return "#90ee90";
-              } else if (c.abandoned_construction > 0) {
-                return "#b19cd9";
+            if (c.country == d.properties.name && countries_with_data.includes(d.properties.name)) {
+              var color = void 0;
+
+              switch (this.legend_choice) {
+                case 'under_construction':
+                  color = color_scale_construction(c.under_construction);
+                  break;
+
+                case 'active_total_ratio':
+                  color = color_scale_ratio(c.active_total_ratio);
+                  break;
+
+                default:
+                  color = color_scale_percent(c.nuclear_share_percentage);
+                  break;
               }
+
+              return color;
             }
           }
         } catch (err) {
@@ -31114,62 +31214,9 @@ function () {
           }
         }
 
-        return "#ececec";
-      }).on("click", function (d) {
-        this.getCountryInfo(d);
-        this.clicked(d);
+        return "#ececec"; // else no data
       }.bind(this));
-      this.resetValuesToWorld(); // temp fix
-
-      countries_with_nuclear.push('Philippines');
-    }
-  }, {
-    key: "resetValuesToWorld",
-    value: function resetValuesToWorld() {
-      this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
-      this.getLightBulbs(10.15, "The World");
-    }
-  }, {
-    key: "getColorScale",
-    value: function getColorScale() {
-      // domain means input range means output
-      var scale = d3.scaleLinear().domain([0, d3.max(country_nuclear_data, function (d) {
-        return d["operating"];
-      })]).range(["#ffc0cb", "#ff0000"]);
-      return scale;
-    }
-  }, {
-    key: "getCountryInfo",
-    value: function getCountryInfo(d) {
-      var _iteratorNormalCompletion3 = true;
-      var _didIteratorError3 = false;
-      var _iteratorError3 = undefined;
-
-      try {
-        for (var _iterator3 = country_nuclear_data[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-          var c = _step3.value;
-
-          if (c.country == d.properties.name) {
-            this.getLightBulbs(c.nuclear_share_percentage, c.country);
-            this.getFactories(c.operating, c.under_construction, c.abandoned_construction + c.longterm_outage + c.permanent_shutdown);
-            break;
-          }
-        }
-      } catch (err) {
-        _didIteratorError3 = true;
-        _iteratorError3 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
-            _iterator3.return();
-          }
-        } finally {
-          if (_didIteratorError3) {
-            throw _iteratorError3;
-          }
-        }
-      }
-    } //clicked
+    } // runs whenever a *country* is clicked
 
   }, {
     key: "clicked",
@@ -31177,27 +31224,27 @@ function () {
       var dx, dy, k;
       var country = d.properties.name;
 
-      if (selected_country !== country && countries_with_nuclear.includes(country)) {
-        var centroid = path.centroid(d);
+      if (selected_country !== country) {
+        var centroid = geo_path.centroid(d);
         dx = width / 2 - centroid[0];
         dy = height / 2 - centroid[1];
-        var bounds = path.bounds(d);
+        var bounds = geo_path.bounds(d);
         var boxw = bounds[1][0] - bounds[0][0];
         var boxh = bounds[1][1] - bounds[0][1];
         k = Math.min(width / boxw, height / boxh) * zoom_scale;
         if (k < min_zoom) k = min_zoom;
         if (k > max_zoom) k = max_zoom;
         selected_country = country;
-        svg.selectAll('path').classed('active', function (d) {
+        map_container.selectAll('path').classed('active', function (d) {
           return d.properties.name === selected_country;
         });
-        var _iteratorNormalCompletion4 = true;
-        var _didIteratorError4 = false;
-        var _iteratorError4 = undefined;
+        var _iteratorNormalCompletion3 = true;
+        var _didIteratorError3 = false;
+        var _iteratorError3 = undefined;
 
         try {
-          for (var _iterator4 = country_nuclear_data[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-            var c = _step4.value;
+          for (var _iterator3 = country_nuclear_data[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+            var c = _step3.value;
 
             if (c.country == selected_country) {
               var _country = c.country;
@@ -31212,101 +31259,152 @@ function () {
             }
           }
         } catch (err) {
-          _didIteratorError4 = true;
-          _iteratorError4 = err;
+          _didIteratorError3 = true;
+          _iteratorError3 = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
-              _iterator4.return();
+            if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
+              _iterator3.return();
             }
           } finally {
-            if (_didIteratorError4) {
-              throw _iteratorError4;
+            if (_didIteratorError3) {
+              throw _iteratorError3;
             }
           }
         }
+
+        this.zoomMap(k, dx, dy);
       } else {
-        this.resetValuesToWorld();
-        dx = 0, dy = 0, k = 1;
-        selected_country = -1;
-        svg.selectAll('path').classed('active', false);
+        this.resetToWorld();
+      }
+    }
+  }, {
+    key: "resetToWorld",
+    value: function resetToWorld() {
+      this.getLightBulbs(10.15, "The World");
+      this.getFactories(world_total_operating, world_total_inprogess, world_total_shutdown);
+      selected_country = -1;
+      map_container.selectAll('path').classed('active', false);
+      this.zoomMap(1, 0, 0);
+    }
+  }, {
+    key: "zoomMap",
+    value: function zoomMap(k, dx, dy) {
+      map_container.transition().duration(750).attr('transform', "scale(".concat(k, ")translate(").concat(dx, ",").concat(dy, ")"));
+    }
+  }, {
+    key: "getCountryInfo",
+    value: function getCountryInfo(d) {
+      var _iteratorNormalCompletion4 = true;
+      var _didIteratorError4 = false;
+      var _iteratorError4 = undefined;
+
+      try {
+        for (var _iterator4 = country_nuclear_data[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+          var c = _step4.value;
+
+          if (c.country == d.properties.name) {
+            this.getLightBulbs(c.nuclear_share_percentage, c.country);
+            this.getFactories(c.operating, c.under_construction, c.abandoned_construction + c.longterm_outage + c.permanent_shutdown);
+            return;
+          }
+        }
+      } catch (err) {
+        _didIteratorError4 = true;
+        _iteratorError4 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
+            _iterator4.return();
+          }
+        } finally {
+          if (_didIteratorError4) {
+            throw _iteratorError4;
+          }
+        }
       }
 
-      svg.transition().duration(750).attr('transform', "scale(".concat(k, ")translate(").concat(dx, ",").concat(dy, ")"));
+      this.nonNuclearCountry(d.properties.name);
     }
   }, {
     key: "getLightBulbs",
     value: function getLightBulbs(percentage, country) {
+      var TOTAL_BULBS = 20; // fix crashes when a country doesn't have a percentage
+
+      if (percentage == '') percentage = 0; // fix text overflow
+
+      if (country === 'United States of American') country = 'United States';
       var string_p = percentage.toFixed(2).bold();
-      document.getElementById("lightbulbs").innerHTML = "";
-
-      if (country === "United States of American") {
-        country = "United States";
-      }
-
-      document.getElementById("country-text").innerHTML = "".concat(country);
-      document.getElementById("percentage-text").innerHTML = "gets ".concat(string_p, "% <br>of its power from nuclear energy.");
-      var lightbulbs = Math.round(percentage);
+      var lightbulbs = Math.round(percentage * (TOTAL_BULBS / 100));
       var all_bulbs = '';
 
       for (var i = 0; i < lightbulbs; i++) {
-        all_bulbs += '<img src="./LightBulb.png" style="width: 10%;">';
+        all_bulbs += '<img src="./LightBulb.png">';
       }
 
-      for (var i = 0; i < 100 - lightbulbs; i++) {
-        all_bulbs += '<img src="./Dimbulb.png" style="width: 10%;">';
+      for (var i = 0; i < TOTAL_BULBS - lightbulbs; i++) {
+        all_bulbs += '<img src="./Dimbulb.png">';
       }
 
-      document.getElementById("lightbulbs").innerHTML += all_bulbs;
+      document.getElementById('country-text').innerHTML = country;
+      document.getElementById('percentage-text').innerHTML = "gets ".concat(string_p, "% <br>of its power from nuclear energy.");
+      document.getElementById('lightbulbs').innerHTML = all_bulbs;
     }
   }, {
     key: "getFactories",
     value: function getFactories(working, in_progress, abandon) {
-      document.getElementById("plants-container").innerHTML = '';
-      var all_plants = '';
-
-      for (var i = 0; i < working; i++) {
-        all_plants += '<img src="./workingPlant.png" style="width: 3%;">';
-      }
-
-      for (var i = 0; i < in_progress; i++) {
-        all_plants += '<img src="./inProgressPlant.png" style="width: 3%;">';
-      }
-
-      for (var i = 0; i < abandon; i++) {
-        all_plants += '<img src="./abandon.png" style="width: 3%;">';
-      }
-
-      document.getElementById("plants-container").innerHTML = all_plants;
+      if (working == '') working = 0;
+      if (in_progress == '') in_progress = 0;
+      if (abandon == '') abandon = 0;
+      document.getElementById('plants-working').innerText = working;
+      document.getElementById('plants-ip').innerText = in_progress;
+      document.getElementById('plants-abandon').innerText = abandon;
+    }
+  }, {
+    key: "nonNuclearCountry",
+    value: function nonNuclearCountry(country) {
+      document.getElementById('country-text').innerHTML = country;
+      document.getElementById('percentage-text').innerHTML = '<br />has no nuclear power plants';
+      document.getElementById('lightbulbs').innerHTML = '';
+      this.getFactories(0, 0, 0);
     }
   }]);
 
-  return Map;
+  return Dashboard;
 }();
 
-module.exports = Map;
+module.exports = Dashboard; // upper_bounds is an int array of the inclusive upper bound of each bin (starting at 0)
+// colors is a string array of equal length
+// returns a callable function that functions like a d3 scale, but for colors
+
+function createColorScale(upper_bounds, colors) {
+  return function (value) {
+    for (var i = 0; i < upper_bounds.length; i++) {
+      if (value <= upper_bounds[i]) return colors[i];
+    }
+
+    return '#ececec';
+  };
+}
 },{"d3":"../node_modules/d3/index.js","../static/world-map-geo.json":"../static/world-map-geo.json"}],"index.js":[function(require,module,exports) {
-// You can require libraries
-var d3 = require('d3'); // You can include local JS files:
+var d3 = require('d3'); // Gets included in js bundle
 
 
-var MyClass = require('./my-class');
+var data_nuclear_only = require('./country_nuclear_status.json');
 
-var myClassInstance = new MyClass();
-myClassInstance.sayHi(); // Gets included in js bundle
+var Dashboard = require('./dashboard.js');
 
-var data_nuclear_only = require('./country_nuclear_status.json'); // Loaded over network due to size
-
-
-d3.csv('all_fuels.csv').then(function (data) {// console.log('Dynamically loaded CSV data', data);
-  // Do stuff
+var DashboardInstance = new Dashboard(data_nuclear_only);
+DashboardInstance.createMap();
+var control_spans = d3.selectAll('#map-control span').on('click', function () {
+  if (DashboardInstance.legend_choice != this.id) {
+    DashboardInstance.legend_choice = this.id;
+    control_spans.classed('selected', false);
+    d3.select("#".concat(DashboardInstance.legend_choice)).classed('selected', true);
+    DashboardInstance.refreshColorMap();
+  }
 });
-
-var Map = require('./map.js');
-
-var MapInstance = new Map(data_nuclear_only);
-MapInstance.createMap();
-},{"d3":"../node_modules/d3/index.js","./my-class":"my-class.js","./country_nuclear_status.json":"country_nuclear_status.json","./map.js":"map.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"d3":"../node_modules/d3/index.js","./country_nuclear_status.json":"country_nuclear_status.json","./dashboard.js":"dashboard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -31334,7 +31432,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49568" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52736" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
