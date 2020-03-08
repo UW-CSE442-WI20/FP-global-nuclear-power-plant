@@ -6,13 +6,9 @@ const data_nuclear_only = require('./country_nuclear_status.json');
 const nuclear_powerplants = require('./nuclear-only.json');
 
 const Map = require('./country_map.js');
-const USMapInstance = new Map(nuclear_powerplants, "#america-map", "United States of America");
-USMapInstance.makeCountryMap();
+export const USMapInstance = new Map(nuclear_powerplants, "#america-map", "United States of America");
 
-d3.select('#america-container').on('mouseover', () => {
-  USMapInstance.plotPlants();
-  d3.select('#america-container').on('mouseover', null);
-});
+
 
 // plotPlants to make dots
 // clearDots to clear the dots

@@ -1,40 +1,54 @@
 const {
-    ChinaMapInstance, AustraliaMapInstance, JapanMapInstance, FranceMapInstance
+    ChinaMapInstance, AustraliaMapInstance, JapanMapInstance, FranceMapInstance, USMapInstance
 } = require('./index.js')
+const d3 = require('d3')
+
 ChinaMapInstance.makeCountryMap();
 AustraliaMapInstance.makeCountryMap();
 JapanMapInstance.makeCountryMap();
 FranceMapInstance.makeCountryMap();
+USMapInstance.makeCountryMap();
+d3.select('#america-container').on('mouseover', () => {
+  USMapInstance.plotPlants();
+  d3.select('#america-container').on('mouseover', null);
+});
+
+d3.select('#countries').on('mouseover', () => {
+  ChinaMapInstance.plotPlants();
+  d3.select('#countries').on('mouseover', null);
+});
 
 var slideIndex = 1;
-showDivs(slideIndex);
+showDivs(slideIndex, true);
 
 function plusDivs(n) {
-    showDivs(slideIndex += n);
+    showDivs(slideIndex += n, false);
 }
 
 function currentDiv(n) {
-    showDivs(slideIndex = n);
+    showDivs(slideIndex = n, false);
 }
 
-function showDivs(n) {
-    ChinaMapInstance.clearDots();
-    JapanMapInstance.clearDots();
-    AustraliaMapInstance.clearDots();
-    FranceMapInstance.clearDots();
-    switch (n) {
-        case 1:
-            ChinaMapInstance.plotPlants();
-            break;
-        case 2:
-            JapanMapInstance.plotPlants();
-            break;
-        case 3:
-            FranceMapInstance.plotPlants();
-            break;
-        case 4:
-            AustraliaMapInstance.plotPlants();
-            break;
+function showDivs(n, first_china) {
+    if (!first_china) {
+        ChinaMapInstance.clearDots();
+        JapanMapInstance.clearDots();
+        AustraliaMapInstance.clearDots();
+        FranceMapInstance.clearDots();
+        switch (n) {
+            case 1:
+                ChinaMapInstance.plotPlants();
+                break;
+            case 2:
+                JapanMapInstance.plotPlants();
+                break;
+            case 3:
+                FranceMapInstance.plotPlants();
+                break;
+            case 4:
+                AustraliaMapInstance.plotPlants();
+                break;
+        }
     }
     var i;
     var x = document.getElementsByClassName("slide");
