@@ -3,7 +3,7 @@
 
 const d3 = require('d3')
 
-const height = 610;
+const height = 510;
 const width = 700;
 
 const worldmap_geo_json = require('../static/world-map-geo.json'); // https://github.com/topojson/world-atlas
@@ -32,7 +32,7 @@ const country_position = [
     {
         country: "United States of America",
         scale: 575,
-        center: [-95, 40]
+        center: [-95, 43]
     }
 ]
 
@@ -81,7 +81,7 @@ class CountryMap {
             .attr("d", path)
             .attr("fill", "#aaaaaa");
 
-        this.plotPlants();
+        // this.plotPlants();
     }
 
     plotPlants() {
@@ -116,7 +116,7 @@ class CountryMap {
                 ]) + ")";
             }.bind(this))
             .style("fill", "#000")
-            .style("stroke", "#90ee90")
+            .style("stroke", "#add8e6")
             .style("stroke-width", 2)
             .on("mouseover", function (d) {
                 //d3.select(this).attr("xlink:href", "../static/homer.png");
@@ -200,4 +200,3 @@ d3.select('#button2').on('click', () => {
   CountryMapInstance.plotPlants()
 });
 */
-// git merge master
