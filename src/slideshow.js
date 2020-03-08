@@ -48,3 +48,19 @@ document.getElementById("dot3").addEventListener("click", function() {
 document.getElementById("dot4").addEventListener("click", function() {
     currentDiv(4);
 })
+
+document.getElementById("china").addEventListener("click", function() {
+    currentDiv(1);
+})
+
+document.getElementById("japan").addEventListener("click", function() {
+    currentDiv(2);
+})
+
+document.getElementById("france").addEventListener("click", function() {
+    currentDiv(3);
+})
+
+document.getElementById("australia").addEventListener("click", function() {
+    currentDiv(4);
+})
