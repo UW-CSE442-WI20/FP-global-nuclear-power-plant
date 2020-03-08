@@ -55,18 +55,18 @@ a {
     background-size: cover;
   }
 
-  .parallax .america-container {
+  .parallax #america-container {
     background-color: lightblue;
     height: 100vh;
     display: flex;
   }
 
-  .america-map {
+  #america-map {
     background-color: red;
     width: 100%
   }
 
-  .america-text {
+  #america-text {
     background-color: orange;
     width: 100%;
   }
