@@ -17,21 +17,101 @@ a {
 }
 
 .topic {
-    background: 
-    url("../static/nuclear_plant.jpg")
-    no-repeat fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-position: center center; */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: 100% 100%;
-    /* background-size: contain; */
-    min-height: 100vh;
 }
+
+.parallax {
+    position: relative;
+    /* height: 300px; */
+    /* text-indent: -9999px; */
+    background-attachment: fixed;
+    background-position:  center;
+  }
+
+  .parallax .one{
+    height: 100vh;
+  }
+
+  .parallax .two {
+    height: 100vh;
+  }
+
+  .parallax .one {
+    background: 
+    url("../static/nuclear_plant.jpg") 
+    no-repeat fixed;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+  }
+
+  .parallax .two {
+    background: 
+    url("../static/Springfield.jpeg") 
+    no-repeat fixed;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+  }
+
+  .parallax .america-container {
+    background-color: lightblue;
+    height: 100vh;
+  }
+
+  .parallax .nuclear-intro-container {
+      background-color: black;
+      height: 100vh;
+      color: white;
+  }
+
+  .parallax .menu {
+      background: 
+        url("../static/nuclear_plant.jpg") 
+        no-repeat fixed;
+      height: 100vh;
+  }
+
+  .countries-container {
+      background-color: gray;
+      height: 100vh;
+  }
+
+  .slide {
+      display: none;
+  }
+
+  .slide1 {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    height:100vh;
+  }
+
+  .slide2 {
+    width: 100%;
+    background-color: rgba(243, 125, 125, 0.75);
+    height:100vh;
+  }
+
+  .slide3 {
+    width: 100%;
+    background-color: rgba(236, 165, 118, 0.75);
+    height:100vh;
+  }
+
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+  .header {
+    position: relative;
+    margin: -5em 0 0 0;
+    padding: 1em;
+    text-align: left;
+    font-size: 2em;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 
 
 .more:link, .more:visited {
