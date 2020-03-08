@@ -1,3 +1,11 @@
+const {
+    ChinaMapInstance, AustraliaMapInstance, JapanMapInstance, FranceMapInstance
+} = require('./index.js')
+ChinaMapInstance.makeCountryMap();
+AustraliaMapInstance.makeCountryMap();
+JapanMapInstance.makeCountryMap();
+FranceMapInstance.makeCountryMap();
+
 var slideIndex = 1;
 showDivs(slideIndex);
 

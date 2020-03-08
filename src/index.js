@@ -16,17 +16,13 @@ d3.select('#america-container').on('mouseover', () => {
 
 // plotPlants to make dots
 // clearDots to clear the dots
-const ChinaMapInstance = new Map(nuclear_powerplants, "#china-map", "China");
-ChinaMapInstance.makeCountryMap();
+export const ChinaMapInstance = new Map(nuclear_powerplants, "#china-map", "China");
 
-const AustraliaMapInstance = new Map(nuclear_powerplants, "#australia-map", "Australia");
-AustraliaMapInstance.makeCountryMap();
+export const AustraliaMapInstance = new Map(nuclear_powerplants, "#australia-map", "Australia");
 
-const JapanMapInstance = new Map(nuclear_powerplants, "#japan-map", "Japan");
-JapanMapInstance.makeCountryMap();
+export const JapanMapInstance = new Map(nuclear_powerplants, "#japan-map", "Japan");
 
-const FranceMapInstance = new Map(nuclear_powerplants, "#france-map", "France");
-FranceMapInstance.makeCountryMap();
+export const FranceMapInstance = new Map(nuclear_powerplants, "#france-map", "France");
 
 const Dashboard = require('./dashboard.js');
 const DashboardInstance = new Dashboard(data_nuclear_only);
