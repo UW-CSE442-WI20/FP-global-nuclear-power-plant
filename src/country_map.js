@@ -81,7 +81,7 @@ class CountryMap {
             .attr("d", path)
             .attr("fill", "#aaaaaa");
 
-        //this.plotPlants();
+        this.plotPlants();
     }
 
     plotPlants() {
@@ -184,3 +184,19 @@ class CountryMap {
 }
 
 module.exports = CountryMap;
+
+/*
+const nuclear_powerplant_locations = require('./nuclear-only.json');
+
+const CountryMap = require('./country_map.js');
+const CountryMapInstance = new CountryMap(nuclear_powerplant_locations, "#country-map-container", "France");
+CountryMapInstance.makeCountryMap();
+
+d3.select('#button1').on('click', () => {
+  CountryMapInstance.clearDots()
+});
+
+d3.select('#button2').on('click', () => {
+  CountryMapInstance.plotPlants()
+});
+*/
