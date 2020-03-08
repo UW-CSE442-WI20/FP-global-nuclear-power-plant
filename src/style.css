@@ -55,9 +55,20 @@ a {
     background-size: cover;
   }
 
-  .parallax .america-container {
+  .parallax #america-container {
     background-color: lightblue;
     height: 100vh;
+    display: flex;
+  }
+
+  #america-map {
+    background-color: red;
+    width: 100%
+  }
+
+  #america-text {
+    background-color: orange;
+    width: 100%;
   }
 
   .parallax .nuclear-intro-container {
@@ -70,7 +81,15 @@ a {
       background: 
         url("../static/nuclear_plant.jpg") 
         no-repeat fixed;
-      height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+
+  .country-button {
+      margin: 10px;
   }
 
   .countries-container {
@@ -97,6 +116,12 @@ a {
   .slide3 {
     width: 100%;
     background-color: rgba(236, 165, 118, 0.75);
+    height:100vh;
+  }
+
+  .slide4 {
+    width: 100%;
+    background-color: rgba(191, 236, 118, 0.75);
     height:100vh;
   }
 
