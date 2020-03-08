@@ -32,7 +32,7 @@ const country_position = [
     {
         country: "United States of America",
         scale: 575,
-        center: [-95, 43]
+        center: [-95, 45]
     }
 ]
 
@@ -92,6 +92,8 @@ class CountryMap {
             }
         }
 
+        // organize the data here!
+
         console.log(powerplants);
 
         let tooltip = d3.select(this.container)
@@ -116,7 +118,7 @@ class CountryMap {
                     800
                 ]) + ")";
             }.bind(this))
-            .style("fill", "#777777")
+            .style("fill", "#000000")
             .style("stroke", "#add8e6")
             .style("stroke-width", 2)
             .on("mouseover", function (d) {
