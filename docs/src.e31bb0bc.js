@@ -28884,34 +28884,7 @@ Object.keys(_d3Zoom).forEach(function (key) {
     }
   });
 });
-},{"./dist/package.js":"../node_modules/d3/dist/package.js","d3-array":"../node_modules/d3-array/src/index.js","d3-axis":"../node_modules/d3-axis/src/index.js","d3-brush":"../node_modules/d3-brush/src/index.js","d3-chord":"../node_modules/d3-chord/src/index.js","d3-collection":"../node_modules/d3-collection/src/index.js","d3-color":"../node_modules/d3-color/src/index.js","d3-contour":"../node_modules/d3-contour/src/index.js","d3-dispatch":"../node_modules/d3-dispatch/src/index.js","d3-drag":"../node_modules/d3-drag/src/index.js","d3-dsv":"../node_modules/d3-dsv/src/index.js","d3-ease":"../node_modules/d3-ease/src/index.js","d3-fetch":"../node_modules/d3-fetch/src/index.js","d3-force":"../node_modules/d3-force/src/index.js","d3-format":"../node_modules/d3-format/src/index.js","d3-geo":"../node_modules/d3-geo/src/index.js","d3-hierarchy":"../node_modules/d3-hierarchy/src/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js","d3-path":"../node_modules/d3-path/src/index.js","d3-polygon":"../node_modules/d3-polygon/src/index.js","d3-quadtree":"../node_modules/d3-quadtree/src/index.js","d3-random":"../node_modules/d3-random/src/index.js","d3-scale":"../node_modules/d3-scale/src/index.js","d3-scale-chromatic":"../node_modules/d3-scale-chromatic/src/index.js","d3-selection":"../node_modules/d3-selection/src/index.js","d3-shape":"../node_modules/d3-shape/src/index.js","d3-time":"../node_modules/d3-time/src/index.js","d3-time-format":"../node_modules/d3-time-format/src/index.js","d3-timer":"../node_modules/d3-timer/src/index.js","d3-transition":"../node_modules/d3-transition/src/index.js","d3-voronoi":"../node_modules/d3-voronoi/src/index.js","d3-zoom":"../node_modules/d3-zoom/src/index.js"}],"my-class.js":[function(require,module,exports) {
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-// You can separate your code out into modules to
-// keep code clean.
-var MyClass =
-/*#__PURE__*/
-function () {
-  function MyClass() {
-    _classCallCheck(this, MyClass);
-  }
-
-  _createClass(MyClass, [{
-    key: "sayHi",
-    value: function sayHi() {
-      console.log('[MyClass]', 'Hello World.');
-    }
-  }]);
-
-  return MyClass;
-}();
-
-module.exports = MyClass;
-},{}],"country_nuclear_status.json":[function(require,module,exports) {
+},{"./dist/package.js":"../node_modules/d3/dist/package.js","d3-array":"../node_modules/d3-array/src/index.js","d3-axis":"../node_modules/d3-axis/src/index.js","d3-brush":"../node_modules/d3-brush/src/index.js","d3-chord":"../node_modules/d3-chord/src/index.js","d3-collection":"../node_modules/d3-collection/src/index.js","d3-color":"../node_modules/d3-color/src/index.js","d3-contour":"../node_modules/d3-contour/src/index.js","d3-dispatch":"../node_modules/d3-dispatch/src/index.js","d3-drag":"../node_modules/d3-drag/src/index.js","d3-dsv":"../node_modules/d3-dsv/src/index.js","d3-ease":"../node_modules/d3-ease/src/index.js","d3-fetch":"../node_modules/d3-fetch/src/index.js","d3-force":"../node_modules/d3-force/src/index.js","d3-format":"../node_modules/d3-format/src/index.js","d3-geo":"../node_modules/d3-geo/src/index.js","d3-hierarchy":"../node_modules/d3-hierarchy/src/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js","d3-path":"../node_modules/d3-path/src/index.js","d3-polygon":"../node_modules/d3-polygon/src/index.js","d3-quadtree":"../node_modules/d3-quadtree/src/index.js","d3-random":"../node_modules/d3-random/src/index.js","d3-scale":"../node_modules/d3-scale/src/index.js","d3-scale-chromatic":"../node_modules/d3-scale-chromatic/src/index.js","d3-selection":"../node_modules/d3-selection/src/index.js","d3-shape":"../node_modules/d3-shape/src/index.js","d3-time":"../node_modules/d3-time/src/index.js","d3-time-format":"../node_modules/d3-time-format/src/index.js","d3-timer":"../node_modules/d3-timer/src/index.js","d3-transition":"../node_modules/d3-transition/src/index.js","d3-voronoi":"../node_modules/d3-voronoi/src/index.js","d3-zoom":"../node_modules/d3-zoom/src/index.js"}],"country_nuclear_status.json":[function(require,module,exports) {
 module.exports = [{
   "country": "Argentina",
   "abandoned_construction": 0,
@@ -31072,34 +31045,40 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var d3 = require('d3');
 
 var worldmap_geo_json = require('../static/world-map-geo.json'); // https://github.com/topojson/world-atlas
+// SVG height and width (TODO: why are these set to such arbitrary values??)
 
 
-var country_nuclear_data;
-var countries_with_data = [];
-var path;
-var svg;
 var height = 546;
 var width = 1113; // Minimum and maximum zoom levels when clicking on a country
 
 var min_zoom = 2;
 var max_zoom = 5; // Scale factor for zoom (1 means match bounding box of country)
 
-var zoom_scale = .5; // currently highlighted country
-
-var selected_country; // upper bounds for the color maps
+var zoom_scale = .5; // Upper bounds for the color maps
 
 var bounds_percent = [0, 10, 30, 50, 70, 100];
 var bounds_construction = [0, 1, 2, 5, 8, 11];
-var bounds_ratio = [0, .2, .4, .6, .8, 1]; // legend descriptions
+var bounds_ratio = [0, .2, .4, .6, .8, 1]; // Legend descriptions
 
 var legend_text_percent = ['0%', '1-10%', '11-30%', '31-50%', '51-70%', '71-100%'];
 var legend_text_construction = ['0', '1', '2', '3-5', '6-10', '11+'];
 var legend_text_ratio = ['No Nuclear', '0-20%', '21-40%', '41-60%', '61-80%', '81-100%'];
 var teal_blue_colors = ['#ececec', '#bce4d8', '#81c4cb', '#45a2b9', '#347da0', '#2c5985'];
-var orange_blue_colors = ['#ececec', '#d45b22', '#f69035', '#AAA194', '#78add3', '#5083af'];
+var orange_blue_colors = ['#ececec', '#d45b22', '#f69035', '#AAA194', '#78add3', '#5083af']; // Color scale functions
+
 var color_scale_percent = createColorScale(bounds_percent, teal_blue_colors);
 var color_scale_construction = createColorScale(bounds_construction, teal_blue_colors);
-var color_scale_ratio = createColorScale(bounds_ratio, orange_blue_colors);
+var color_scale_ratio = createColorScale(bounds_ratio, orange_blue_colors); // Currently highlighted country
+
+var selected_country;
+var country_nuclear_data;
+var countries_with_data = [];
+var geo_path;
+var map_container; // World info values
+
+world_total_operating = 0;
+world_total_inprogess = 0;
+world_total_shutdown = 0;
 
 var Dashboard =
 /*#__PURE__*/
@@ -31108,11 +31087,9 @@ function () {
     _classCallCheck(this, Dashboard);
 
     country_nuclear_data = data; // column to be color-encoded on the map: 'nuclear_share_percentage', 'under_construction', or 'active_total_ratio'
+    // created as class variable to be accessible from outside this file (temp hack for #map-control functionality)
 
     this.legend_choice = 'nuclear_share_percentage';
-    this.word_total_operating = 0;
-    this.world_total_inprogess = 0;
-    this.world_total_shutdown = 0;
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
@@ -31123,9 +31100,9 @@ function () {
         countries_with_data.push(c.country);
 
         if (c.country == "World") {
-          this.word_total_operating = c.operating;
-          this.world_total_inprogess = c.under_construction;
-          this.world_total_shutdown = c.abandoned_construction + c.longterm_outage + c.permanent_shutdown;
+          world_total_operating = c.operating;
+          world_total_inprogess = c.under_construction;
+          world_total_shutdown = c.abandoned_construction + c.longterm_outage + c.permanent_shutdown;
         }
       }
     } catch (err) {
@@ -31147,17 +31124,23 @@ function () {
   _createClass(Dashboard, [{
     key: "createMap",
     value: function createMap() {
-      svg = d3.select("#map-container").append("svg").attr("width", width).attr("height", height);
+      map_container = d3.select("#map-container").append("svg").attr("width", width).attr("height", height);
       var projection = d3.geoMercator().scale(1 * width / 2 / Math.PI).translate([width / 2, height / 1.55]);
-      path = d3.geoPath().projection(projection);
-      this.countryPath = svg.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append("path").attr("d", path).on('click', function (d) {
+      geo_path = d3.geoPath().projection(projection);
+      this.country_path = map_container.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append("path").attr("d", geo_path).on('click', function (d) {
+        d3.event.stopPropagation();
         this.getCountryInfo(d);
         this.clicked(d);
       }.bind(this));
       this.refreshColorMap();
-      this.resetValuesToWorld();
-      d3.select("#".concat(this.legend_choice)).classed('selected', true);
-    }
+      this.resetToWorld();
+      d3.select("#".concat(this.legend_choice)).classed('selected', true); // return to world view if the ocean is clicked
+
+      d3.select('#map-container>svg').on('click', function () {
+        this.resetToWorld();
+      }.bind(this));
+    } // updates the legend and the map to reflect a new encoding selection
+
   }, {
     key: "refreshColorMap",
     value: function refreshColorMap() {
@@ -31187,7 +31170,7 @@ function () {
         legend_table.select(".c".concat(i, " .text")).text(text_list[i]);
       }
 
-      this.countryPath.transition().duration(1000).attr('fill', function (d) {
+      this.country_path.transition().duration(1000).attr('fill', function (d) {
         var _iteratorNormalCompletion2 = true;
         var _didIteratorError2 = false;
         var _iteratorError2 = undefined;
@@ -31233,7 +31216,7 @@ function () {
 
         return "#ececec"; // else no data
       }.bind(this));
-    } // runs whenever a *country* is clicked, TODO also run when background is clicked
+    } // runs whenever a *country* is clicked
 
   }, {
     key: "clicked",
@@ -31242,17 +31225,17 @@ function () {
       var country = d.properties.name;
 
       if (selected_country !== country) {
-        var centroid = path.centroid(d);
+        var centroid = geo_path.centroid(d);
         dx = width / 2 - centroid[0];
         dy = height / 2 - centroid[1];
-        var bounds = path.bounds(d);
+        var bounds = geo_path.bounds(d);
         var boxw = bounds[1][0] - bounds[0][0];
         var boxh = bounds[1][1] - bounds[0][1];
         k = Math.min(width / boxw, height / boxh) * zoom_scale;
         if (k < min_zoom) k = min_zoom;
         if (k > max_zoom) k = max_zoom;
         selected_country = country;
-        svg.selectAll('path').classed('active', function (d) {
+        map_container.selectAll('path').classed('active', function (d) {
           return d.properties.name === selected_country;
         });
         var _iteratorNormalCompletion3 = true;
@@ -31289,20 +31272,25 @@ function () {
             }
           }
         }
-      } else {
-        this.resetValuesToWorld();
-        dx = 0, dy = 0, k = 1;
-        selected_country = -1;
-        svg.selectAll('path').classed('active', false);
-      }
 
-      svg.transition().duration(750).attr('transform', "scale(".concat(k, ")translate(").concat(dx, ",").concat(dy, ")"));
+        this.zoomMap(k, dx, dy);
+      } else {
+        this.resetToWorld();
+      }
     }
   }, {
-    key: "resetValuesToWorld",
-    value: function resetValuesToWorld() {
+    key: "resetToWorld",
+    value: function resetToWorld() {
       this.getLightBulbs(10.15, "The World");
-      this.getFactories(this.word_total_operating, this.world_total_inprogess, this.world_total_shutdown);
+      this.getFactories(world_total_operating, world_total_inprogess, world_total_shutdown);
+      selected_country = -1;
+      map_container.selectAll('path').classed('active', false);
+      this.zoomMap(1, 0, 0);
+    }
+  }, {
+    key: "zoomMap",
+    value: function zoomMap(k, dx, dy) {
+      map_container.transition().duration(750).attr('transform', "scale(".concat(k, ")translate(").concat(dx, ",").concat(dy, ")"));
     }
   }, {
     key: "getCountryInfo",
@@ -31399,21 +31387,10 @@ function createColorScale(upper_bounds, colors) {
   };
 }
 },{"d3":"../node_modules/d3/index.js","../static/world-map-geo.json":"../static/world-map-geo.json"}],"index.js":[function(require,module,exports) {
-// You can require libraries
-var d3 = require('d3'); // You can include local JS files:
+var d3 = require('d3'); // Gets included in js bundle
 
 
-var MyClass = require('./my-class');
-
-var myClassInstance = new MyClass();
-myClassInstance.sayHi(); // Gets included in js bundle
-
-var data_nuclear_only = require('./country_nuclear_status.json'); // Loaded over network due to size
-
-
-d3.csv('all_fuels.csv').then(function (data) {// console.log('Dynamically loaded CSV data', data);
-  // Do stuff
-});
+var data_nuclear_only = require('./country_nuclear_status.json');
 
 var Dashboard = require('./dashboard.js');
 
@@ -31427,7 +31404,7 @@ var control_spans = d3.selectAll('#map-control span').on('click', function () {
     DashboardInstance.refreshColorMap();
   }
 });
-},{"d3":"../node_modules/d3/index.js","./my-class":"my-class.js","./country_nuclear_status.json":"country_nuclear_status.json","./dashboard.js":"dashboard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"d3":"../node_modules/d3/index.js","./country_nuclear_status.json":"country_nuclear_status.json","./dashboard.js":"dashboard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -31455,7 +31432,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52725" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52736" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
