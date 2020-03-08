@@ -17,22 +17,22 @@ const country_position = [
     {
         country: "Australia",
         scale: 700,
-        center: [137, 330]
+        center: [137, 333]
     },
     {
         country: "China",
         scale: 550,
-        center: [105, 40]
+        center: [105, 43]
     },
     {
         country: "Japan",
         scale: 1200,
-        center: [135, 37]
+        center: [135, 38]
     },
     {
         country: "United States of America",
         scale: 575,
-        center: [-95, 45]
+        center: [-95, 46]
     }
 ]
 
@@ -93,7 +93,13 @@ class CountryMap {
         }
 
         // organize the data here!
+        powerplants.sort(function (x, y) {
+            return d3.ascending(x.commissioning_year, y.commissioning_year);
+        });
 
+        let min_year = d3.min(powerplants, function (d) { return d.commissioning_year; })
+
+        console.log(min_year);
         console.log(powerplants);
 
         let tooltip = d3.select(this.container)
