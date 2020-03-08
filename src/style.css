@@ -176,7 +176,7 @@ a {
     bottom: 0;
     left: 0;
     z-index: 10;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 #map-legend table {
     border-spacing: 10px;
@@ -250,4 +250,10 @@ a {
     width: 50%;
 }
 
-
+.tooltip {
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 2px;
+    background: transparent;
+    font-weight: 700;
+}
