@@ -43,7 +43,7 @@ class CountryMap {
         this.country_name = country_name;
         this.svg = null;
         this.projection = null;
-        
+
         this.dotsID = `#${country_name}dots`;
         this.tooltipsID = `#${country_name}tooltips`;
     }
@@ -96,6 +96,7 @@ class CountryMap {
 
         let tooltip = d3.select(this.container)
             .append("div")
+            .attr("class", "tooltip")
             .style("position", "absolute")
             .style("z-index", "10")
             .style("visibility", "hidden")
@@ -115,7 +116,7 @@ class CountryMap {
                     800
                 ]) + ")";
             }.bind(this))
-            .style("fill", "#000")
+            .style("fill", "#777777")
             .style("stroke", "#add8e6")
             .style("stroke-width", 2)
             .on("mouseover", function (d) {
