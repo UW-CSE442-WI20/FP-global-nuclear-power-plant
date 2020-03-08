@@ -132,19 +132,14 @@ class Dashboard {
             .attr('fill', function (d) {
                 for (let c of country_nuclear_data) {
                     if (c.country == d.properties.name && countries_with_data.includes(d.properties.name)) {
-                        let color;
                         switch (this.legend_choice) {
                             case 'under_construction':
-                                color = color_scale_construction(c.under_construction);
-                                break;
+                                return color_scale_construction(c.under_construction);
                             case 'active_total_ratio':
-                                color = color_scale_ratio(c.active_total_ratio);
-                                break;
+                                return color_scale_ratio(c.active_total_ratio);
                             default:
-                                color = color_scale_percent(c.nuclear_share_percentage);
-                                break;
+                                return color_scale_percent(c.nuclear_share_percentage);
                         }
-                        return color;
                     }
                 }
                 return "#ececec"; // else no data
