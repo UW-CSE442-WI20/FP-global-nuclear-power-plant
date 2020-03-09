@@ -181,7 +181,7 @@ var introContents = ['Nuclear power is a clean and efficient energy that contrib
                     'energy.', ' In 1935, physicist Enrico Fermi conducted experiments that showed ' + 
                     'neutrons could split atoms. He also bombarded uranium and concluded that he created new elements. ',
                     'In 1938, German scientist Otto Hahn and Fritz Strassmann fired neutrons at uranium and later Lise Meitner figured that the split must ' +
-                    'have converted to energy following E=mc^2 equation.', 'Frédéric Joliot, H. Von Halban and L. Kowarski in Paris discovered neutron multiplication ' +
+                    'have converted to energy following E=mc^2 equation.', ' Frédéric Joliot, H. Von Halban and L. Kowarski in Paris discovered neutron multiplication ' +
                     'in uranium, proving that a nuclear chain reaction by this mechanism was indeed possible.', ' In 1942, Fermi and a group of scientists gathered at the ' +
                     'University of Chicago to develop their theories about self-sustaining reactions. The reactor they built was later ' +
                     'known as Chicago Pile-1.'
