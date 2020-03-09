@@ -34001,19 +34001,19 @@ var country_position = [{
 }, {
   country: "Australia",
   scale: 700,
-  center: [137, 333]
+  center: [137, 330]
 }, {
   country: "China",
   scale: 550,
-  center: [105, 43]
+  center: [105, 40]
 }, {
   country: "Japan",
   scale: 1200,
-  center: [135, 38]
+  center: [135, 37]
 }, {
   country: "United States of America",
   scale: 575,
-  center: [-95, 46]
+  center: [-95, 43]
 }];
 
 var CountryMap =
@@ -34087,8 +34087,7 @@ function () {
           if (c.country_long == this.country_name) {
             powerplants.push(c);
           }
-        } // organize the data here!
-
+        }
       } catch (err) {
         _didIteratorError2 = true;
         _iteratorError2 = err;
@@ -34104,18 +34103,11 @@ function () {
         }
       }
 
-      powerplants.sort(function (x, y) {
-        return d3.ascending(x.commissioning_year, y.commissioning_year);
-      });
-      var min_year = d3.min(powerplants, function (d) {
-        return d.commissioning_year;
-      });
-      console.log(min_year);
       console.log(powerplants);
       var tooltip = d3.select(this.container).append("div").attr("class", "tooltip").style("position", "absolute").style("z-index", "10").style("visibility", "hidden").style("background", "#ffff").attr("id", this.tooltipsID).text("a simple tooltip");
       var circles = this.svg.selectAll(".pin").data(powerplants).enter().append("circle", ".pin").attr("r", 5).attr("id", this.dotsID).attr("transform", function (d) {
         return "translate(" + this.projection([d.longitude, 800]) + ")";
-      }.bind(this)).style("fill", "#000000").style("stroke", "#add8e6").style("stroke-width", 2).on("mouseover", function (d) {
+      }.bind(this)).style("fill", "#777777").style("stroke", "#add8e6").style("stroke-width", 2).on("mouseover", function (d) {
         //d3.select(this).attr("xlink:href", "../static/homer.png");
         tooltip.text(d.name);
         return tooltip.style("visibility", "visible");
@@ -34536,13 +34528,6 @@ function createColorScale(upper_bounds, colors) {
   };
 }
 },{"d3":"../node_modules/d3/index.js","../static/world-map-geo.json":"../static/world-map-geo.json"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.FranceMapInstance = exports.JapanMapInstance = exports.AustraliaMapInstance = exports.ChinaMapInstance = exports.USMapInstance = void 0;
-
 var d3 = require('d3'); // Gets included in js bundle
 
 
@@ -34552,18 +34537,12 @@ var nuclear_powerplants = require('./nuclear-only.json');
 
 var Map = require('./country_map.js');
 
-var USMapInstance = new Map(nuclear_powerplants, "#america-map", "United States of America"); // plotPlants to make dots
-// clearDots to clear the dots
-
-exports.USMapInstance = USMapInstance;
-var ChinaMapInstance = new Map(nuclear_powerplants, "#china-map", "China");
-exports.ChinaMapInstance = ChinaMapInstance;
-var AustraliaMapInstance = new Map(nuclear_powerplants, "#australia-map", "Australia");
-exports.AustraliaMapInstance = AustraliaMapInstance;
-var JapanMapInstance = new Map(nuclear_powerplants, "#japan-map", "Japan");
-exports.JapanMapInstance = JapanMapInstance;
-var FranceMapInstance = new Map(nuclear_powerplants, "#france-map", "France");
-exports.FranceMapInstance = FranceMapInstance;
+var USMapInstance = new Map(nuclear_powerplants, "#america-map", "United States of America");
+USMapInstance.makeCountryMap();
+d3.select('#america-container').on('mouseover', function () {
+  USMapInstance.plotPlants();
+  d3.select('#america-container').on('mouseover', null);
+});
 
 var Dashboard = require('./dashboard.js');
 
@@ -34576,110 +34555,6 @@ var control_spans = d3.selectAll('#map-control span').on('click', function () {
     d3.select("#".concat(DashboardInstance.legend_choice)).classed('selected', true);
     DashboardInstance.refreshColorMap();
   }
-});
-ChinaMapInstance.makeCountryMap();
-AustraliaMapInstance.makeCountryMap();
-JapanMapInstance.makeCountryMap();
-FranceMapInstance.makeCountryMap();
-USMapInstance.makeCountryMap();
-d3.select('#america-container').on('mouseover', function () {
-  USMapInstance.plotPlants();
-  d3.select('#america-container').on('mouseover', null);
-});
-d3.select('#countries').on('mouseover', function () {
-  ChinaMapInstance.plotPlants();
-  d3.select('#countries').on('mouseover', null);
-});
-var slideIndex = 1;
-showDivs(slideIndex, true);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n, false);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n, false);
-}
-
-function showDivs(n, first_china) {
-  if (!first_china) {
-    ChinaMapInstance.clearDots();
-    JapanMapInstance.clearDots();
-    AustraliaMapInstance.clearDots();
-    FranceMapInstance.clearDots();
-
-    switch (n) {
-      case 1:
-        ChinaMapInstance.plotPlants();
-        break;
-
-      case 2:
-        JapanMapInstance.plotPlants();
-        break;
-
-      case 3:
-        FranceMapInstance.plotPlants();
-        break;
-
-      case 4:
-        AustraliaMapInstance.plotPlants();
-        break;
-    }
-  }
-
-  var i;
-  var x = document.getElementsByClassName("slide");
-  var dots = document.getElementsByClassName("demo");
-
-  if (n > x.length) {
-    slideIndex = 1;
-  }
-
-  if (n < 1) {
-    slideIndex = x.length;
-  }
-
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-
-  x[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " w3-white";
-}
-
-document.getElementById("left").addEventListener("click", function () {
-  plusDivs(-1);
-});
-document.getElementById("right").addEventListener("click", function () {
-  plusDivs(1);
-});
-document.getElementById("dot1").addEventListener("click", function () {
-  currentDiv(1);
-});
-document.getElementById("dot2").addEventListener("click", function () {
-  currentDiv(2);
-});
-document.getElementById("dot3").addEventListener("click", function () {
-  currentDiv(3);
-});
-document.getElementById("dot4").addEventListener("click", function () {
-  currentDiv(4);
-});
-document.getElementById("china").addEventListener("click", function () {
-  currentDiv(1);
-});
-document.getElementById("japan").addEventListener("click", function () {
-  currentDiv(2);
-});
-document.getElementById("france").addEventListener("click", function () {
-  currentDiv(3);
-});
-document.getElementById("australia").addEventListener("click", function () {
-  currentDiv(4);
 });
 },{"d3":"../node_modules/d3/index.js","./country_nuclear_status.json":"country_nuclear_status.json","./nuclear-only.json":"nuclear-only.json","./country_map.js":"country_map.js","./dashboard.js":"dashboard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -34709,7 +34584,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54373" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49276" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
