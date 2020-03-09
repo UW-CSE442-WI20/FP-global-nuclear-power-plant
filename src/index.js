@@ -167,7 +167,7 @@ setTimeout(function() { typeWriter("intro", introContents[3], 0) }, 18000);
 setTimeout(function() { typeWriter("intro", introContents[4], 0) }, 21000);
 setTimeout(function() { typeWriter("intro", introContents[5], 0) }, 24000);
 setTimeout(function() { replaceText(introTitles[0] + introContents[0] + introTitles[1] + introContents[1] + introTitles[2] + introContents[2]
-                                + introContents[3] + introContents[4] + introContents[5]); }, 27000);
+                                + introContents[3] + introContents[4] + introContents[5]); }, 30000);
 
 
 // text
