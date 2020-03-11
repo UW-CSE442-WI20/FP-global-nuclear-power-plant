@@ -163,7 +163,8 @@ a {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 546px auto;
     height: 100vh;
-    padding: 40px 0;
+    padding: 20px 0 20px 20px;
+    box-sizing: content-box;
 }
 
 #map-container {
