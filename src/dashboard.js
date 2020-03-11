@@ -174,10 +174,27 @@ class Dashboard {
             if (k < min_zoom) k = min_zoom;
             if (k > max_zoom) k = max_zoom;
 
-            // console.log(`${country} -- dx:${dx}, dy:${dy}, k:${k}, k*dx:${k*dx}, k*dy:${k*dy}`)
-
-            // if (k * dx > width / 2) dx = (width / 2) / k;
-            // if (k * dy > height / 2) dy = (height / 2) / k;
+            // I've given up
+            console.log(`dx:${dx}, dy:${dy}, k:${k}`)
+            switch (country) {
+                case 'Russia':
+                    dy -= 75;
+                    dx += 50;
+                    break;
+                case 'United States of America':
+                    dx -= 100;
+                    break;
+                case 'Canada':
+                    dx -= 30;
+                    dy -= 100;
+                    break;
+                case 'Greenland':
+                    dy -= 190;
+                    break;
+                case 'Norway':
+                    dy -= 40;
+                    break;
+            }
 
             selected_country = country;
             map_container.selectAll('path')
