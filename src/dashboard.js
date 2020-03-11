@@ -171,6 +171,11 @@ class Dashboard {
             if (k < min_zoom) k = min_zoom;
             if (k > max_zoom) k = max_zoom;
 
+            // console.log(`${country} -- dx:${dx}, dy:${dy}, k:${k}, k*dx:${k*dx}, k*dy:${k*dy}`)
+
+            // if (k * dx > width / 2) dx = (width / 2) / k;
+            // if (k * dy > height / 2) dy = (height / 2) / k;
+
             selected_country = country;
             map_container.selectAll('path')
                 .classed('active', function (d) { return d.properties.name === selected_country; })
