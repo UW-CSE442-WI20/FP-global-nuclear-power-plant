@@ -257,3 +257,21 @@ a {
     background: transparent;
     font-weight: 700;
 }
+
+#intro {
+    padding: 10%;
+    float: inline-start;
+    font-size: 120%;
+}
+
+#america-text, #china-text, #australia-text, #japan-text, #france-text {
+    padding: 5%;
+}
+
+#america-text {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#countries {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}

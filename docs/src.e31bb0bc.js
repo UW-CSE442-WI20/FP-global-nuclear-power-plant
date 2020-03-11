@@ -29330,6 +29330,2948 @@ module.exports = [{
   "operating_total_capacity": "",
   "active_total_ratio": 0.599739244
 }];
+},{}],"nuclear-only.json":[function(require,module,exports) {
+module.exports = [{
+  "country": "ARG",
+  "country_long": "Argentina",
+  "name": "ATUCHA I",
+  "gppd_idnr": "ARG0000029",
+  "capacity_mw": 370,
+  "latitude": -33.967,
+  "longitude": -59.2059,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1974,
+  "owner": "NASA",
+  "year_of_capacity_data": 2015,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 1208.00907544
+}, {
+  "country": "ARG",
+  "country_long": "Argentina",
+  "name": "ATUCHA II",
+  "gppd_idnr": "ARG0000030",
+  "capacity_mw": 745,
+  "latitude": -33.9674,
+  "longitude": -59.2045,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2014,
+  "owner": "NASA",
+  "year_of_capacity_data": 2015,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 2432.342597845
+}, {
+  "country": "ARG",
+  "country_long": "Argentina",
+  "name": "EMBALSE",
+  "gppd_idnr": "ARG0000112",
+  "capacity_mw": 648,
+  "latitude": -32.2316,
+  "longitude": -64.4422,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "NASA",
+  "year_of_capacity_data": 2015,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 2115.648326716
+}, {
+  "country": "ARM",
+  "country_long": "Armenia",
+  "name": "Armenian-2",
+  "gppd_idnr": "WRI1019028",
+  "capacity_mw": 375,
+  "latitude": 40.1805,
+  "longitude": 44.1498,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1980,
+  "owner": "Armenian Nuclear Power Company",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 2465
+}, {
+  "country": "BEL",
+  "country_long": "Belgium",
+  "name": "DOEL 4",
+  "gppd_idnr": "WRI1002223",
+  "capacity_mw": 2910,
+  "latitude": 51.3254,
+  "longitude": 4.2597,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 16550.631138412
+}, {
+  "country": "BEL",
+  "country_long": "Belgium",
+  "name": "TIHANGE 1N",
+  "gppd_idnr": "WRI1002275",
+  "capacity_mw": 962,
+  "latitude": 50.5342,
+  "longitude": 5.2751,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1975,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 5471.377029262
+}, {
+  "country": "BEL",
+  "country_long": "Belgium",
+  "name": "TIHANGE 3",
+  "gppd_idnr": "WRI1002277",
+  "capacity_mw": 2053.8,
+  "latitude": 50.5342,
+  "longitude": 5.2751,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 11680.991832326
+}, {
+  "country": "BRA",
+  "country_long": "Brazil",
+  "name": "Almirante Álvaro Alberto - Unidade I (Antiga Angra I)",
+  "gppd_idnr": "BRA0000100",
+  "capacity_mw": 640,
+  "latitude": -23.0087,
+  "longitude": -44.4574,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 4945.688442211
+}, {
+  "country": "BRA",
+  "country_long": "Brazil",
+  "name": "Almirante Álvaro Alberto - Unidade II (Antiga Angra II)",
+  "gppd_idnr": "BRA0000101",
+  "capacity_mw": 1350,
+  "latitude": -23.0072,
+  "longitude": -44.4588,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2000,
+  "owner": "",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 10432.311557789
+}, {
+  "country": "BGR",
+  "country_long": "Bulgaria",
+  "name": "KOZLODUY",
+  "gppd_idnr": "WRI1008053",
+  "capacity_mw": 2000,
+  "latitude": 43.7438,
+  "longitude": 23.7723,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 15867
+}, {
+  "country": "CAN",
+  "country_long": "Canada",
+  "name": "Bruce A",
+  "gppd_idnr": "CAN0002030",
+  "capacity_mw": 3220,
+  "latitude": 44.3391,
+  "longitude": -81.5747,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Bruce Power LP",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 24324.62186053
+}, {
+  "country": "CAN",
+  "country_long": "Canada",
+  "name": "Bruce B",
+  "gppd_idnr": "CAN0002031",
+  "capacity_mw": 3390,
+  "latitude": 44.319,
+  "longitude": -81.6027,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Bruce Power LP",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 25608.84102708
+}, {
+  "country": "CAN",
+  "country_long": "Canada",
+  "name": "Darlington",
+  "gppd_idnr": "CAN0002043",
+  "capacity_mw": 3740,
+  "latitude": 43.8697,
+  "longitude": -78.7239,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 28252.821664094
+}, {
+  "country": "CAN",
+  "country_long": "Canada",
+  "name": "Pickering A",
+  "gppd_idnr": "CAN0002073",
+  "capacity_mw": 1084,
+  "latitude": 43.8107,
+  "longitude": -79.0689,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8188.785744352
+}, {
+  "country": "CAN",
+  "country_long": "Canada",
+  "name": "Pickering B",
+  "gppd_idnr": "CAN0002074",
+  "capacity_mw": 2160,
+  "latitude": 43.8096,
+  "longitude": -79.0639,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 16317.137645573
+}, {
+  "country": "CAN",
+  "country_long": "Canada",
+  "name": "Point Lepreau",
+  "gppd_idnr": "CAN0002076",
+  "capacity_mw": 660,
+  "latitude": 45.0686,
+  "longitude": -66.4543,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 4985.79205837
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "CEFR",
+  "gppd_idnr": "WRI1061016",
+  "capacity_mw": 20,
+  "latitude": 39.74,
+  "longitude": 116.03,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2012,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 79.359319801
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Changjiang",
+  "gppd_idnr": "WRI1061017",
+  "capacity_mw": 1220,
+  "latitude": 19.46,
+  "longitude": 108.9,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2015,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 4840.918507874
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Daya Bay",
+  "gppd_idnr": "WRI1061018",
+  "capacity_mw": 1888,
+  "latitude": 22.6,
+  "longitude": 114.54,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1993,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 7491.519789234
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Fangchenggang",
+  "gppd_idnr": "WRI1061019",
+  "capacity_mw": 2000,
+  "latitude": 21.67,
+  "longitude": 108.56,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2016,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 7935.931980121
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Fangjiashan",
+  "gppd_idnr": "WRI1061020",
+  "capacity_mw": 2024,
+  "latitude": 30.44,
+  "longitude": 120.94,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2014,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8031.163163882
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Fuqing",
+  "gppd_idnr": "WRI1061021",
+  "capacity_mw": 4000,
+  "latitude": 25.4426,
+  "longitude": 119.444,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2014,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 15871.863960242
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Hongyanhe",
+  "gppd_idnr": "WRI1061022",
+  "capacity_mw": 4183,
+  "latitude": 39.8,
+  "longitude": 121.48,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2013,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 16598.001736423
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Ling Ao",
+  "gppd_idnr": "WRI1061023",
+  "capacity_mw": 3914,
+  "latitude": 22.6,
+  "longitude": 114.55,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2002,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 15530.618885097
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Ningde",
+  "gppd_idnr": "WRI1061024",
+  "capacity_mw": 4072,
+  "latitude": 27.0446,
+  "longitude": 120.2855,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2012,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 16157.557511526
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Qinshan 2",
+  "gppd_idnr": "WRI1061025",
+  "capacity_mw": 4101,
+  "latitude": 30.433,
+  "longitude": 120.9501,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1994,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 16272.628525238
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Tianwan",
+  "gppd_idnr": "WRI1061026",
+  "capacity_mw": 1980,
+  "latitude": 34.69,
+  "longitude": 119.46,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2006,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 7856.57266032
+}, {
+  "country": "CHN",
+  "country_long": "China",
+  "name": "Yangjiang",
+  "gppd_idnr": "WRI1061027",
+  "capacity_mw": 4000,
+  "latitude": 21.71,
+  "longitude": 112.26,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2014,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 15871.863960242
+}, {
+  "country": "FIN",
+  "country_long": "Finland",
+  "name": "Loviisa Y1",
+  "gppd_idnr": "WRI1002445",
+  "capacity_mw": 992,
+  "latitude": 60.3708,
+  "longitude": 26.3468,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Fortum Power & Heat   Power",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8499.76744186
+}, {
+  "country": "FIN",
+  "country_long": "Finland",
+  "name": "Olkiluoto 1",
+  "gppd_idnr": "WRI1002473",
+  "capacity_mw": 1760,
+  "latitude": 61.2371,
+  "longitude": 21.4433,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Teollisuuden Voima Oyj",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 15080.23255814
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "BELLEVILLE",
+  "gppd_idnr": "WRI1002693",
+  "capacity_mw": 2620,
+  "latitude": 47.5103,
+  "longitude": 2.875,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1988,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 18114.396958657
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "BLAYAIS",
+  "gppd_idnr": "WRI1002694",
+  "capacity_mw": 3640,
+  "latitude": 45.256,
+  "longitude": -0.6932,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1981,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 25166.566766989
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "BUGEY",
+  "gppd_idnr": "WRI1002701",
+  "capacity_mw": 3580,
+  "latitude": 45.7973,
+  "longitude": 5.2706,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1972,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 24751.733248852
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "CATTENOM",
+  "gppd_idnr": "WRI1002703",
+  "capacity_mw": 5200,
+  "latitude": 49.416,
+  "longitude": 6.2169,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1987,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 35952.238238555
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "CHINON",
+  "gppd_idnr": "WRI1002706",
+  "capacity_mw": 3620,
+  "latitude": 47.2254,
+  "longitude": 0.1656,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1964,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 25028.28892761
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "CHOOZ",
+  "gppd_idnr": "WRI1002707",
+  "capacity_mw": 3000,
+  "latitude": 50.09,
+  "longitude": 4.7894,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1967,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 20741.675906859
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "CIVAUX",
+  "gppd_idnr": "WRI1002708",
+  "capacity_mw": 2990,
+  "latitude": 46.4563,
+  "longitude": 0.6548,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2002,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 20672.536987169
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "CRUAS",
+  "gppd_idnr": "WRI1002716",
+  "capacity_mw": 3660,
+  "latitude": 44.6325,
+  "longitude": 4.7546,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1983,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 25304.844606368
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "DAMPIERRE",
+  "gppd_idnr": "WRI1002720",
+  "capacity_mw": 3560,
+  "latitude": 47.7321,
+  "longitude": 2.5185,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1980,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 24613.455409473
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "FESSENHEIM",
+  "gppd_idnr": "WRI1002727",
+  "capacity_mw": 1760,
+  "latitude": 47.9032,
+  "longitude": 7.5631,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1978,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 12168.449865357
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "FLAMANVILLE",
+  "gppd_idnr": "WRI1002728",
+  "capacity_mw": 2660,
+  "latitude": 49.5366,
+  "longitude": -1.8823,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1986,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 18390.952637415
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "GOLFECH",
+  "gppd_idnr": "WRI1002733",
+  "capacity_mw": 2620,
+  "latitude": 44.106,
+  "longitude": 0.8443,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 18114.396958657
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "GRAVELINES",
+  "gppd_idnr": "WRI1002735",
+  "capacity_mw": 5460,
+  "latitude": 51.0141,
+  "longitude": 2.1332,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1991,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 37749.850150483
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "NOGENT",
+  "gppd_idnr": "WRI1002749",
+  "capacity_mw": 2620,
+  "latitude": 48.5171,
+  "longitude": 3.5181,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1987,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 18114.396958657
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "PALUEL",
+  "gppd_idnr": "WRI1002752",
+  "capacity_mw": 5320,
+  "latitude": 49.8582,
+  "longitude": 0.6354,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 36781.90527483
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "PENLY",
+  "gppd_idnr": "WRI1002754",
+  "capacity_mw": 2660,
+  "latitude": 49.9764,
+  "longitude": 1.2107,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1990,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 18390.952637415
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "ST ALBAN",
+  "gppd_idnr": "WRI1002777",
+  "capacity_mw": 2670,
+  "latitude": 45.4043,
+  "longitude": 4.7554,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1986,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 18460.091557104
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "ST LAURENT",
+  "gppd_idnr": "WRI1002779",
+  "capacity_mw": 1830,
+  "latitude": 47.7197,
+  "longitude": 1.5783,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1969,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 12652.422303184
+}, {
+  "country": "FRA",
+  "country_long": "France",
+  "name": "TRICASTIN 1",
+  "gppd_idnr": "WRI1002782",
+  "capacity_mw": 3660,
+  "latitude": 44.3311,
+  "longitude": 4.7311,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1980,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 25304.844606368
+}, {
+  "country": "DEU",
+  "country_long": "Germany",
+  "name": "BROKDORF",
+  "gppd_idnr": "WRI1005621",
+  "capacity_mw": 1480,
+  "latitude": 53.8506,
+  "longitude": 9.345,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1986,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 12868.223077612
+}, {
+  "country": "DEU",
+  "country_long": "Germany",
+  "name": "EMSLAND",
+  "gppd_idnr": "WRI1005659",
+  "capacity_mw": 1406,
+  "latitude": 52.4716,
+  "longitude": 7.3204,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1988,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 12224.811923731
+}, {
+  "country": "DEU",
+  "country_long": "Germany",
+  "name": "Grohnde",
+  "gppd_idnr": "WRI1005703",
+  "capacity_mw": 1360,
+  "latitude": 52.0356,
+  "longitude": 9.4135,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "E.ON Kernkraft GmbH",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 11824.853638886
+}, {
+  "country": "DEU",
+  "country_long": "Germany",
+  "name": "ISAR-2",
+  "gppd_idnr": "WRI1005849",
+  "capacity_mw": 1485,
+  "latitude": 48.6049,
+  "longitude": 12.2936,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1988,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 12911.696804225
+}, {
+  "country": "DEU",
+  "country_long": "Germany",
+  "name": "Kernkraft Gundremmingen",
+  "gppd_idnr": "WRI1005856",
+  "capacity_mw": 2572,
+  "latitude": 48.515,
+  "longitude": 10.4016,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "Kernkraftwerk Gundremmingen GmbH (KGG)",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 22362.884970012
+}, {
+  "country": "DEU",
+  "country_long": "Germany",
+  "name": "NECKARWESTHEIM-2",
+  "gppd_idnr": "WRI1005974",
+  "capacity_mw": 1400,
+  "latitude": 49.0408,
+  "longitude": 9.1759,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1989,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 12172.643451795
+}, {
+  "country": "DEU",
+  "country_long": "Germany",
+  "name": "PHILIPPSBURG-2",
+  "gppd_idnr": "WRI1006001",
+  "capacity_mw": 1468,
+  "latitude": 49.2529,
+  "longitude": 8.4364,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 12763.886133739
+}, {
+  "country": "HUN",
+  "country_long": "Hungary",
+  "name": "Paksi Atomerőmű",
+  "gppd_idnr": "WRI1020246",
+  "capacity_mw": 1886.8,
+  "latitude": 46.5739,
+  "longitude": 18.8536,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 15649
+}, {
+  "country": "IND",
+  "country_long": "India",
+  "name": "DAE RAJASTHAN",
+  "gppd_idnr": "IND0000086",
+  "capacity_mw": 100,
+  "latitude": 24.8747,
+  "longitude": 75.6189,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1972,
+  "owner": "",
+  "year_of_capacity_data": 2018,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 96.624135714
+}, {
+  "country": "IND",
+  "country_long": "India",
+  "name": "KAIGA",
+  "gppd_idnr": "IND0000170",
+  "capacity_mw": 880,
+  "latitude": 14.865,
+  "longitude": 74.4385,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2004,
+  "owner": "",
+  "year_of_capacity_data": 2018,
+  "generation_gwh_2014": 5866.94,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "IND",
+  "country_long": "India",
+  "name": "KAKRAPARA",
+  "gppd_idnr": "IND0000173",
+  "capacity_mw": 440,
+  "latitude": 21.2384,
+  "longitude": 73.3489,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1993,
+  "owner": "",
+  "year_of_capacity_data": 2018,
+  "generation_gwh_2014": 3155,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "IND",
+  "country_long": "India",
+  "name": "KUNDANKULAM",
+  "gppd_idnr": "IND0000220",
+  "capacity_mw": 2000,
+  "latitude": 8.1691,
+  "longitude": 77.1327,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2015,
+  "owner": "",
+  "year_of_capacity_data": 2018,
+  "generation_gwh_2014": 3875.32315,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "IND",
+  "country_long": "India",
+  "name": "Kudankulam",
+  "gppd_idnr": "WRI1026848",
+  "capacity_mw": 2000,
+  "latitude": 8.1689,
+  "longitude": 77.7126,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 1932.482714286
+}, {
+  "country": "IND",
+  "country_long": "India",
+  "name": "M.A.P.P.",
+  "gppd_idnr": "IND0000242",
+  "capacity_mw": 440,
+  "latitude": 12.5571,
+  "longitude": 80.1754,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "",
+  "year_of_capacity_data": 2018,
+  "generation_gwh_2014": 2356.63,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "IND",
+  "country_long": "India",
+  "name": "N.A.P.S",
+  "gppd_idnr": "IND0000283",
+  "capacity_mw": 440,
+  "latitude": 28.156,
+  "longitude": 78.4089,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1990,
+  "owner": "",
+  "year_of_capacity_data": 2018,
+  "generation_gwh_2014": 2539,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "IND",
+  "country_long": "India",
+  "name": "R.A.P.S.",
+  "gppd_idnr": "IND0000350",
+  "capacity_mw": 1080,
+  "latitude": 24.8747,
+  "longitude": 75.6189,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2000,
+  "owner": "",
+  "year_of_capacity_data": 2018,
+  "generation_gwh_2014": 6945,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "IND",
+  "country_long": "India",
+  "name": "TARAPUR",
+  "gppd_idnr": "IND0000445",
+  "capacity_mw": 1400,
+  "latitude": 19.8294,
+  "longitude": 72.6617,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1996,
+  "owner": "",
+  "year_of_capacity_data": 2018,
+  "generation_gwh_2014": 9335,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "IRN",
+  "country_long": "Iran",
+  "name": "Bushehr",
+  "gppd_idnr": "WRI1023916",
+  "capacity_mw": 1000,
+  "latitude": 28.8298,
+  "longitude": 50.8857,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2011,
+  "owner": "Nuclear Power Production and Development Company of Iran",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 4472
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Fukushima Daina",
+  "gppd_idnr": "WRI1000678",
+  "capacity_mw": 4400,
+  "latitude": 37.3164,
+  "longitude": 141.0265,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1982,
+  "owner": "Tokyo",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Genkai",
+  "gppd_idnr": "WRI1000687",
+  "capacity_mw": 3478,
+  "latitude": 33.5152,
+  "longitude": 129.836,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1975,
+  "owner": "Kyushu",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Hamaoka",
+  "gppd_idnr": "WRI1000680",
+  "capacity_mw": 3617,
+  "latitude": 34.6235,
+  "longitude": 138.1421,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1976,
+  "owner": "Chubu",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Higashi-Dori",
+  "gppd_idnr": "WRI1000675",
+  "capacity_mw": 1100,
+  "latitude": 41.188,
+  "longitude": 141.3903,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2005,
+  "owner": "Tohoku",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Ikata",
+  "gppd_idnr": "WRI1000686",
+  "capacity_mw": 2022,
+  "latitude": 33.4909,
+  "longitude": 132.3088,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1977,
+  "owner": "Shikoku",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Kashiwazaki Kariwa",
+  "gppd_idnr": "WRI1000679",
+  "capacity_mw": 8212,
+  "latitude": 37.4259,
+  "longitude": 138.5941,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "Tokyo",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Mihama",
+  "gppd_idnr": "WRI1000682",
+  "capacity_mw": 826,
+  "latitude": 35.7024,
+  "longitude": 135.9634,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1970,
+  "owner": "Kansai",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Ohi",
+  "gppd_idnr": "WRI1000684",
+  "capacity_mw": 4710,
+  "latitude": 35.5424,
+  "longitude": 135.6544,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1976,
+  "owner": "Kansai",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Onagawa",
+  "gppd_idnr": "WRI1000676",
+  "capacity_mw": 2174,
+  "latitude": 38.4,
+  "longitude": 141.5,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "Tohoku",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Sendai",
+  "gppd_idnr": "WRI1000688",
+  "capacity_mw": 1780,
+  "latitude": 31.8335,
+  "longitude": 130.1887,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "Kyushu",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Shika",
+  "gppd_idnr": "WRI1000681",
+  "capacity_mw": 1746,
+  "latitude": 37.0609,
+  "longitude": 136.7265,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1993,
+  "owner": "Hokuriku",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Shimane",
+  "gppd_idnr": "WRI1000685",
+  "capacity_mw": 820,
+  "latitude": 35.5379,
+  "longitude": 132.9991,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1974,
+  "owner": "Chugoku",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Takahama",
+  "gppd_idnr": "WRI1000683",
+  "capacity_mw": 3392,
+  "latitude": 35.5223,
+  "longitude": 135.5036,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1974,
+  "owner": "Kansai",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Tokai Daini",
+  "gppd_idnr": "WRI1000689",
+  "capacity_mw": 1100,
+  "latitude": 36.4215,
+  "longitude": 140.6028,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1966,
+  "owner": "Japan Atomic Power Co.",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Tomari",
+  "gppd_idnr": "WRI1000674",
+  "capacity_mw": 2000,
+  "latitude": 43.0367,
+  "longitude": 140.5125,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1989,
+  "owner": "Hokkaido",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "JPN",
+  "country_long": "Japan",
+  "name": "Tsuruga",
+  "gppd_idnr": "WRI1000690",
+  "capacity_mw": 1160,
+  "latitude": 35.7519,
+  "longitude": 136.0189,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1970,
+  "owner": "Japan Atomic Power Co.",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 0
+}, {
+  "country": "MEX",
+  "country_long": "Mexico",
+  "name": "Laguna Verde",
+  "gppd_idnr": "MEX0001769",
+  "capacity_mw": 1510,
+  "latitude": 19.7208,
+  "longitude": -96.4064,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "CFE",
+  "year_of_capacity_data": 2016,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 9677
+}, {
+  "country": "NLD",
+  "country_long": "Netherlands",
+  "name": "Borssele Nuclear Power Station",
+  "gppd_idnr": "WRI1019300",
+  "capacity_mw": 485,
+  "latitude": 51.4312,
+  "longitude": 3.7174,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1973,
+  "owner": "EPZ",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 4091
+}, {
+  "country": "PAK",
+  "country_long": "Pakistan",
+  "name": "Chasnupp",
+  "gppd_idnr": "WRI1001626",
+  "capacity_mw": 1330,
+  "latitude": 32.392,
+  "longitude": 71.4616,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Pakistan Atomic Energy Commission",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 4614.655760055
+}, {
+  "country": "PAK",
+  "country_long": "Pakistan",
+  "name": "Kanupp",
+  "gppd_idnr": "WRI1001625",
+  "capacity_mw": 137,
+  "latitude": 24.845,
+  "longitude": 66.7888,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1971,
+  "owner": "Pakistan Atomic Energy Commission",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 475.344239945
+}, {
+  "country": "ROU",
+  "country_long": "Romania",
+  "name": "NPP Cernavoda",
+  "gppd_idnr": "WRI1019093",
+  "capacity_mw": 1298,
+  "latitude": 44.3215,
+  "longitude": 28.0568,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 11676
+}, {
+  "country": "RUS",
+  "country_long": "Russia",
+  "name": "Balakovo NPP",
+  "gppd_idnr": "WRI1023915",
+  "capacity_mw": 4000,
+  "latitude": 52.0928,
+  "longitude": 47.9539,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "JSC \"Concern Rosenergoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 25668.41806305
+}, {
+  "country": "RUS",
+  "country_long": "Russia",
+  "name": "Beloyarsk",
+  "gppd_idnr": "WRI1003666",
+  "capacity_mw": 1480,
+  "latitude": 56.8417,
+  "longitude": 61.3225,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1964,
+  "owner": "Rosatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 9497.314683329
+}, {
+  "country": "RUS",
+  "country_long": "Russia",
+  "name": "Bilibino",
+  "gppd_idnr": "WRI1003671",
+  "capacity_mw": 48,
+  "latitude": 68.0503,
+  "longitude": 166.5389,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "JSC \"Concern Rosenergoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 308.021016757
+}, {
+  "country": "RUS",
+  "country_long": "Russia",
+  "name": "Kalinn NPP",
+  "gppd_idnr": "WRI1003717",
+  "capacity_mw": 4000,
+  "latitude": 57.905,
+  "longitude": 35.0614,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "JSC \"Concern Rosenergoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 25668.41806305
+}, {
+  "country": "RUS",
+  "country_long": "Russia",
+  "name": "Kola NPP",
+  "gppd_idnr": "WRI1003733",
+  "capacity_mw": 1760,
+  "latitude": 67.4667,
+  "longitude": 32.4667,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "JSC \"Concern Rosenergoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 11294.103947742
+}, {
+  "country": "RUS",
+  "country_long": "Russia",
+  "name": "Kursk",
+  "gppd_idnr": "WRI1003744",
+  "capacity_mw": 4000,
+  "latitude": 51.675,
+  "longitude": 35.6056,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "JSC \"Concern Rosenergoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 25668.41806305
+}, {
+  "country": "RUS",
+  "country_long": "Russia",
+  "name": "Leningrad NPP",
+  "gppd_idnr": "WRI1003749",
+  "capacity_mw": 4000,
+  "latitude": 59.8528,
+  "longitude": 29.0486,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "JSC \"Concern Rosenergoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 25668.41806305
+}, {
+  "country": "RUS",
+  "country_long": "Russia",
+  "name": "Novovoronezh",
+  "gppd_idnr": "WRI1003775",
+  "capacity_mw": 1880,
+  "latitude": 51.2822,
+  "longitude": 39.21,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "JSC \"Concern Rosenergoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 12064.156489634
+}, {
+  "country": "RUS",
+  "country_long": "Russia",
+  "name": "Rostov NPP",
+  "gppd_idnr": "WRI1003791",
+  "capacity_mw": 4000,
+  "latitude": 47.5993,
+  "longitude": 42.3717,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2001,
+  "owner": "Rosatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 25668.41806305
+}, {
+  "country": "RUS",
+  "country_long": "Russia",
+  "name": "Smolensk",
+  "gppd_idnr": "WRI1003812",
+  "capacity_mw": 3000,
+  "latitude": 54.1647,
+  "longitude": 33.2367,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "JSC \"Concern Rosenergoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 19251.313547288
+}, {
+  "country": "SVK",
+  "country_long": "Slovakia",
+  "name": "Bohunice Nuclear Power Plant Slovakia",
+  "gppd_idnr": "GEODB0002385",
+  "capacity_mw": 880,
+  "latitude": 48.496,
+  "longitude": 17.6816,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 7749.5
+}, {
+  "country": "SVK",
+  "country_long": "Slovakia",
+  "name": "Mochovce Nuclear Power Plant Slovakia",
+  "gppd_idnr": "GEODB0004330",
+  "capacity_mw": 880,
+  "latitude": 48.2621,
+  "longitude": 18.459,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 7749.5
+}, {
+  "country": "SVN",
+  "country_long": "Slovenia",
+  "name": "Krsko (NEK)",
+  "gppd_idnr": "WRI1022414",
+  "capacity_mw": 696,
+  "latitude": 45.9389,
+  "longitude": 15.516,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 6370
+}, {
+  "country": "ZAF",
+  "country_long": "South Africa",
+  "name": "Koeberg",
+  "gppd_idnr": "WRI1000137",
+  "capacity_mw": 1800,
+  "latitude": -33.6737,
+  "longitude": 18.4281,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "Eskom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 13794
+}, {
+  "country": "KOR",
+  "country_long": "South Korea",
+  "name": "Hanbit",
+  "gppd_idnr": "WRI1000217",
+  "capacity_mw": 5900,
+  "latitude": 35.4105,
+  "longitude": 126.4175,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Korea Hydro and Nuclear",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 39989.65591957
+}, {
+  "country": "KOR",
+  "country_long": "South Korea",
+  "name": "Hanul",
+  "gppd_idnr": "WRI1000218",
+  "capacity_mw": 5900,
+  "latitude": 37.0931,
+  "longitude": 129.383,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Korea Hydro and Nuclear",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 39989.65591957
+}, {
+  "country": "KOR",
+  "country_long": "South Korea",
+  "name": "Kori",
+  "gppd_idnr": "WRI1000213",
+  "capacity_mw": 3137,
+  "latitude": 35.3199,
+  "longitude": 129.2948,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Korea Hydro and Nuclear",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 21262.296715202
+}, {
+  "country": "KOR",
+  "country_long": "South Korea",
+  "name": "Shin-Kori",
+  "gppd_idnr": "WRI1000214",
+  "capacity_mw": 3340,
+  "latitude": 35.3271,
+  "longitude": 129.3017,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Korea Hydro and Nuclear",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 22638.211995146
+}, {
+  "country": "KOR",
+  "country_long": "South Korea",
+  "name": "Shin-Wolsong",
+  "gppd_idnr": "WRI1000216",
+  "capacity_mw": 2000,
+  "latitude": 35.7221,
+  "longitude": 129.4786,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2012,
+  "owner": "Korea Hydro and Nuclear",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 13555.815565956
+}, {
+  "country": "KOR",
+  "country_long": "South Korea",
+  "name": "Wolsong",
+  "gppd_idnr": "WRI1000215",
+  "capacity_mw": 2799,
+  "latitude": 35.7111,
+  "longitude": 129.4743,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Korea Hydro and Nuclear",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 18971.363884555
+}, {
+  "country": "ESP",
+  "country_long": "Spain",
+  "name": "ASCO GR",
+  "gppd_idnr": "WRI1006213",
+  "capacity_mw": 1990.5,
+  "latitude": 41.2008,
+  "longitude": 0.5679,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1983,
+  "owner": "ENDESA GENERACION S.A.",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 16020.314786673
+}, {
+  "country": "ESP",
+  "country_long": "Spain",
+  "name": "CN ALMARAZ 1",
+  "gppd_idnr": "WRI1006358",
+  "capacity_mw": 2016.9,
+  "latitude": 39.807,
+  "longitude": -5.6986,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "IBERDROLA GENERACION  S.A.",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 16232.792209616
+}, {
+  "country": "ESP",
+  "country_long": "Spain",
+  "name": "CN COFRENTES",
+  "gppd_idnr": "WRI1006359",
+  "capacity_mw": 1063.94,
+  "latitude": 39.2134,
+  "longitude": -1.0509,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "IBERDROLA GENERACION NUCLEAR  S.A.U.",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8563.00111235
+}, {
+  "country": "ESP",
+  "country_long": "Spain",
+  "name": "TRILLO",
+  "gppd_idnr": "WRI1007993",
+  "capacity_mw": 1003.41,
+  "latitude": 40.7016,
+  "longitude": -2.6227,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1988,
+  "owner": "IBERDROLA GENERACION  S.A.",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8075.832233155
+}, {
+  "country": "ESP",
+  "country_long": "Spain",
+  "name": "VANDELLOS GR 2",
+  "gppd_idnr": "WRI1023569",
+  "capacity_mw": 1045.31,
+  "latitude": 40.9511,
+  "longitude": 0.8662,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1987,
+  "owner": "ENDESA GENERACION S.A.",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8413.059658205
+}, {
+  "country": "SWE",
+  "country_long": "Sweden",
+  "name": "Forsmark",
+  "gppd_idnr": "WRI1002098",
+  "capacity_mw": 3227,
+  "latitude": 60.4028,
+  "longitude": 18.1744,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "65% Vattenfall; E.ON 8.5%; Mellansvensk Kraftgrupp 25.5%",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 21446.228129482
+}, {
+  "country": "SWE",
+  "country_long": "Sweden",
+  "name": "Oskarshamn",
+  "gppd_idnr": "WRI1002168",
+  "capacity_mw": 2603,
+  "latitude": 57.413,
+  "longitude": 16.6683,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 17299.204158984
+}, {
+  "country": "SWE",
+  "country_long": "Sweden",
+  "name": "Ringhals",
+  "gppd_idnr": "WRI1002097",
+  "capacity_mw": 3932,
+  "latitude": 57.2574,
+  "longitude": 12.1087,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "70.4% Vattenfall; 29.6% Karnkraft Sverige",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 26131.567711535
+}, {
+  "country": "CHE",
+  "country_long": "Switzerland",
+  "name": "Kernkraftwerk Beznau",
+  "gppd_idnr": "WRI1004271",
+  "capacity_mw": 760,
+  "latitude": 47.552,
+  "longitude": 8.2281,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Axpo AG",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 6105.924198251
+}, {
+  "country": "CHE",
+  "country_long": "Switzerland",
+  "name": "Kernkraftwerk Gösgen",
+  "gppd_idnr": "WRI1004272",
+  "capacity_mw": 1035,
+  "latitude": 47.3656,
+  "longitude": 7.968,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1979,
+  "owner": "Kernkraftwerk Gösgen-Däniken AG",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8315.304664723
+}, {
+  "country": "CHE",
+  "country_long": "Switzerland",
+  "name": "Kernkraftwerk Leibstadt",
+  "gppd_idnr": "WRI1004273",
+  "capacity_mw": 1245,
+  "latitude": 47.6012,
+  "longitude": 8.1845,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "Kernkraftwerk leibstadt AG",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 10002.467930029
+}, {
+  "country": "CHE",
+  "country_long": "Switzerland",
+  "name": "Kernkraftwerk Mühleberg",
+  "gppd_idnr": "WRI1004274",
+  "capacity_mw": 390,
+  "latitude": 46.9689,
+  "longitude": 7.2684,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1972,
+  "owner": "BWK FMB Energie AG",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 3133.303206997
+}, {
+  "country": "TWN",
+  "country_long": "Taiwan",
+  "name": "Chinshan",
+  "gppd_idnr": "WRI1000378",
+  "capacity_mw": 1272,
+  "latitude": 25.2861,
+  "longitude": 121.5874,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 10341.15995397
+}, {
+  "country": "TWN",
+  "country_long": "Taiwan",
+  "name": "Kuosheng",
+  "gppd_idnr": "WRI1000379",
+  "capacity_mw": 2040,
+  "latitude": 25.2025,
+  "longitude": 121.6629,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 16584.879171461
+}, {
+  "country": "TWN",
+  "country_long": "Taiwan",
+  "name": "Maanshan",
+  "gppd_idnr": "WRI1000380",
+  "capacity_mw": 1902,
+  "latitude": 21.9589,
+  "longitude": 120.7501,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 15462.960874568
+}, {
+  "country": "UKR",
+  "country_long": "Ukraine",
+  "name": "Khmelnytska",
+  "gppd_idnr": "WRI1005111",
+  "capacity_mw": 2000,
+  "latitude": 50.3024,
+  "longitude": 26.6473,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Energoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 12777.593061077
+}, {
+  "country": "UKR",
+  "country_long": "Ukraine",
+  "name": "Rivne (Rouno)",
+  "gppd_idnr": "WRI1005112",
+  "capacity_mw": 2835,
+  "latitude": 51.3245,
+  "longitude": 25.8974,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Energoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 18112.238164077
+}, {
+  "country": "UKR",
+  "country_long": "Ukraine",
+  "name": "South Ukraine",
+  "gppd_idnr": "WRI1005113",
+  "capacity_mw": 3000,
+  "latitude": 47.812,
+  "longitude": 31.22,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Energoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 19166.389591615
+}, {
+  "country": "UKR",
+  "country_long": "Ukraine",
+  "name": "Zaporozhye",
+  "gppd_idnr": "WRI1005114",
+  "capacity_mw": 6000,
+  "latitude": 47.5119,
+  "longitude": 34.5863,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "Energoatom",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 38332.779183231
+}, {
+  "country": "GBR",
+  "country_long": "United Kingdom",
+  "name": "Dungeness B",
+  "gppd_idnr": "GBR1000052",
+  "capacity_mw": 1050,
+  "latitude": 50.9133,
+  "longitude": 0.964,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "British Energy (now part of EDF)",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 7505.651491366
+}, {
+  "country": "GBR",
+  "country_long": "United Kingdom",
+  "name": "Hartlepool",
+  "gppd_idnr": "GBR1000053",
+  "capacity_mw": 1180,
+  "latitude": 54.6341,
+  "longitude": -1.1801,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "British Energy (now part of EDF)",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8434.922628392
+}, {
+  "country": "GBR",
+  "country_long": "United Kingdom",
+  "name": "Heysham 1",
+  "gppd_idnr": "GBR1000054",
+  "capacity_mw": 1155,
+  "latitude": 54.0285,
+  "longitude": -2.916,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "British Energy (now part of EDF)",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8256.216640502
+}, {
+  "country": "GBR",
+  "country_long": "United Kingdom",
+  "name": "Heysham 2",
+  "gppd_idnr": "GBR1000055",
+  "capacity_mw": 1230,
+  "latitude": 54.0285,
+  "longitude": -2.916,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "British Energy (now part of EDF)",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8792.334604171
+}, {
+  "country": "GBR",
+  "country_long": "United Kingdom",
+  "name": "Hinkley Point B",
+  "gppd_idnr": "GBR1000056",
+  "capacity_mw": 955,
+  "latitude": 51.2085,
+  "longitude": -3.1334,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "British Energy (now part of EDF)",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 6826.568737385
+}, {
+  "country": "GBR",
+  "country_long": "United Kingdom",
+  "name": "Hunterston B",
+  "gppd_idnr": "GBR1000057",
+  "capacity_mw": 965,
+  "latitude": 55.7204,
+  "longitude": -4.8964,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "British Energy (now part of EDF)",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 6898.051132541
+}, {
+  "country": "GBR",
+  "country_long": "United Kingdom",
+  "name": "Sizewell B",
+  "gppd_idnr": "GBR1000058",
+  "capacity_mw": 1198,
+  "latitude": 52.2145,
+  "longitude": 1.6206,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "British Energy (now part of EDF)",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8563.590939673
+}, {
+  "country": "GBR",
+  "country_long": "United Kingdom",
+  "name": "Torness",
+  "gppd_idnr": "GBR1000059",
+  "capacity_mw": 1185,
+  "latitude": 55.9679,
+  "longitude": -2.4086,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": "",
+  "owner": "British Energy (now part of EDF)",
+  "year_of_capacity_data": "",
+  "generation_gwh_2014": "",
+  "estimated_generation_gwh_2014": 8470.66382597
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Arkansas Nuclear One",
+  "gppd_idnr": "USA0008055",
+  "capacity_mw": 1845,
+  "latitude": 35.311,
+  "longitude": -93.2351,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1977,
+  "owner": "Entergy Arkansas Inc",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 14478.259,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Beaver Valley",
+  "gppd_idnr": "USA0006040",
+  "capacity_mw": 1846.8,
+  "latitude": 40.6219,
+  "longitude": -80.4336,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1981,
+  "owner": "FirstEnergy Nuclear Operating Company",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 14757.306,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Braidwood Generation Station",
+  "gppd_idnr": "USA0006022",
+  "capacity_mw": 2449.8,
+  "latitude": 41.2435,
+  "longitude": -88.2286,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1988,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 20263.665,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Browns Ferry",
+  "gppd_idnr": "USA0000046",
+  "capacity_mw": 3494,
+  "latitude": 34.7042,
+  "longitude": -87.1189,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1975,
+  "owner": "Tennessee Valley Authority",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 26738.3,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Brunswick Nuclear",
+  "gppd_idnr": "USA0006014",
+  "capacity_mw": 2003.2,
+  "latitude": 33.9597,
+  "longitude": -78.0114,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1976,
+  "owner": "Duke Energy Progress - (NC)",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 15332.24,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Byron Generating Station",
+  "gppd_idnr": "USA0006023",
+  "capacity_mw": 2449.8,
+  "latitude": 42.0742,
+  "longitude": -89.2819,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1986,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 19252.381,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Callaway",
+  "gppd_idnr": "USA0006153",
+  "capacity_mw": 1235.8,
+  "latitude": 38.7589,
+  "longitude": -91.7788,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "Union Electric Co - (MO)",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 9276.356,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Calvert Cliffs Nuclear Power Plant",
+  "gppd_idnr": "USA0006011",
+  "capacity_mw": 1828.7,
+  "latitude": 38.4344,
+  "longitude": -76.4417,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1975,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 14343.334,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Catawba",
+  "gppd_idnr": "USA0006036",
+  "capacity_mw": 2410.2,
+  "latitude": 35.0514,
+  "longitude": -81.0694,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "Duke Energy Carolinas  LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 18711.509,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Clinton Power Station",
+  "gppd_idnr": "USA0000204",
+  "capacity_mw": 1138.3,
+  "latitude": 40.1719,
+  "longitude": -88.8339,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1987,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 9071.711,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Columbia Generating Station",
+  "gppd_idnr": "USA0000371",
+  "capacity_mw": 1200,
+  "latitude": 46.4711,
+  "longitude": -119.3339,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "Energy Northwest",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 9497.321,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Comanche Peak",
+  "gppd_idnr": "USA0006145",
+  "capacity_mw": 2430,
+  "latitude": 32.2984,
+  "longitude": -97.7855,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1991,
+  "owner": "Luminant Generation Company LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 18635.776,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Cooper Nuclear Station",
+  "gppd_idnr": "USA0008036",
+  "capacity_mw": 801,
+  "latitude": 40.3628,
+  "longitude": -95.6408,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1974,
+  "owner": "Nebraska Public Power District",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 5917.335,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Davis Besse",
+  "gppd_idnr": "USA0006149",
+  "capacity_mw": 925.2,
+  "latitude": 41.5967,
+  "longitude": -83.0861,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1977,
+  "owner": "FirstEnergy Nuclear Operating Company",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 5829.169,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Diablo Canyon",
+  "gppd_idnr": "USA0006099",
+  "capacity_mw": 2323,
+  "latitude": 35.2115,
+  "longitude": -120.8555,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "Pacific Gas & Electric Co.",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 16985.978,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Donald C Cook",
+  "gppd_idnr": "USA0006000",
+  "capacity_mw": 2285.3,
+  "latitude": 41.9756,
+  "longitude": -86.5652,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1976,
+  "owner": "Indiana Michigan Power Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 17630.792,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Dresden Generating Station",
+  "gppd_idnr": "USA0000869",
+  "capacity_mw": 2018.6,
+  "latitude": 41.39,
+  "longitude": -88.27,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1970,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 15128.94,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Duane Arnold Energy Center",
+  "gppd_idnr": "USA0001060",
+  "capacity_mw": 679.5,
+  "latitude": 42.1011,
+  "longitude": -91.7781,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1975,
+  "owner": "NextEra Energy Duane Arnold LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 4152.468,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Edwin I Hatch",
+  "gppd_idnr": "USA0006051",
+  "capacity_mw": 1721.8,
+  "latitude": 31.9342,
+  "longitude": -82.3447,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1977,
+  "owner": "Georgia Power Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 14509.992,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Fermi",
+  "gppd_idnr": "USA0001729",
+  "capacity_mw": 1281,
+  "latitude": 41.9631,
+  "longitude": -83.2581,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1986,
+  "owner": "DTE Electric Company",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 7793.433,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Grand Gulf",
+  "gppd_idnr": "USA0006072",
+  "capacity_mw": 1440,
+  "latitude": 32.0081,
+  "longitude": -91.0478,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "System Energy Resources  Inc",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 10252.183,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "H B Robinson",
+  "gppd_idnr": "USA0003251",
+  "capacity_mw": 768.6,
+  "latitude": 34.4017,
+  "longitude": -80.1589,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1971,
+  "owner": "Duke Energy Progress - (NC)",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 5597.462,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Harris",
+  "gppd_idnr": "USA0006015",
+  "capacity_mw": 950.9,
+  "latitude": 35.6334,
+  "longitude": -78.9556,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1987,
+  "owner": "Duke Energy Progress - (NC)",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 8048.575,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Indian Point 2",
+  "gppd_idnr": "USA0002497",
+  "capacity_mw": 1299,
+  "latitude": 41.2706,
+  "longitude": -73.9527,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1973,
+  "owner": "Entergy Nuclear Indian Point 2",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 8330.556,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Indian Point 3",
+  "gppd_idnr": "USA0008907",
+  "capacity_mw": 1012,
+  "latitude": 41.2706,
+  "longitude": -73.9526,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1976,
+  "owner": "Entergy Nuclear Indian Point 3",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 8977.699,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "James A Fitzpatrick",
+  "gppd_idnr": "USA0006110",
+  "capacity_mw": 883.3,
+  "latitude": 43.5214,
+  "longitude": -76.4084,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1976,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 5828.694,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Joseph M Farley",
+  "gppd_idnr": "USA0006001",
+  "capacity_mw": 1776.4,
+  "latitude": 31.2231,
+  "longitude": -85.1116,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1979,
+  "owner": "Alabama Power Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 14505.389,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "LaSalle Generating Station",
+  "gppd_idnr": "USA0006026",
+  "capacity_mw": 2340,
+  "latitude": 41.2455,
+  "longitude": -88.6691,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 18754.699,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Limerick",
+  "gppd_idnr": "USA0006105",
+  "capacity_mw": 2277,
+  "latitude": 40.2243,
+  "longitude": -75.5874,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1988,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 19077.244,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "McGuire",
+  "gppd_idnr": "USA0006038",
+  "capacity_mw": 2440.6,
+  "latitude": 35.4331,
+  "longitude": -80.9486,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1982,
+  "owner": "Duke Energy Carolinas  LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 17586.205,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Millstone",
+  "gppd_idnr": "USA0000566",
+  "capacity_mw": 2162.9,
+  "latitude": 41.3107,
+  "longitude": -72.1677,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1981,
+  "owner": "Dominion Energy Nuclear Conn Inc",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 15840.619,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Monticello Nuclear Facility",
+  "gppd_idnr": "USA0001922",
+  "capacity_mw": 685,
+  "latitude": 45.3338,
+  "longitude": -93.8493,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1971,
+  "owner": "Northern States Power Co - Minnesota",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 4323.966,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Nine Mile Point Nuclear Station",
+  "gppd_idnr": "USA0002589",
+  "capacity_mw": 1901.1,
+  "latitude": 43.5211,
+  "longitude": -76.41,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1981,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 15239.18,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "North Anna",
+  "gppd_idnr": "USA0006168",
+  "capacity_mw": 1960.4,
+  "latitude": 38.06,
+  "longitude": -77.7897,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1979,
+  "owner": "Virginia Electric & Power Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 15891.448,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Oconee",
+  "gppd_idnr": "USA0003265",
+  "capacity_mw": 2666.7,
+  "latitude": 34.7939,
+  "longitude": -82.8986,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1974,
+  "owner": "Duke Energy Carolinas  LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 21193.381,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Oyster Creek",
+  "gppd_idnr": "USA0002388",
+  "capacity_mw": 550,
+  "latitude": 39.8143,
+  "longitude": -74.2062,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1970,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 4850.907,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "PSEG Hope Creek Generating Station",
+  "gppd_idnr": "USA0006118",
+  "capacity_mw": 1290.7,
+  "latitude": 39.4666,
+  "longitude": -75.5377,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1987,
+  "owner": "PSEG Nuclear LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 10373.816,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "PSEG Salem Generating Station",
+  "gppd_idnr": "USA0002410",
+  "capacity_mw": 2381.8,
+  "latitude": 39.4625,
+  "longitude": -75.5358,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1978,
+  "owner": "PSEG Nuclear LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 16283.135,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Palisades",
+  "gppd_idnr": "USA0001715",
+  "capacity_mw": 811.8,
+  "latitude": 42.323,
+  "longitude": -86.3146,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1972,
+  "owner": "Entergy Nuclear Palisades LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 5822.926,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Palo Verde",
+  "gppd_idnr": "USA0006008",
+  "capacity_mw": 4209.6,
+  "latitude": 33.3881,
+  "longitude": -112.8617,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1986,
+  "owner": "Arizona Public Service Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 32320.917,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Peach Bottom",
+  "gppd_idnr": "USA0003166",
+  "capacity_mw": 2784.6,
+  "latitude": 39.7589,
+  "longitude": -76.2687,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1974,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 18771.169,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Perry",
+  "gppd_idnr": "USA0006020",
+  "capacity_mw": 1311.6,
+  "latitude": 41.8006,
+  "longitude": -81.1439,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1987,
+  "owner": "FirstEnergy Nuclear Operating Company",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 10455.271,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Pilgrim Nuclear Power Station",
+  "gppd_idnr": "USA0001590",
+  "capacity_mw": 670,
+  "latitude": 41.9438,
+  "longitude": -70.578,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1973,
+  "owner": "Entergy Nuclear Generation Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 5769.154,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Point Beach Nuclear Plant",
+  "gppd_idnr": "USA0004046",
+  "capacity_mw": 1311,
+  "latitude": 44.2806,
+  "longitude": -87.5369,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1971,
+  "owner": "NextEra Energy Point Beach LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 9447.148,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Prairie Island",
+  "gppd_idnr": "USA0001925",
+  "capacity_mw": 1186.2,
+  "latitude": 44.622,
+  "longitude": -92.6333,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1974,
+  "owner": "Northern States Power Co - Minnesota",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 8383.2,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Quad Cities Generating Station",
+  "gppd_idnr": "USA0000880",
+  "capacity_mw": 2018.6,
+  "latitude": 41.7261,
+  "longitude": -90.3103,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1973,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 15386.504,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "R E Ginna Nuclear Power Plant",
+  "gppd_idnr": "USA0006122",
+  "capacity_mw": 614,
+  "latitude": 43.2777,
+  "longitude": -77.3099,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1970,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 4662.495,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "River Bend",
+  "gppd_idnr": "USA0006462",
+  "capacity_mw": 1035.9,
+  "latitude": 30.757,
+  "longitude": -91.3327,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1986,
+  "owner": "Entergy Louisiana LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 8154.994,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Seabrook",
+  "gppd_idnr": "USA0006115",
+  "capacity_mw": 1242,
+  "latitude": 42.8992,
+  "longitude": -70.8489,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1990,
+  "owner": "NextEra Energy Seabrook LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 10168.265,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Sequoyah",
+  "gppd_idnr": "USA0006152",
+  "capacity_mw": 2441,
+  "latitude": 35.2267,
+  "longitude": -85.0917,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1981,
+  "owner": "Tennessee Valley Authority",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 18892.391,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "South Texas Project",
+  "gppd_idnr": "USA0006251",
+  "capacity_mw": 2708.6,
+  "latitude": 28.795,
+  "longitude": -96.0481,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1988,
+  "owner": "STP Nuclear Operating Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 20651.667,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "St Lucie",
+  "gppd_idnr": "USA0006045",
+  "capacity_mw": 2160,
+  "latitude": 27.3486,
+  "longitude": -80.2464,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1979,
+  "owner": "Florida Power & Light Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 15817.574,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Surry",
+  "gppd_idnr": "USA0003806",
+  "capacity_mw": 1695,
+  "latitude": 37.1661,
+  "longitude": -76.6986,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1973,
+  "owner": "Virginia Electric & Power Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 14332.325,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "TalenEnergy Susquehanna",
+  "gppd_idnr": "USA0006103",
+  "capacity_mw": 2596,
+  "latitude": 41.0919,
+  "longitude": -76.1462,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "TalenEnergy Susquehanna LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 18781.295,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Three Mile Island",
+  "gppd_idnr": "USA0008011",
+  "capacity_mw": 980.8,
+  "latitude": 40.1515,
+  "longitude": -76.7232,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1974,
+  "owner": "Exelon Nuclear",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 7327.645,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Turkey Point",
+  "gppd_idnr": "USA0000621",
+  "capacity_mw": 2861.2,
+  "latitude": 25.4356,
+  "longitude": -80.3308,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1987,
+  "owner": "Florida Power & Light Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 18371.295983,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "V C Summer",
+  "gppd_idnr": "USA0006127",
+  "capacity_mw": 1029.6,
+  "latitude": 34.2983,
+  "longitude": -81.3153,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1984,
+  "owner": "South Carolina Electric&Gas Company",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 6916.201,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Vogtle",
+  "gppd_idnr": "USA0000649",
+  "capacity_mw": 2320,
+  "latitude": 33.1427,
+  "longitude": -81.7625,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1988,
+  "owner": "Georgia Power Co",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 18060.19,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Waterford 3",
+  "gppd_idnr": "USA0004270",
+  "capacity_mw": 1199.8,
+  "latitude": 29.9953,
+  "longitude": -90.4716,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "Entergy Louisiana LLC",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 9156.336,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Watts Bar Nuclear Plant",
+  "gppd_idnr": "USA0007722",
+  "capacity_mw": 2539.8,
+  "latitude": 35.6021,
+  "longitude": -84.7895,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 2006,
+  "owner": "Tennessee Valley Authority",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 8777.615,
+  "estimated_generation_gwh_2014": ""
+}, {
+  "country": "USA",
+  "country_long": "United States of America",
+  "name": "Wolf Creek Generating Station",
+  "gppd_idnr": "USA0000210",
+  "capacity_mw": 1267.7,
+  "latitude": 38.2393,
+  "longitude": -95.6898,
+  "primary_fuel": "Nuclear",
+  "fuel_category": "Nuclear",
+  "commissioning_year": 1985,
+  "owner": "Wolf Creek Nuclear Optg Corp",
+  "year_of_capacity_data": 2017,
+  "generation_gwh_2014": 8558.384,
+  "estimated_generation_gwh_2014": ""
+}];
 },{}],"../static/world-map-geo.json":[function(require,module,exports) {
 module.exports = {
   "type": "Topology",
@@ -30009,7 +32951,7 @@ module.exports = {
         }
       }, {
         "type": "MultiPolygon",
-        "arcs": [[[832, 833, 834]], [[835, 836]], [[837]], [[838]], [[839]], [[840]], [[841]], [[842]], [[843]], [[844]], [[845]], [[846]]],
+        "arcs": [[[832, 833, 834]], [[835, 836]], [[837]], [[838]], [[839]], [[840]], [[841]]],
         "id": "528",
         "properties": {
           "name": "Netherlands"
@@ -31035,7 +33977,218 @@ module.exports = {
     "translate": [-180, -89.999]
   }
 };
-},{}],"dashboard.js":[function(require,module,exports) {
+},{}],"country_map.js":[function(require,module,exports) {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+// needs to be in a div like
+// <div id="country-map-container" style="width: 700px; height: 610px;">
+var d3 = require('d3');
+
+var height = 510;
+var width = 700;
+
+var worldmap_geo_json = require('../static/world-map-geo.json'); // https://github.com/topojson/world-atlas
+
+
+var country_position = [{
+  country: "France",
+  scale: 2000,
+  center: [2, 47]
+}, {
+  country: "Australia",
+  scale: 700,
+  center: [137, 333]
+}, {
+  country: "China",
+  scale: 550,
+  center: [105, 43]
+}, {
+  country: "Japan",
+  scale: 1200,
+  center: [135, 38]
+}, {
+  country: "United States of America",
+  scale: 575,
+  center: [-95, 46]
+}];
+
+var CountryMap =
+/*#__PURE__*/
+function () {
+  function CountryMap(data, container, country_name) {
+    _classCallCheck(this, CountryMap);
+
+    this.nuclear_powerplant_locations = data;
+    this.container = container;
+    this.country_name = country_name;
+    this.svg = null;
+    this.projection = null;
+    this.dotsID = "#".concat(country_name, "dots");
+    this.tooltipsID = "#".concat(country_name, "tooltips");
+  } // pass in the name of the country and the div it should be in
+
+
+  _createClass(CountryMap, [{
+    key: "makeCountryMap",
+    value: function makeCountryMap() {
+      this.svg = d3.select(this.container).append("svg").attr("width", width).attr("height", height);
+      country_coord = {};
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = country_position[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var c = _step.value;
+
+          if (c.country == this.country_name) {
+            country_coord.scale = c.scale;
+            country_coord.center = c.center;
+          }
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return != null) {
+            _iterator.return();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
+
+      this.projection = d3.geoMercator().center(country_coord.center) // x, y lower y higher up it is
+      .scale(country_coord.scale).translate([width / 2, height / 2]);
+      var path = d3.geoPath().projection(this.projection);
+      this.svg.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features.filter(function (d) {
+        return this.country_name === d.properties.name;
+      }.bind(this))).enter().append("path").attr("d", path).attr("fill", "#aaaaaa"); // this.plotPlants();
+    }
+  }, {
+    key: "plotPlants",
+    value: function plotPlants() {
+      var powerplants = [];
+      var _iteratorNormalCompletion2 = true;
+      var _didIteratorError2 = false;
+      var _iteratorError2 = undefined;
+
+      try {
+        for (var _iterator2 = this.nuclear_powerplant_locations[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+          var c = _step2.value;
+
+          if (c.country_long == this.country_name) {
+            powerplants.push(c);
+          }
+        } // organize the data here!
+
+      } catch (err) {
+        _didIteratorError2 = true;
+        _iteratorError2 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
+            _iterator2.return();
+          }
+        } finally {
+          if (_didIteratorError2) {
+            throw _iteratorError2;
+          }
+        }
+      }
+
+      powerplants.sort(function (x, y) {
+        return d3.ascending(x.commissioning_year, y.commissioning_year);
+      });
+      var min_year = d3.min(powerplants, function (d) {
+        return d.commissioning_year;
+      });
+      console.log(min_year);
+      console.log(powerplants);
+      var tooltip = d3.select(this.container).append("div").attr("class", "tooltip").style("position", "absolute").style("z-index", "10").style("visibility", "hidden").style("background", "#ffff").attr("id", this.tooltipsID).text("a simple tooltip");
+      var circles = this.svg.selectAll(".pin").data(powerplants).enter().append("circle", ".pin").attr("r", 5).attr("id", this.dotsID).attr("transform", function (d) {
+        return "translate(" + this.projection([d.longitude, 800]) + ")";
+      }.bind(this)).style("fill", "#000000").style("stroke", "#add8e6").style("stroke-width", 2).on("mouseover", function (d) {
+        //d3.select(this).attr("xlink:href", "../static/homer.png");
+        tooltip.text(d.name);
+        return tooltip.style("visibility", "visible");
+      }).on("mousemove", function () {
+        /*var string = '<img src="./homer.png/">';
+        tooltip.html(string) //this will add the image on mouseover
+            .style("left", (d3.event.pageX + 10) + "px")
+            .style("top", (d3.event.pageY + 50) + "px")
+            .style("font-color", "white");*/
+        return tooltip.style("top", d3.event.pageY - 10 + "px").style("left", d3.event.pageX + 10 + "px");
+      }).on("mouseout", function () {
+        return tooltip.style("visibility", "hidden");
+      });
+      circles.transition().delay(function (d, i) {
+        return i * 200;
+      }).duration(800).ease(this.customBounce(.08)).attr("transform", function (d) {
+        return "translate(" + this.projection([d.longitude, d.latitude]) + ")";
+      }.bind(this));
+    }
+  }, {
+    key: "customBounce",
+    value: function customBounce(h) {
+      if (!arguments.length) h = 0.25;
+      var b0 = 1 - h,
+          b1 = b0 * (1 - b0) + b0,
+          b2 = b0 * (1 - b1) + b1,
+          x0 = 2 * Math.sqrt(h),
+          x1 = x0 * Math.sqrt(h),
+          x2 = x1 * Math.sqrt(h),
+          t0 = 1 / (1 + x0 + x1 + x2),
+          t1 = t0 + t0 * x0,
+          t2 = t1 + t0 * x1,
+          m0 = t0 + t0 * x0 / 2,
+          m1 = t1 + t0 * x1 / 2,
+          m2 = t2 + t0 * x2 / 2,
+          a = 1 / (t0 * t0);
+      return function (t) {
+        return t >= 1 ? 1 : t < t0 ? a * t * t : t < t1 ? a * (t -= m0) * t + b0 : t < t2 ? a * (t -= m1) * t + b1 : a * (t -= m2) * t + b2;
+      };
+    }
+    /* call this function like this
+    d3.select('#button').on('click', () => {
+        CountryMapInstance.clearDots()
+    });
+    */
+
+  }, {
+    key: "clearDots",
+    value: function clearDots() {
+      d3.select(this.container).selectAll("circle").remove();
+    }
+  }]);
+
+  return CountryMap;
+}();
+
+module.exports = CountryMap;
+/*
+const nuclear_powerplant_locations = require('./nuclear-only.json');
+
+const CountryMap = require('./country_map.js');
+const CountryMapInstance = new CountryMap(nuclear_powerplant_locations, "#country-map-container", "France");
+CountryMapInstance.makeCountryMap();
+
+d3.select('#button1').on('click', () => {
+  CountryMapInstance.clearDots()
+});
+
+d3.select('#button2').on('click', () => {
+  CountryMapInstance.plotPlants()
+});
+*/
+},{"d3":"../node_modules/d3/index.js","../static/world-map-geo.json":"../static/world-map-geo.json"}],"dashboard.js":[function(require,module,exports) {
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -31054,7 +34207,9 @@ var width = 1113; // Minimum and maximum zoom levels when clicking on a country
 var min_zoom = 2;
 var max_zoom = 5; // Scale factor for zoom (1 means match bounding box of country)
 
-var zoom_scale = .5; // Upper bounds for the color maps
+var zoom_scale = .5; // Country border thickness when zoomed out
+
+var default_stroke_width = 0.5; // Upper bounds for the color maps
 
 var bounds_percent = [0, 10, 30, 50, 70, 100];
 var bounds_construction = [0, 1, 2, 5, 8, 11];
@@ -31124,10 +34279,10 @@ function () {
   _createClass(Dashboard, [{
     key: "createMap",
     value: function createMap() {
-      map_container = d3.select("#map-container").append("svg").attr("width", width).attr("height", height);
+      map_container = d3.select('#map-container').append('svg').attr('width', width).attr('height', height);
       var projection = d3.geoMercator().scale(1 * width / 2 / Math.PI).translate([width / 2, height / 1.55]);
       geo_path = d3.geoPath().projection(projection);
-      this.country_path = map_container.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append("path").attr("d", geo_path).on('click', function (d) {
+      this.country_path = map_container.selectAll('path').data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append('path').attr('d', geo_path).style('stroke', '#ffffff').style('stroke-width', default_stroke_width).on('click', function (d) {
         d3.event.stopPropagation();
         this.getCountryInfo(d);
         this.clicked(d);
@@ -31180,23 +34335,16 @@ function () {
             var c = _step2.value;
 
             if (c.country == d.properties.name && countries_with_data.includes(d.properties.name)) {
-              var color = void 0;
-
               switch (this.legend_choice) {
                 case 'under_construction':
-                  color = color_scale_construction(c.under_construction);
-                  break;
+                  return color_scale_construction(c.under_construction);
 
                 case 'active_total_ratio':
-                  color = color_scale_ratio(c.active_total_ratio);
-                  break;
+                  return color_scale_ratio(c.active_total_ratio);
 
                 default:
-                  color = color_scale_percent(c.nuclear_share_percentage);
-                  break;
+                  return color_scale_percent(c.nuclear_share_percentage);
               }
-
-              return color;
             }
           }
         } catch (err) {
@@ -31290,6 +34438,7 @@ function () {
   }, {
     key: "zoomMap",
     value: function zoomMap(k, dx, dy) {
+      this.country_path.style('stroke-width', default_stroke_width / k);
       map_container.transition().duration(750).attr('transform', "scale(".concat(k, ")translate(").concat(dx, ",").concat(dy, ")"));
     }
   }, {
@@ -31329,20 +34478,20 @@ function () {
   }, {
     key: "getLightBulbs",
     value: function getLightBulbs(percentage, country) {
-      var TOTAL_BULBS = 20; // fix crashes when a country doesn't have a percentage
+      var total_bulbs = 20; // fix crashes when a country doesn't have a percentage
 
       if (percentage == '') percentage = 0; // fix text overflow
 
       if (country === 'United States of American') country = 'United States';
       var string_p = percentage.toFixed(2).bold();
-      var lightbulbs = Math.round(percentage * (TOTAL_BULBS / 100));
+      var lightbulbs = Math.round(percentage * (total_bulbs / 100));
       var all_bulbs = '';
 
       for (var i = 0; i < lightbulbs; i++) {
         all_bulbs += '<img src="./LightBulb.png">';
       }
 
-      for (var i = 0; i < TOTAL_BULBS - lightbulbs; i++) {
+      for (var i = 0; i < total_bulbs - lightbulbs; i++) {
         all_bulbs += '<img src="./Dimbulb.png">';
       }
 
@@ -31387,10 +34536,34 @@ function createColorScale(upper_bounds, colors) {
   };
 }
 },{"d3":"../node_modules/d3/index.js","../static/world-map-geo.json":"../static/world-map-geo.json"}],"index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FranceMapInstance = exports.JapanMapInstance = exports.AustraliaMapInstance = exports.ChinaMapInstance = exports.USMapInstance = void 0;
+
 var d3 = require('d3'); // Gets included in js bundle
 
 
 var data_nuclear_only = require('./country_nuclear_status.json');
+
+var nuclear_powerplants = require('./nuclear-only.json');
+
+var Map = require('./country_map.js');
+
+var USMapInstance = new Map(nuclear_powerplants, "#america-map", "United States of America"); // plotPlants to make dots
+// clearDots to clear the dots
+
+exports.USMapInstance = USMapInstance;
+var ChinaMapInstance = new Map(nuclear_powerplants, "#china-map", "China");
+exports.ChinaMapInstance = ChinaMapInstance;
+var AustraliaMapInstance = new Map(nuclear_powerplants, "#australia-map", "Australia");
+exports.AustraliaMapInstance = AustraliaMapInstance;
+var JapanMapInstance = new Map(nuclear_powerplants, "#japan-map", "Japan");
+exports.JapanMapInstance = JapanMapInstance;
+var FranceMapInstance = new Map(nuclear_powerplants, "#france-map", "France");
+exports.FranceMapInstance = FranceMapInstance;
 
 var Dashboard = require('./dashboard.js');
 
@@ -31404,7 +34577,178 @@ var control_spans = d3.selectAll('#map-control span').on('click', function () {
     DashboardInstance.refreshColorMap();
   }
 });
-},{"d3":"../node_modules/d3/index.js","./country_nuclear_status.json":"country_nuclear_status.json","./dashboard.js":"dashboard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+ChinaMapInstance.makeCountryMap();
+AustraliaMapInstance.makeCountryMap();
+JapanMapInstance.makeCountryMap();
+FranceMapInstance.makeCountryMap();
+USMapInstance.makeCountryMap();
+d3.select('#america-container').on('mouseover', function () {
+  USMapInstance.plotPlants();
+  d3.select('#america-container').on('mouseover', null);
+});
+d3.select('#countries').on('mouseover', function () {
+  ChinaMapInstance.plotPlants();
+  d3.select('#countries').on('mouseover', null);
+});
+var slideIndex = 1;
+showDivs(slideIndex, true);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n, false);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n, false);
+}
+
+function showDivs(n, first_china) {
+  if (!first_china) {
+    ChinaMapInstance.clearDots();
+    JapanMapInstance.clearDots();
+    AustraliaMapInstance.clearDots();
+    FranceMapInstance.clearDots();
+
+    switch (n) {
+      case 1:
+        ChinaMapInstance.plotPlants();
+        break;
+
+      case 2:
+        JapanMapInstance.plotPlants();
+        break;
+
+      case 3:
+        FranceMapInstance.plotPlants();
+        break;
+
+      case 4:
+        AustraliaMapInstance.plotPlants();
+        break;
+    }
+  }
+
+  var i;
+  var x = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("demo");
+
+  if (n > x.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = x.length;
+  }
+
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+
+  x[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " w3-white";
+}
+
+document.getElementById("left").addEventListener("click", function () {
+  plusDivs(-1);
+});
+document.getElementById("right").addEventListener("click", function () {
+  plusDivs(1);
+});
+document.getElementById("dot1").addEventListener("click", function () {
+  currentDiv(1);
+});
+document.getElementById("dot2").addEventListener("click", function () {
+  currentDiv(2);
+});
+document.getElementById("dot3").addEventListener("click", function () {
+  currentDiv(3);
+});
+document.getElementById("dot4").addEventListener("click", function () {
+  currentDiv(4);
+});
+document.getElementById("china").addEventListener("click", function () {
+  currentDiv(1);
+});
+document.getElementById("japan").addEventListener("click", function () {
+  currentDiv(2);
+});
+document.getElementById("france").addEventListener("click", function () {
+  currentDiv(3);
+});
+document.getElementById("australia").addEventListener("click", function () {
+  currentDiv(4);
+});
+setTimeout(function () {
+  typeWriter("china-content", china, 0);
+}, 35000);
+setTimeout(function () {
+  typeWriter("france-content", france, 0);
+}, 35000);
+setTimeout(function () {
+  typeWriter("australia-content", australia, 0);
+}, 35000);
+setTimeout(function () {
+  typeWriter("japan-content", japan, 0);
+}, 35000);
+var speed = 10;
+
+function typeWriter(id, text, i) {
+  if (i < text.length) {
+    document.getElementById(id).innerHTML += text.charAt(i);
+    setTimeout(function () {
+      typeWriter(id, text, i + 1);
+    }, speed);
+  }
+}
+
+function replaceText(text) {
+  document.getElementById("intro").innerHTML = text;
+}
+
+document.getElementById("intro").innerHTML = '<h1>What is nuclear power?</h1>';
+setTimeout(function () {
+  replaceText(introTitles[0]);
+}, 2000);
+setTimeout(function () {
+  typeWriter("intro", introContents[0], 0);
+}, 2000);
+setTimeout(function () {
+  replaceText(introTitles[1]);
+}, 6000);
+setTimeout(function () {
+  typeWriter("intro", introContents[1], 0);
+}, 6000);
+setTimeout(function () {
+  replaceText(introTitles[2]);
+}, 15000);
+setTimeout(function () {
+  typeWriter("intro", introContents[2], 0);
+}, 15000);
+setTimeout(function () {
+  typeWriter("intro", introContents[3], 0);
+}, 18000);
+setTimeout(function () {
+  typeWriter("intro", introContents[4], 0);
+}, 21000);
+setTimeout(function () {
+  typeWriter("intro", introContents[5], 0);
+}, 24000);
+setTimeout(function () {
+  replaceText(introTitles[0] + introContents[0] + introTitles[1] + introContents[1] + introTitles[2] + introContents[2] + introContents[3] + introContents[4] + introContents[5]);
+}, 27000); // text
+
+var introTitles = ['<h2>What is nuclear power?</h2>', '<h2>Where does the energy come from?</h2>', '<h2>How did we develop to use nuclear energy?</h2>'];
+var introContents = ['Nuclear power is a clean and efficient energy that contributes 12 ' + 'percent of the energy produced in the world. It is the second largest source of low-carbon power.', 'The energy comes from Uranium-236. When we fire a neutron to an uranium-235, it becomes uranium-236 ' + 'and that’s an unstable state that would want to split up into smaller atoms and a neutron. The process of ' + 'splitting up the nucleus of uranium-236 releases energy. ' + 'The neutron from the reaction will also collide with other uranium-235 and trigger more reactions to create more ' + 'energy.', ' In 1935, physicist Enrico Fermi conducted experiments that showed ' + 'neutrons could split atoms. He also bombarded uranium and concluded that he created new elements. ', 'In 1938, German scientist Otto Hahn and Fritz Strassmann fired neutrons at uranium and later Lise Meitner figured that the split must ' + 'have converted to energy following E=mc^2 equation.', 'Frédéric Joliot, H. Von Halban and L. Kowarski in Paris discovered neutron multiplication ' + 'in uranium, proving that a nuclear chain reaction by this mechanism was indeed possible.', ' In 1942, Fermi and a group of scientists gathered at the ' + 'University of Chicago to develop their theories about self-sustaining reactions. The reactor they built was later ' + 'known as Chicago Pile-1.'];
+var usaContent = '<p>Nuclear power in the USA is provided by 98 commercial reactors with a net capacity of 100,350 megawatts.</p>' + '<p>    <u>Development:</u><b>  In 1953, President Dwight D Eisenhower announced Atoms for Peace </b>and in 1958 the first ' + 'commercial nuclear power plant was built in the US. The industry continued to grow throughout the 1960s ever since. Price-Anderson ' + 'Act in 1975 then was introduced to protect private companies from liabilities of these accidents to encourage the development of nuclear power.</p>' + '<p>    <u>Emergence:</u><b> In the 1970s, the growth of the nuclear industry occured in the US as the environmental movement was being formed ' + '</b>was being formed and people saw the advantage of nuclear power in reducing air pollution.</p>' + '<p>    <u>Opposition:</u><b> In 1979  three Mile Island Accident that caused radiation leak </b><b> The protests then preceded the shutdown of over ' + 'a dozen nuclear power plants in the states.</b> that further leads to almost 200 thousands of people attending protests against nuclear power.</p>' + '<p>    <u>Overcommitments to Nuclear Power:</u><b> From 1953 to 2008, 48 percent of the ordered nuclear plants were canceled. </b> By 1983, cost overruns ' + 'and delays along with slowing of electricity demand growth. <b> In 1985 the Atomic Energy Act encouraged private corporations to build nuclear reactors </b> ' + 'and a significant learning phase followed with many early partial nuclear reactor accidents at experimental reactors and research facilities. </p>';
+document.getElementById("america-text").innerHTML = '<h2>Nuclear power in the USA</h2>' + usaContent;
+var japan = '    Prior to the 2011 Tohoku earthquake, Japan had generated 30% of its electrical power' + ' from nuclear reactors from 9 reactors. In 1954, Japan budgeted 230 million yen for nuclear energy, marking the beginning of Japan\'s ' + 'nuclear program. Three Mile Island accident or the Chernobyl disaster did not hit Japan as hard as it did in other countries. ' + 'Constructions of new nuclear plants continued to be strong through 1980s, 1990s and up to today. Despite the Bombing of Hiroshima ' + 'and Nagasaki and Fukushima disaster, Japan recognized nuclear power as the country’s most important power source as it aims for a ' + 'realistic and balanced energy structure.';
+var france = '    France derives about 75% of its electricity from nuclear energy. As a direct result of the 1973 oil crisis,' + ' Prime Minister Pierre Messmer announced Messmer Plan to reach 170 plants by 2000 as a response to the lack of oil sources.  In 2018, based on energy security, ' + 'the government policy is to reduce this to 50% by 2035 and increase its wind, biomass and solar power electricity output.';
+var china = '    China is one of the largest producers of nuclear power in the world. Nuclear power contributed 4.9% of the total chinese ' + 'electricity production in 2019 with 45 reactors. Most of the nuclear plants are on the coast and use seawater for cooling. In 1955, the China National Nuclear ' + 'Corporation was established. In 1970, China issued its first nuclear power plan. Since then, it has Energy Development Strategy Action Plan 2014-2020 to have a ' + '58 GWe capacity by 2020 with 30 GWe more under construction.';
+var australia = '    Australia has never had a nuclear power station. In the meantime, Australia hosts 33% of the world’s uranium ' + 'deposits and is the world’s largest producer of uranium after Kazakhstan and Canada. With its low-cost coal and natural gas reserves, Australia has been able ' + 'to avoid nuclear power. Since the 1950s, the Liberty Party has advocated for the development of nuclear power. And since the 1970s, anti-nuclear movements ' + 'developed in Australia. ';
+},{"d3":"../node_modules/d3/index.js","./country_nuclear_status.json":"country_nuclear_status.json","./nuclear-only.json":"nuclear-only.json","./country_map.js":"country_map.js","./dashboard.js":"dashboard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -31432,7 +34776,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52736" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57863" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
