@@ -5,10 +5,29 @@ const d3 = require('d3')
 const data_nuclear_only = require('./country_nuclear_status.json');
 const nuclear_powerplants = require('./nuclear-only.json');
 
+var currentPage = 1;
+
 window.onscroll = function(e)
 {
-    //this.console.log(document.getElementById("america-map").scroll)
-    console.log(document.scrollingElement.scrollTop);
+    var ratio = document.scrollingElement.scrollTop / document.body.scrollHeight;
+    var temp;
+    if (ratio < 0.14) {
+        temp = 1;
+    } else if (ratio < 0.31) {
+        temp = 2;
+    } else if (ratio < 0.47) {
+        temp = 3;
+    } else if (ratio < 0.64) {
+        temp = 4;
+    } else if (ratio < 0.82) {
+        temp = 5;
+    } else {
+        temp = 6;
+    }
+    if (temp != currentPage) {
+        currentPage = temp;
+        console.log(currentPage);
+    }
 }
 
 const Map = require('./country_map.js');
