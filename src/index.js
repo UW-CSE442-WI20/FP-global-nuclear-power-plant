@@ -7,28 +7,7 @@ const nuclear_powerplants = require('./nuclear-only.json');
 
 var currentPage = 1;
 
-window.onscroll = function(e)
-{
-    var ratio = document.scrollingElement.scrollTop / document.body.scrollHeight;
-    var temp;
-    if (ratio < 0.14) {
-        temp = 1;
-    } else if (ratio < 0.31) {
-        temp = 2;
-    } else if (ratio < 0.47) {
-        temp = 3;
-    } else if (ratio < 0.64) {
-        temp = 4;
-    } else if (ratio < 0.82) {
-        temp = 5;
-    } else {
-        temp = 6;
-    }
-    if (temp != currentPage) {
-        currentPage = temp;
-        console.log(currentPage);
-    }
-}
+
 
 const Map = require('./country_map.js');
 export const USMapInstance = new Map(nuclear_powerplants, "#america-map", "#america-year-text", "United States of America");
@@ -63,15 +42,43 @@ AustraliaMapInstance.makeCountryMap();
 JapanMapInstance.makeCountryMap();
 FranceMapInstance.makeCountryMap();
 USMapInstance.makeCountryMap();
-d3.select('#america-container').on('mouseover', () => {
-    USMapInstance.plotPlants();
-    d3.select('#america-container').on('mouseover', null);
-});
 
-d3.select('#countries').on('mouseover', () => {
-    ChinaMapInstance.plotPlants();
-    d3.select('#countries').on('mouseover', null);
-});
+
+var visitedUS = false;
+var visitedChina = false;
+var visitedJapan = false;
+var visitedFrance = false;
+var visitedAustralia = false;
+
+window.onscroll = function (e) {
+    var ratio = document.scrollingElement.scrollTop / document.body.scrollHeight;
+    var temp;
+    if (ratio < 0.14) {
+        temp = 1;
+    } else if (ratio < 0.31) {
+        temp = 2;
+    } else if (ratio < 0.47) {
+        temp = 3;
+    } else if (ratio < 0.64) {
+        temp = 4;
+    } else if (ratio < 0.82) {
+        temp = 5;
+    } else {
+        temp = 6;
+    }
+    if (temp != currentPage) {
+        currentPage = temp;
+        console.log(currentPage);
+        if (currentPage == 3 && !visitedUS) {
+            USMapInstance.plotPlants();
+            visitedUS = true;
+        }
+        if (currentPage == 5 && !visitedChina) {
+            ChinaMapInstance.plotPlants();
+            visitedChina = true;
+        }
+    }
+}
 
 var slideIndex = 1;
 showDivs(slideIndex, true);
@@ -86,22 +93,30 @@ function currentDiv(n) {
 
 function showDivs(n, first_china) {
     if (!first_china) {
-        ChinaMapInstance.clearDots();
-        JapanMapInstance.clearDots();
-        AustraliaMapInstance.clearDots();
-        FranceMapInstance.clearDots();
         switch (n) {
             case 1:
-                ChinaMapInstance.plotPlants();
+                if (!visitedChina) {
+                    ChinaMapInstance.plotPlants();
+                    visitedChina = true;
+                }
                 break;
             case 2:
-                JapanMapInstance.plotPlants();
+                if (!visitedJapan) {
+                    JapanMapInstance.plotPlants();
+                    visitedJapan = true;
+                }
                 break;
             case 3:
-                FranceMapInstance.plotPlants();
+                if (!visitedFrance) {
+                    FranceMapInstance.plotPlants();
+                    visitedFrance = true;
+                }
                 break;
             case 4:
-                AustraliaMapInstance.plotPlants();
+                if (!visitedAustralia) {
+                    AustraliaMapInstance.plotPlants();
+                    visitedAustralia = true;
+                }
                 break;
         }
     }
@@ -160,57 +175,6 @@ document.getElementById("australia").addEventListener("click", function () {
     currentDiv(4);
 })
 
-// setTimeout(function() { typeWriter("china-content", china, 0); }, 35000);
-
-// setTimeout(function() { typeWriter("france-content", france, 0); }, 35000);
-
-// setTimeout(function() { typeWriter("australia-content", australia, 0); }, 35000);
-
-// setTimeout(function() { typeWriter("japan-content", japan, 0); }, 35000);
-
-// var speed = 10;
-// function typeWriter(id, text, i) {
-//     if (i < text.length) {
-//         document.getElementById(id).innerHTML += text.charAt(i);
-//         setTimeout(function() { typeWriter(id, text, i + 1) }, speed);
-//     }
-// }
-
-
-// function replaceText(text) {
-//     document.getElementById("intro").innerHTML = text;
-// }
-
-// document.getElementById("intro").innerHTML = '<h1>What is nuclear power?</h1>';
-// setTimeout(function() { replaceText(introTitles[0]); }, 2000);
-// setTimeout(function() { typeWriter("intro", introContents[0], 0) }, 2000);
-// setTimeout(function() { replaceText(introTitles[1]); }, 6000);
-// setTimeout(function() { typeWriter("intro", introContents[1], 0) }, 6000);
-// setTimeout(function() { replaceText(introTitles[2]); }, 15000);
-// setTimeout(function() { typeWriter("intro", introContents[2], 0) }, 15000);
-// setTimeout(function() { typeWriter("intro", introContents[3], 0) }, 18000);
-// setTimeout(function() { typeWriter("intro", introContents[4], 0) }, 21000);
-// setTimeout(function() { typeWriter("intro", introContents[5], 0) }, 24000);
-// setTimeout(function() { replaceText(introTitles[0] + introContents[0] + introTitles[1] + introContents[1] + introTitles[2] + introContents[2]
-//                                 + introContents[3] + introContents[4] + introContents[5]); }, 30000);
-
-
-// text
-// var introTitles = ['<h2>What is nuclear power?</h2>', '<h2>Where does the energy come from?</h2>', '<h2>How did we develop to use nuclear energy?</h2>']; 
-// var introContents = ['Nuclear power is a clean and efficient energy that contributes 12 ' +
-//                     'percent of the energy produced in the world. It is the second largest source of low-carbon power.', 
-//                     'The energy comes from Uranium-236. When we fire a neutron to an uranium-235, it becomes uranium-236 ' +
-//                     'and that’s an unstable state that would want to split up into smaller atoms and a neutron. The process of ' +
-//                     'splitting up the nucleus of uranium-236 releases energy. ' +
-//                     'The neutron from the reaction will also collide with other uranium-235 and trigger more reactions to create more ' +
-//                     'energy.', ' In 1935, physicist Enrico Fermi conducted experiments that showed ' + 
-//                     'neutrons could split atoms. He also bombarded uranium and concluded that he created new elements. ',
-//                     'In 1938, German scientist Otto Hahn and Fritz Strassmann fired neutrons at uranium and later Lise Meitner figured that the split must ' +
-//                     'have converted to energy following E=mc^2 equation.', ' Frédéric Joliot, H. Von Halban and L. Kowarski in Paris discovered neutron multiplication ' +
-//                     'in uranium, proving that a nuclear chain reaction by this mechanism was indeed possible.', ' In 1942, Fermi and a group of scientists gathered at the ' +
-//                     'University of Chicago to develop their theories about self-sustaining reactions. The reactor they built was later ' +
-//                     'known as Chicago Pile-1.'
-//                 ];
 
 var usaContent = '<p>Nuclear power in the USA is provided by 98 commercial reactors with a net capacity of 100,350 megawatts.</p>' +
     '<p>    <u>Development:</u><b>  In 1953, President Dwight D Eisenhower announced Atoms for Peace </b>and in 1958 the first ' +
