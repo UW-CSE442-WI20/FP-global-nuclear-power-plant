@@ -195,13 +195,12 @@ class CountryMap {
             setInterval(function () {
                 if (all_years.length > 0) {
                     last_year = all_years.shift();
-                    d3.select(this.year_text).text(last_year);
                 } else {
                     if (last_year < 2020) {
                         last_year++;
                     }
-                    d3.select(this.year_text).text(last_year);
                 }
+                d3.select(this.year_text).text(last_year);
             }.bind(this), 200);
         }
     }
