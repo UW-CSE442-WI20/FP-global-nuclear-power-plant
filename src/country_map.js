@@ -107,6 +107,12 @@ class CountryMap {
             .style("opacity", 0);
         console.log(tooltip)
 
+        let plantImage = d3.select(this.container)
+            .append('img')
+            .attr('src', './SimpsonsPowerplant.png')
+            .attr('class', `map-plant-image`)
+            .style('opacity', 0)
+
 
         let circles = this.svg.selectAll(".pin")
             .data(powerplants)
@@ -128,10 +134,11 @@ class CountryMap {
                     .duration(175)
                     .style("opacity", 1);
                 tooltip.html(d.name)
+
+                console.log(d3.select(this).attr('transform'));
             })
             .on("mousemove", function (d) {
-
-                return tooltip
+                tooltip
                     .style("top", (d3.event.pageY - 10) + "px")
                     .style("left", (d3.event.pageX + 10) + "px");
             })
