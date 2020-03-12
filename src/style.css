@@ -55,6 +55,16 @@ a {
     /* background-size: 100% 100%; */
     background-size: cover;
   }
+    .menu {
+      background: 
+        url("../static/nuclear_plant.jpg") 
+        no-repeat fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
 
    .two {
     background: 
@@ -90,16 +100,7 @@ a {
       color: white;
   }
 
-   .menu {
-      background: 
-        url("../static/nuclear_plant.jpg") 
-        no-repeat fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center
-  }
+
 
   .country-button {
       margin: 10px;
