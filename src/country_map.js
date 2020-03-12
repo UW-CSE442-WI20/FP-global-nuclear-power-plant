@@ -37,10 +37,11 @@ const country_position = [
 ]
 
 class CountryMap {
-    constructor(data, container, country_name) {
+    constructor(data, container, year_text, country_name) {
         this.nuclear_powerplant_locations = data;
         this.container = container;
         this.country_name = country_name;
+        this.year_text = year_text;
         this.svg = null;
         this.projection = null;
 
@@ -98,9 +99,6 @@ class CountryMap {
             return d3.ascending(x.commissioning_year, y.commissioning_year);
         });
 
-        let min_year = d3.min(powerplants, function (d) { return d.commissioning_year; })
-
-        console.log(min_year);
         console.log(powerplants);
 
         let tooltip = d3.select(this.container)
@@ -143,12 +141,14 @@ class CountryMap {
                     .style("opacity", 0);
             });
 
+        let all_years = [];
         circles
             .transition()
             .delay(function (d, i) { return i * 200; })
             .duration(800)
             .ease(this.customBounce(.08))
             .attr("transform", function (d) {
+                all_years.push(d.commissioning_year);
                 return "translate(" + this.projection([
                     d.longitude,
                     d.latitude
@@ -190,6 +190,18 @@ class CountryMap {
                     .on('end', jumping);
             };
         }
+        let last_year = 0;
+        setInterval(function () {
+            if (all_years.length > 0) {
+                last_year = all_years.shift();
+                d3.select(this.year_text).text(last_year);
+            } else {
+                if (last_year < 2020) {
+                    last_year++;
+                }
+                d3.select(this.year_text).text(last_year);
+            }
+        }.bind(this), 200);
     }
 
     customBounce(h) {

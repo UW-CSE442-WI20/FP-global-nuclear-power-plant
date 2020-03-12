@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>$(function () {
+  $('#slideshow img:gt(0)').hide();
+  setInterval(function () {
+    $('#slideshow :first-child').fadeOut(1000).next('img').fadeIn(1000).end().appendTo('#slideshow');
+  }, 4000);
+});</script>
+</head>
+<body>
+    <figure id="slideshow">
+        <div>
+            <h1>What is nuclear power?</h1>
+            <h3>
+                Nuclear power is a clean and efficient energy that comes from splitting atoms in a reactor to heat water into steam, 
+                turn a turbine and generate electricity. About 440 power reactors around the world produce 12 percent of the energy 
+                produced by nuclear power. It is the second largest source of low-carbon power.
+            </h3>
+        </div>
+        <div>
+            <h1>Where does the energy come from?</h1>
+            <h3>
+                The energy comes from an element called uranium. Uranium-235 is a stable type of uranium that consists of 92 protons 
+                and 143 neutrons in its nucleus. When we fire a neutron to an uranium-235, it becomes uranium-236 and that’s an unstable 
+                that would want to react and split up into smaller atoms, barium (56 protons and 81 neutrons in the nucleus), krypton 
+                (36 protons and 45 neutrons in the nucleus) and a neutron. The process of splitting up the nucleus of uranium-236 releases 
+                energy that was used to connect the protons and neutrons. The neutron from the reaction will also collide with other uranium-235 
+                and trigger more reactions to create more energy.
+            </h3>
+        </div>
+        <div>
+            <h1>How did we develop to use nuclear energy?</h1>
+            <h3>
+                Bombardment of neutrons: In 1935, physicist Enrico Fermi conducted experiments in Rome that showed neutrons could split atoms. 
+                He also bombarded uranium and concluded that he created new elements.
+            </h3>
+            <h3>
+                Discovery of Fission: In 1938, German scientist Otto Hahn and Fritz Strassmann fired neutrons at uranium and found that the elements 
+                they get are weighted much less than uranium. Later Lise Meitner figured that the split must have converted to energy following 
+                Albert Einstein’s E=mc^2 equation
+            </h3>
+            <h3>
+                Chain Reaction: Frédéric Joliot, H. Von Halban and L. Kowarski in Paris discovered neutron multiplication in uranium, proving that 
+                a nuclear chain reaction by this mechanism was indeed possible.
+            </h3>
+            <h3>
+                First nuclear reactor: In 1942, Fermi and a group of scientists gathered at the University of Chicago to develop their theories 
+                about self-sustaining reactions. The reactor they built was later known as Chicago Pile-1.
+            </h3>
+        </div>
+    </figure>
+</body>
+</html>
