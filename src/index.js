@@ -176,7 +176,7 @@ document.getElementById("australia").addEventListener("click", function () {
 })
 
 
-var usaContent = '<p>Nuclear power in the USA is provided by 98 commercial reactors with a net capacity of 100,350 megawatts.</p>' +
+/*var usaContent = '<p>Nuclear power in the USA is provided by 98 commercial reactors with a net capacity of 100,350 megawatts.</p>' +
     '<p>    <u>Development:</u><b>  In 1953, President Dwight D Eisenhower announced Atoms for Peace </b>and in 1958 the first ' +
     'commercial nuclear power plant was built in the US. The industry continued to grow throughout the 1960s ever since. Price-Anderson ' +
     'Act in 1975 then was introduced to protect private companies from liabilities of these accidents to encourage the development of nuclear power.</p>' +
@@ -186,7 +186,7 @@ var usaContent = '<p>Nuclear power in the USA is provided by 98 commercial react
     'a dozen nuclear power plants in the states.</b> that further leads to almost 200 thousands of people attending protests against nuclear power.</p>' +
     '<p>    <u>Overcommitments to Nuclear Power:</u><b> From 1953 to 2008, 48 percent of the ordered nuclear plants were canceled. </b> By 1983, cost overruns ' +
     'and delays along with slowing of electricity demand growth. <b> In 1985 the Atomic Energy Act encouraged private corporations to build nuclear reactors </b> ' +
-    'and a significant learning phase followed with many early partial nuclear reactor accidents at experimental reactors and research facilities. </p>';
+    'and a significant learning phase followed with many early partial nuclear reactor accidents at experimental reactors and research facilities. </p>';*/
 
 
 var japan = '    Prior to the 2011 Tohoku earthquake, Japan had generated 30% of its electrical power' +
@@ -210,7 +210,7 @@ var australia = '    Australia has never had a nuclear power station. In the mea
     'to avoid nuclear power. Since the 1950s, the Liberty Party has advocated for the development of nuclear power. And since the 1970s, anti-nuclear movements ' +
     'developed in Australia. ';
 
-document.getElementById("america-text").innerHTML = '<h2>Nuclear power in the USA</h2>' + usaContent;
+//document.getElementById("america-text").innerHTML = '<h2>Nuclear power in the USA</h2>' + usaContent;
 document.getElementById("china-content").innerHTML = china;
 document.getElementById("japan-content").innerHTML = japan;
 document.getElementById("france-content").innerHTML = france;
