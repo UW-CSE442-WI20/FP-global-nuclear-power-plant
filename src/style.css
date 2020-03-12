@@ -290,6 +290,8 @@ a {
 
 #intro {
     padding: 5%;
+    padding-left: 0;
+    padding-right: 0;
     float: inline-start;
     font-size: 120%;
 }
