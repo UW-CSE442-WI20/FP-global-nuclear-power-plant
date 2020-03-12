@@ -125,17 +125,22 @@ class CountryMap {
             .style("fill", "#000000")
             .style("stroke", "#add8e6")
             .style("stroke-width", 2)
-            .on("mouseover", function(d) {      
-                tooltip.transition()        
-                    .duration(150)      
-                    .style("opacity", 1);      
-                tooltip.html(d.name)  
-                .style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");     
-                })                  
-            .on("mouseout", function(d) {       
-                tooltip.transition()        
-                    .duration(500)      
-                    .style("opacity", 0);   
+            .on("mouseover", function (d) {
+                tooltip.transition()
+                    .duration(175)
+                    .style("opacity", 1);
+                tooltip.html(d.name)
+            })
+            .on("mousemove", function (d) {
+
+                return tooltip
+                    .style("top", (d3.event.pageY - 10) + "px")
+                    .style("left", (d3.event.pageX + 10) + "px");
+            })
+            .on("mouseout", function (d) {
+                tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
             });
 
         circles
