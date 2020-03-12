@@ -65,6 +65,8 @@ a {
     background-color: rgba(255, 0, 0, 0.315);
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
   }
 
   .info-text {
@@ -256,6 +258,12 @@ a {
     padding: 2px;
     background: transparent;
     font-weight: 700;
+    
+    position: absolute;           
+    text-align: center;
+    background: #ffffff;   
+    z-index: 10;
+    pointer-events: none;  
 }
 
 #intro {

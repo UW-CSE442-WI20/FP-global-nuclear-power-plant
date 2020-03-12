@@ -11,18 +11,18 @@ const worldmap_geo_json = require('../static/world-map-geo.json'); // https://gi
 const country_position = [
     {
         country: "France",
-        scale: 2000,
+        scale: 1800,
         center: [2, 47]
     },
     {
         country: "Australia",
-        scale: 700,
+        scale: 600,
         center: [137, 333]
     },
     {
         country: "China",
         scale: 550,
-        center: [105, 43]
+        center: [105, 40]
     },
     {
         country: "Japan",
@@ -32,7 +32,7 @@ const country_position = [
     {
         country: "United States of America",
         scale: 575,
-        center: [-95, 46]
+        center: [-95, 42]
     }
 ]
 
@@ -53,7 +53,8 @@ class CountryMap {
         this.svg = d3.select(this.container)
             .append("svg")
             .attr("width", width)
-            .attr("height", height);
+            .attr("height", height)
+            ;
 
         country_coord = {};
         for (let c of country_position) {
@@ -105,12 +106,19 @@ class CountryMap {
         let tooltip = d3.select(this.container)
             .append("div")
             .attr("class", "tooltip")
-            .style("position", "absolute")
-            .style("z-index", "10")
+            //.style("position", "absolute")
+            //.style("z-index", "10")
             .style("visibility", "hidden")
-            .style("background", "#ffff")
+            //.style("background", "#ffff")
             .attr("id", this.tooltipsID)
             .text("a simple tooltip");
+
+        /*let tooltip = d3.select(this.container)
+            .append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);*/
+        console.log(tooltip)
+
 
         let circles = this.svg.selectAll(".pin")
             .data(powerplants)
@@ -127,18 +135,28 @@ class CountryMap {
             .style("fill", "#000000")
             .style("stroke", "#add8e6")
             .style("stroke-width", 2)
+            /*.on("mouseover", function(d) {      
+                tooltip.transition()        
+                    .duration(200)      
+                    .style("opacity", .9);      
+                tooltip.html(d.name)  
+                .style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");     
+                })                  
+            .on("mouseout", function(d) {       
+                tooltip.transition()        
+                    .duration(500)      
+                    .style("opacity", 0);   
+            });*/
             .on("mouseover", function (d) {
                 //d3.select(this).attr("xlink:href", "../static/homer.png");
                 tooltip.text(d.name);
                 return tooltip.style("visibility", "visible");
             })
-            .on("mousemove", function () {
-                /*var string = '<img src="./homer.png/">';
-                tooltip.html(string) //this will add the image on mouseover
-                    .style("left", (d3.event.pageX + 10) + "px")
-                    .style("top", (d3.event.pageY + 50) + "px")
-                    .style("font-color", "white");*/
+            .on("mousemove", function (d) {
 
+                console.log(d.name);
+                console.log(tooltip);
+                d3.select(this.container).append(tooltip);
                 return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");
             })
             .on("mouseout", function () {
@@ -189,6 +207,7 @@ class CountryMap {
     */
     clearDots() {
         d3.select(this.container).selectAll("circle").remove();
+        d3.select(this.container).selectAll("div").remove();
     }
 }
 
