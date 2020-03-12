@@ -6,7 +6,7 @@ const worldmap_geo_json = require('../static/world-map-geo.json'); // https://gi
 const height = window.innerHeight * 3 / 4;
 const width = window.innerWidth * 3 / 4;
 
-console.log(`width:${width}, height: ${height}`);
+// console.log(`width:${width}, height: ${height}`);
 
 // Minimum and maximum zoom levels when clicking on a country
 const min_zoom = 2;
