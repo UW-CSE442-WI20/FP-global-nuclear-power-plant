@@ -154,6 +154,42 @@ class CountryMap {
                     d.latitude
                 ]) + ")";
             }.bind(this));
+
+        if (this.country_name == 'Australia') {
+            let kangaroo_pos = [[120, 190],[130,290],[325,280],[450,330],[480,230],[400,100]]
+
+            var kangaroos = this.svg.selectAll('image')
+                .data(kangaroo_pos)
+                .enter()
+                .append('image')
+                .attr('xlink:href', './SimpsonsKangaroo.png')
+                .attr('width', 30)
+                .attr('height', 55)
+                .attr('x', function (d) { return d[0]; })
+                .attr('y', -55)
+                .attr('transform', 'rotate(0)')
+                .transition()
+                .delay(function (d, i) { return i * 200; })
+                .duration(2000)
+                .ease(this.customBounce(.08))
+                .attr('y', function (d) { return d[1]; })
+
+            jumping();
+            
+            function jumping() {
+                kangaroos
+                    .attr('y', function(d) { return d[1]; })
+                    .transition()
+                    .duration(2000)
+                    .ease(d3.easeLinear)
+                    .attr('y', function(d) { return d[1] - 40; })
+                    .transition()
+                    .duration(2000)
+                    .ease(d3.easeLinear)
+                    .attr('y', function(d) { return d[1]; })
+                    .on('end', jumping);
+            };
+        }
     }
 
     customBounce(h) {
