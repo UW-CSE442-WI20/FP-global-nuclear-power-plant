@@ -39,15 +39,15 @@ a {
     background-position:  center;
   }
 
-  .parallax .one{
+   .one{
     height: 100vh;
   }
 
-  .parallax .two {
+   .two {
     height: 100vh;
   }
 
-  .parallax .one {
+   .one {
     background: 
     url("../static/nuclear_plant.jpg") 
     no-repeat fixed;
@@ -55,7 +55,7 @@ a {
     background-size: cover;
   }
 
-  .parallax .two {
+   .two {
     background: 
     url("../static/Springfield.jpeg") 
     no-repeat fixed;
@@ -63,7 +63,7 @@ a {
     background-size: cover;
   }
 
-  .parallax #america-container {
+   #america-container {
     background-color: lightblue;
     height: 100vh;
     display: flex;
@@ -81,13 +81,13 @@ a {
     height: 100vh;
   }
 
-  .parallax .nuclear-intro-container {
+  .nuclear-intro-container {
       background-color: black;
       height: 100vh;
       color: white;
   }
 
-  .parallax .menu {
+   .menu {
       background: 
         url("../static/nuclear_plant.jpg") 
         no-repeat fixed;
