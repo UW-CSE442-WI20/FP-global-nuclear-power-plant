@@ -164,7 +164,8 @@ class CountryMap {
 
 
         if (this.country_name == 'Australia') {
-            let kangaroo_pos = [[120, 190], [130, 290], [325, 280], [450, 330], [480, 230], [400, 100]]
+            // ^ x is right, ^ y is down
+            let kangaroo_pos = [[120, 190], [130, 290], [325, 280], [450, 330], [480, 230], [400, 100], [350, 220], [200, 100], [220, 180]]
 
             var kangaroos = this.svg.selectAll('image')
                 .data(kangaroo_pos)
@@ -174,13 +175,7 @@ class CountryMap {
                 .attr('width', 30)
                 .attr('height', 55)
                 .attr('x', function (d) { return d[0]; })
-                .attr('y', -55)
-                .attr('transform', 'rotate(0)')
-                .transition()
-                .delay(function (d, i) { return i * 200; })
-                .duration(2000)
-                .ease(this.customBounce(.08))
-                .attr('y', function (d) { return d[1]; })
+                .attr('y', function (d) { return d[1]; });
 
             jumping();
 
@@ -188,11 +183,11 @@ class CountryMap {
                 kangaroos
                     .attr('y', function (d) { return d[1]; })
                     .transition()
-                    .duration(2000)
+                    .duration(500)
                     .ease(d3.easeLinear)
                     .attr('y', function (d) { return d[1] - 40; })
                     .transition()
-                    .duration(2000)
+                    .duration(500)
                     .ease(d3.easeLinear)
                     .attr('y', function (d) { return d[1]; })
                     .on('end', jumping);
@@ -202,13 +197,12 @@ class CountryMap {
             setInterval(function () {
                 if (all_years.length > 0) {
                     last_year = all_years.shift();
-                    d3.select(this.year_text).text(last_year);
                 } else {
                     if (last_year < 2020) {
                         last_year++;
                     }
-                    d3.select(this.year_text).text(last_year);
                 }
+                d3.select(this.year_text).text(last_year);
             }.bind(this), 200);
         }
     }
