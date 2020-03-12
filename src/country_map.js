@@ -106,17 +106,7 @@ class CountryMap {
         let tooltip = d3.select(this.container)
             .append("div")
             .attr("class", "tooltip")
-            //.style("position", "absolute")
-            //.style("z-index", "10")
-            .style("visibility", "hidden")
-            //.style("background", "#ffff")
-            .attr("id", this.tooltipsID)
-            .text("a simple tooltip");
-
-        /*let tooltip = d3.select(this.container)
-            .append("div")
-            .attr("class", "tooltip")
-            .style("opacity", 0);*/
+            .style("opacity", 0);
         console.log(tooltip)
 
 
@@ -135,10 +125,10 @@ class CountryMap {
             .style("fill", "#000000")
             .style("stroke", "#add8e6")
             .style("stroke-width", 2)
-            /*.on("mouseover", function(d) {      
+            .on("mouseover", function(d) {      
                 tooltip.transition()        
-                    .duration(200)      
-                    .style("opacity", .9);      
+                    .duration(150)      
+                    .style("opacity", 1);      
                 tooltip.html(d.name)  
                 .style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");     
                 })                  
@@ -146,21 +136,6 @@ class CountryMap {
                 tooltip.transition()        
                     .duration(500)      
                     .style("opacity", 0);   
-            });*/
-            .on("mouseover", function (d) {
-                //d3.select(this).attr("xlink:href", "../static/homer.png");
-                tooltip.text(d.name);
-                return tooltip.style("visibility", "visible");
-            })
-            .on("mousemove", function (d) {
-
-                console.log(d.name);
-                console.log(tooltip);
-                d3.select(this.container).append(tooltip);
-                return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");
-            })
-            .on("mouseout", function () {
-                return tooltip.style("visibility", "hidden");
             });
 
         circles
