@@ -3,8 +3,10 @@ const d3 = require('d3')
 const worldmap_geo_json = require('../static/world-map-geo.json'); // https://github.com/topojson/world-atlas
 
 // SVG height and width (TODO: why are these set to such arbitrary values??)
-const height = 546;
-const width = 1113;
+const height = window.innerHeight * 3 / 4;
+const width = window.innerWidth * 3 / 4;
+
+console.log(`width:${width}, height: ${height}`);
 
 // Minimum and maximum zoom levels when clicking on a country
 const min_zoom = 2;
@@ -73,8 +75,9 @@ class Dashboard {
             .attr('height', height);
 
         let projection = d3.geoMercator()
-            .scale(1 * width / 2 / Math.PI)
-            .translate([width / 2, height / 1.55])
+            .scale(width / 2 / Math.PI * 1.05)
+            .translate([width / 2, height / 1.75])
+            // .translate([width / 2, height / 1.55])
 
         geo_path = d3.geoPath()
             .projection(projection);
@@ -170,6 +173,28 @@ class Dashboard {
             k = Math.min(width / boxw, height / boxh) * zoom_scale;
             if (k < min_zoom) k = min_zoom;
             if (k > max_zoom) k = max_zoom;
+
+            // I've given up
+            console.log(`dx:${dx}, dy:${dy}, k:${k}`)
+            switch (country) {
+                case 'Russia':
+                    dy -= 75;
+                    dx += 50;
+                    break;
+                case 'United States of America':
+                    dx -= 100;
+                    break;
+                case 'Canada':
+                    dx -= 30;
+                    dy -= 100;
+                    break;
+                case 'Greenland':
+                    dy -= 190;
+                    break;
+                case 'Norway':
+                    dy -= 40;
+                    break;
+            }
 
             selected_country = country;
             map_container.selectAll('path')

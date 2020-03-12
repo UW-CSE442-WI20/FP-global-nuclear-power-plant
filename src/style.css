@@ -1,5 +1,13 @@
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
 }
 
 body {
@@ -158,7 +166,8 @@ a {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 546px auto;
     height: 100vh;
-    padding: 40px 0;
+    padding: 20px 0 20px 20px;
+    box-sizing: content-box;
 }
 
 #map-container {
