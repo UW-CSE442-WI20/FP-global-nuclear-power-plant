@@ -155,6 +155,7 @@ class CountryMap {
                 ]) + ")";
             }.bind(this));
 
+        
         let last_year = 0;
         setInterval(function () {
             if (all_years.length > 0) {
