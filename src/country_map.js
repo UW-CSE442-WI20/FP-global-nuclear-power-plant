@@ -113,7 +113,6 @@ class CountryMap {
             .attr('class', `map-plant-image`)
             .style('opacity', 0)
 
-
         let circles = this.svg.selectAll(".pin")
             .data(powerplants)
             .enter()
@@ -130,23 +129,50 @@ class CountryMap {
             .style("stroke", "#add8e6")
             .style("stroke-width", 2)
             .on("mouseover", function (d) {
-                tooltip.transition()
+                console.log(this.pageX);
+
+                tooltip
+                    .style("top", (d3.event.pageY - 10) + "px")
+                    .style("left", (d3.event.pageX + 10) + "px")
+                    .transition()
                     .duration(175)
                     .style("opacity", 1);
                 tooltip.html(d.name)
 
-                console.log(d3.select(this).attr('transform'));
-            })
+                let dot_coords = [this.projection([d.longitude,d.latitude])];
+
+                this.svg.selectAll('image')
+                    .data(dot_coords)
+                    .enter()
+                    .append('image')
+                    .attr('xlink:href', './SimpsonsPowerplant.png')
+                    .attr('width', 20)
+                    .attr('height', 30)
+                    .attr('x', function(d) { return d[0] - 10; })
+                    .attr('y', function(d) { return d[1] - 15; })
+                    .on('mousemove', function(d) {
+                        tooltip
+                            .style("top", (d3.event.pageY - 10) + "px")
+                            .style("left", (d3.event.pageX + 10) + "px");
+                    })
+                    .on('mouseout', function() {
+                        tooltip.transition()
+                            .duration(500)
+                            .style("opacity", 0);
+                        this.svg.selectAll('image').remove();
+                    }.bind(this))
+
+            }.bind(this))
             .on("mousemove", function (d) {
-                tooltip
-                    .style("top", (d3.event.pageY - 10) + "px")
-                    .style("left", (d3.event.pageX + 10) + "px");
+                // tooltip
+                //     .style("top", (d3.event.pageY - 10) + "px")
+                //     .style("left", (d3.event.pageX + 10) + "px");
             })
             .on("mouseout", function (d) {
-                tooltip.transition()
-                    .duration(500)
-                    .style("opacity", 0);
-            });
+                // tooltip.transition()
+                //     .duration(500)
+                //     .style("opacity", 0);
+            }.bind(this));
 
         let all_years = [];
         circles
