@@ -81,7 +81,7 @@ class CountryMap {
             .enter()
             .append("path")
             .attr("d", path)
-            .attr("fill", "#aaaaaa");
+            .attr("fill", "#bbbbbb");
 
         // this.plotPlants();
     }
