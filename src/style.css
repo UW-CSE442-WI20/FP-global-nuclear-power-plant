@@ -50,7 +50,7 @@ a {
 
    .one {
     background: 
-    url("../static/Familyguysimpsons0.jpg") 
+    url("../static/simpsons-64.jpg") 
     no-repeat fixed;
     /* background-size: 100% 100%; */
     background-size: cover;
@@ -313,6 +313,12 @@ a {
     position: absolute;
     z-index: 20;
     width: 25px;
+}
+
+.map-plant-image {
+    width: 25px;
+    z-index: 5;
+    position: absolute;
 }
 
 

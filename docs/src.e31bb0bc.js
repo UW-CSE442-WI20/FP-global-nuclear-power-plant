@@ -32895,7 +32895,7 @@ module.exports = {
         }
       }, {
         "type": "MultiPolygon",
-        "arcs": [[[-378, 764, -554, 765]], [[766]], [[767]], [[768]], [[769]], [[770]], [[771]], [[772]], [[773]], [[774]], [[775]], [[776]], [[777]], [[778]], [[779]], [[780]], [[781]], [[782]], [[783]], [[784]], [[785]], [[786]], [[787]], [[788]], [[789]], [[790]], [[791]], [[792]], [[793]], [[794]], [[795]], [[796]]],
+        "arcs": [[[-378, 764, -554, 765]], [[766]], [[767]], [[768]], [[769]], [[770]], [[771]], [[772]], [[773]], [[774]], [[775]], [[776]], [[777]], [[778]], [[779]], [[780]], [[781]], [[782]], [[783]], [[784]], [[785]], [[786]]],
         "id": "578",
         "properties": {
           "name": "Norway"
@@ -33996,16 +33996,16 @@ var worldmap_geo_json = require('../static/world-map-geo.json'); // https://gith
 
 var country_position = [{
   country: "France",
-  scale: 2000,
+  scale: 1800,
   center: [2, 47]
 }, {
   country: "Australia",
-  scale: 700,
+  scale: 600,
   center: [137, 333]
 }, {
   country: "China",
   scale: 550,
-  center: [105, 43]
+  center: [105, 40]
 }, {
   country: "Japan",
   scale: 1200,
@@ -34013,18 +34013,19 @@ var country_position = [{
 }, {
   country: "United States of America",
   scale: 575,
-  center: [-95, 46]
+  center: [-95, 42]
 }];
 
 var CountryMap =
 /*#__PURE__*/
 function () {
-  function CountryMap(data, container, country_name) {
+  function CountryMap(data, container, year_text, country_name) {
     _classCallCheck(this, CountryMap);
 
     this.nuclear_powerplant_locations = data;
     this.container = container;
     this.country_name = country_name;
+    this.year_text = year_text;
     this.svg = null;
     this.projection = null;
     this.dotsID = "#".concat(country_name, "dots");
@@ -34107,33 +34108,61 @@ function () {
       powerplants.sort(function (x, y) {
         return d3.ascending(x.commissioning_year, y.commissioning_year);
       });
-      var min_year = d3.min(powerplants, function (d) {
-        return d.commissioning_year;
-      });
-      console.log(min_year);
       console.log(powerplants);
-      var tooltip = d3.select(this.container).append("div").attr("class", "tooltip").style("position", "absolute").style("z-index", "10").style("visibility", "hidden").style("background", "#ffff").attr("id", this.tooltipsID).text("a simple tooltip");
+      var tooltip = d3.select(this.container).append("div").attr("class", "tooltip").style("opacity", 0);
+      console.log(tooltip);
       var circles = this.svg.selectAll(".pin").data(powerplants).enter().append("circle", ".pin").attr("r", 5).attr("id", this.dotsID).attr("transform", function (d) {
         return "translate(" + this.projection([d.longitude, 800]) + ")";
       }.bind(this)).style("fill", "#000000").style("stroke", "#add8e6").style("stroke-width", 2).on("mouseover", function (d) {
-        //d3.select(this).attr("xlink:href", "../static/homer.png");
-        tooltip.text(d.name);
-        return tooltip.style("visibility", "visible");
-      }).on("mousemove", function () {
-        /*var string = '<img src="./homer.png/">';
-        tooltip.html(string) //this will add the image on mouseover
-            .style("left", (d3.event.pageX + 10) + "px")
-            .style("top", (d3.event.pageY + 50) + "px")
-            .style("font-color", "white");*/
+        tooltip.transition().duration(175).style("opacity", 1);
+        tooltip.html(d.name);
+      }).on("mousemove", function (d) {
         return tooltip.style("top", d3.event.pageY - 10 + "px").style("left", d3.event.pageX + 10 + "px");
-      }).on("mouseout", function () {
-        return tooltip.style("visibility", "hidden");
+      }).on("mouseout", function (d) {
+        tooltip.transition().duration(500).style("opacity", 0);
       });
+      var all_years = [];
       circles.transition().delay(function (d, i) {
         return i * 200;
       }).duration(800).ease(this.customBounce(.08)).attr("transform", function (d) {
+        all_years.push(d.commissioning_year);
         return "translate(" + this.projection([d.longitude, d.latitude]) + ")";
       }.bind(this));
+
+      if (this.country_name == 'Australia') {
+        var jumping = function jumping() {
+          kangaroos.attr('y', function (d) {
+            return d[1];
+          }).transition().duration(500).ease(d3.easeLinear).attr('y', function (d) {
+            return d[1] - 40;
+          }).transition().duration(500).ease(d3.easeLinear).attr('y', function (d) {
+            return d[1];
+          }).on('end', jumping);
+        };
+
+        // ^ x is right, ^ y is down
+        var kangaroo_pos = [[120, 190], [130, 290], [325, 280], [450, 330], [480, 230], [400, 100], [350, 220], [200, 100], [220, 180]];
+        var kangaroos = this.svg.selectAll('image').data(kangaroo_pos).enter().append('image').attr('xlink:href', './SimpsonsKangaroo.png').attr('width', 30).attr('height', 55).attr('x', function (d) {
+          return d[0];
+        }).attr('y', function (d) {
+          return d[1];
+        });
+        jumping();
+        ;
+      } else {
+        var last_year = 0;
+        setInterval(function () {
+          if (all_years.length > 0) {
+            last_year = all_years.shift();
+          } else {
+            if (last_year < 2020) {
+              last_year++;
+            }
+          }
+
+          d3.select(this.year_text).text(last_year);
+        }.bind(this), 200);
+      }
     }
   }, {
     key: "customBounce",
@@ -34166,6 +34195,7 @@ function () {
     key: "clearDots",
     value: function clearDots() {
       d3.select(this.container).selectAll("circle").remove();
+      d3.select(this.container).selectAll("div").remove();
     }
   }]);
 
@@ -34201,8 +34231,9 @@ var worldmap_geo_json = require('../static/world-map-geo.json'); // https://gith
 // SVG height and width (TODO: why are these set to such arbitrary values??)
 
 
-var height = 546;
-var width = 1113; // Minimum and maximum zoom levels when clicking on a country
+var height = window.innerHeight * 3 / 4;
+var width = window.innerWidth * 3 / 4; // console.log(`width:${width}, height: ${height}`);
+// Minimum and maximum zoom levels when clicking on a country
 
 var min_zoom = 2;
 var max_zoom = 5; // Scale factor for zoom (1 means match bounding box of country)
@@ -34280,7 +34311,8 @@ function () {
     key: "createMap",
     value: function createMap() {
       map_container = d3.select('#map-container').append('svg').attr('width', width).attr('height', height);
-      var projection = d3.geoMercator().scale(1 * width / 2 / Math.PI).translate([width / 2, height / 1.55]);
+      var projection = d3.geoMercator().scale(width / 2 / Math.PI * 1.05).translate([width / 2, height / 1.75]); // .translate([width / 2, height / 1.55])
+
       geo_path = d3.geoPath().projection(projection);
       this.country_path = map_container.selectAll('path').data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features).enter().append('path').attr('d', geo_path).style('stroke', '#ffffff').style('stroke-width', default_stroke_width).on('click', function (d) {
         d3.event.stopPropagation();
@@ -34381,7 +34413,34 @@ function () {
         var boxh = bounds[1][1] - bounds[0][1];
         k = Math.min(width / boxw, height / boxh) * zoom_scale;
         if (k < min_zoom) k = min_zoom;
-        if (k > max_zoom) k = max_zoom;
+        if (k > max_zoom) k = max_zoom; // I've given up
+
+        console.log("dx:".concat(dx, ", dy:").concat(dy, ", k:").concat(k));
+
+        switch (country) {
+          case 'Russia':
+            dy -= 75;
+            dx += 50;
+            break;
+
+          case 'United States of America':
+            dx -= 100;
+            break;
+
+          case 'Canada':
+            dx -= 30;
+            dy -= 100;
+            break;
+
+          case 'Greenland':
+            dy -= 190;
+            break;
+
+          case 'Norway':
+            dy -= 40;
+            break;
+        }
+
         selected_country = country;
         map_container.selectAll('path').classed('active', function (d) {
           return d.properties.name === selected_country;
@@ -34550,19 +34609,21 @@ var data_nuclear_only = require('./country_nuclear_status.json');
 
 var nuclear_powerplants = require('./nuclear-only.json');
 
+var currentPage = 1;
+
 var Map = require('./country_map.js');
 
-var USMapInstance = new Map(nuclear_powerplants, "#america-map", "United States of America"); // plotPlants to make dots
+var USMapInstance = new Map(nuclear_powerplants, "#america-map", "#america-year-text", "United States of America"); // plotPlants to make dots
 // clearDots to clear the dots
 
 exports.USMapInstance = USMapInstance;
-var ChinaMapInstance = new Map(nuclear_powerplants, "#china-map", "China");
+var ChinaMapInstance = new Map(nuclear_powerplants, "#china-map", "#china-year-text", "China");
 exports.ChinaMapInstance = ChinaMapInstance;
-var AustraliaMapInstance = new Map(nuclear_powerplants, "#australia-map", "Australia");
+var AustraliaMapInstance = new Map(nuclear_powerplants, "#australia-map", "#australia-year-text", "Australia");
 exports.AustraliaMapInstance = AustraliaMapInstance;
-var JapanMapInstance = new Map(nuclear_powerplants, "#japan-map", "Japan");
+var JapanMapInstance = new Map(nuclear_powerplants, "#japan-map", "#japan-year-text", "Japan");
 exports.JapanMapInstance = JapanMapInstance;
-var FranceMapInstance = new Map(nuclear_powerplants, "#france-map", "France");
+var FranceMapInstance = new Map(nuclear_powerplants, "#france-map", "#france-year-text", "France");
 exports.FranceMapInstance = FranceMapInstance;
 
 var Dashboard = require('./dashboard.js');
@@ -34582,14 +34643,46 @@ AustraliaMapInstance.makeCountryMap();
 JapanMapInstance.makeCountryMap();
 FranceMapInstance.makeCountryMap();
 USMapInstance.makeCountryMap();
-d3.select('#america-container').on('mouseover', function () {
-  USMapInstance.plotPlants();
-  d3.select('#america-container').on('mouseover', null);
-});
-d3.select('#countries').on('mouseover', function () {
-  ChinaMapInstance.plotPlants();
-  d3.select('#countries').on('mouseover', null);
-});
+var visitedUS = false;
+var visitedChina = false;
+var visitedJapan = false;
+var visitedFrance = false;
+var visitedAustralia = false;
+
+window.onscroll = function (e) {
+  var ratio = document.scrollingElement.scrollTop / document.body.scrollHeight;
+  var temp;
+
+  if (ratio < 0.14) {
+    temp = 1;
+  } else if (ratio < 0.31) {
+    temp = 2;
+  } else if (ratio < 0.47) {
+    temp = 3;
+  } else if (ratio < 0.64) {
+    temp = 4;
+  } else if (ratio < 0.82) {
+    temp = 5;
+  } else {
+    temp = 6;
+  }
+
+  if (temp != currentPage) {
+    currentPage = temp;
+    console.log(currentPage);
+
+    if (currentPage == 3 && !visitedUS) {
+      USMapInstance.plotPlants();
+      visitedUS = true;
+    }
+
+    if (currentPage == 5 && !visitedChina) {
+      ChinaMapInstance.plotPlants();
+      visitedChina = true;
+    }
+  }
+};
+
 var slideIndex = 1;
 showDivs(slideIndex, true);
 
@@ -34603,26 +34696,37 @@ function currentDiv(n) {
 
 function showDivs(n, first_china) {
   if (!first_china) {
-    ChinaMapInstance.clearDots();
-    JapanMapInstance.clearDots();
-    AustraliaMapInstance.clearDots();
-    FranceMapInstance.clearDots();
-
     switch (n) {
       case 1:
-        ChinaMapInstance.plotPlants();
+        if (!visitedChina) {
+          ChinaMapInstance.plotPlants();
+          visitedChina = true;
+        }
+
         break;
 
       case 2:
-        JapanMapInstance.plotPlants();
+        if (!visitedJapan) {
+          JapanMapInstance.plotPlants();
+          visitedJapan = true;
+        }
+
         break;
 
       case 3:
-        FranceMapInstance.plotPlants();
+        if (!visitedFrance) {
+          FranceMapInstance.plotPlants();
+          visitedFrance = true;
+        }
+
         break;
 
       case 4:
-        AustraliaMapInstance.plotPlants();
+        if (!visitedAustralia) {
+          AustraliaMapInstance.plotPlants();
+          visitedAustralia = true;
+        }
+
         break;
     }
   }
@@ -34681,73 +34785,27 @@ document.getElementById("france").addEventListener("click", function () {
 document.getElementById("australia").addEventListener("click", function () {
   currentDiv(4);
 });
-setTimeout(function () {
-  typeWriter("china-content", china, 0);
-}, 35000);
-setTimeout(function () {
-  typeWriter("france-content", france, 0);
-}, 35000);
-setTimeout(function () {
-  typeWriter("australia-content", australia, 0);
-}, 35000);
-setTimeout(function () {
-  typeWriter("japan-content", japan, 0);
-}, 35000);
-var speed = 10;
+/*var usaContent = '<p>Nuclear power in the USA is provided by 98 commercial reactors with a net capacity of 100,350 megawatts.</p>' +
+    '<p>    <u>Development:</u><b>  In 1953, President Dwight D Eisenhower announced Atoms for Peace </b>and in 1958 the first ' +
+    'commercial nuclear power plant was built in the US. The industry continued to grow throughout the 1960s ever since. Price-Anderson ' +
+    'Act in 1975 then was introduced to protect private companies from liabilities of these accidents to encourage the development of nuclear power.</p>' +
+    '<p>    <u>Emergence:</u><b> In the 1970s, the growth of the nuclear industry occured in the US as the environmental movement was being formed ' +
+    '</b>was being formed and people saw the advantage of nuclear power in reducing air pollution.</p>' +
+    '<p>    <u>Opposition:</u><b> In 1979  three Mile Island Accident that caused radiation leak </b><b> The protests then preceded the shutdown of over ' +
+    'a dozen nuclear power plants in the states.</b> that further leads to almost 200 thousands of people attending protests against nuclear power.</p>' +
+    '<p>    <u>Overcommitments to Nuclear Power:</u><b> From 1953 to 2008, 48 percent of the ordered nuclear plants were canceled. </b> By 1983, cost overruns ' +
+    'and delays along with slowing of electricity demand growth. <b> In 1985 the Atomic Energy Act encouraged private corporations to build nuclear reactors </b> ' +
+    'and a significant learning phase followed with many early partial nuclear reactor accidents at experimental reactors and research facilities. </p>';*/
 
-function typeWriter(id, text, i) {
-  if (i < text.length) {
-    document.getElementById(id).innerHTML += text.charAt(i);
-    setTimeout(function () {
-      typeWriter(id, text, i + 1);
-    }, speed);
-  }
-}
-
-function replaceText(text) {
-  document.getElementById("intro").innerHTML = text;
-}
-
-document.getElementById("intro").innerHTML = '<h1>What is nuclear power?</h1>';
-setTimeout(function () {
-  replaceText(introTitles[0]);
-}, 2000);
-setTimeout(function () {
-  typeWriter("intro", introContents[0], 0);
-}, 2000);
-setTimeout(function () {
-  replaceText(introTitles[1]);
-}, 6000);
-setTimeout(function () {
-  typeWriter("intro", introContents[1], 0);
-}, 6000);
-setTimeout(function () {
-  replaceText(introTitles[2]);
-}, 15000);
-setTimeout(function () {
-  typeWriter("intro", introContents[2], 0);
-}, 15000);
-setTimeout(function () {
-  typeWriter("intro", introContents[3], 0);
-}, 18000);
-setTimeout(function () {
-  typeWriter("intro", introContents[4], 0);
-}, 21000);
-setTimeout(function () {
-  typeWriter("intro", introContents[5], 0);
-}, 24000);
-setTimeout(function () {
-  replaceText(introTitles[0] + introContents[0] + introTitles[1] + introContents[1] + introTitles[2] + introContents[2] + introContents[3] + introContents[4] + introContents[5]);
-}, 27000); // text
-
-var introTitles = ['<h2>What is nuclear power?</h2>', '<h2>Where does the energy come from?</h2>', '<h2>How did we develop to use nuclear energy?</h2>'];
-var introContents = ['Nuclear power is a clean and efficient energy that contributes 12 ' + 'percent of the energy produced in the world. It is the second largest source of low-carbon power.', 'The energy comes from Uranium-236. When we fire a neutron to an uranium-235, it becomes uranium-236 ' + 'and that’s an unstable state that would want to split up into smaller atoms and a neutron. The process of ' + 'splitting up the nucleus of uranium-236 releases energy. ' + 'The neutron from the reaction will also collide with other uranium-235 and trigger more reactions to create more ' + 'energy.', ' In 1935, physicist Enrico Fermi conducted experiments that showed ' + 'neutrons could split atoms. He also bombarded uranium and concluded that he created new elements. ', 'In 1938, German scientist Otto Hahn and Fritz Strassmann fired neutrons at uranium and later Lise Meitner figured that the split must ' + 'have converted to energy following E=mc^2 equation.', 'Frédéric Joliot, H. Von Halban and L. Kowarski in Paris discovered neutron multiplication ' + 'in uranium, proving that a nuclear chain reaction by this mechanism was indeed possible.', ' In 1942, Fermi and a group of scientists gathered at the ' + 'University of Chicago to develop their theories about self-sustaining reactions. The reactor they built was later ' + 'known as Chicago Pile-1.'];
-var usaContent = '<p>Nuclear power in the USA is provided by 98 commercial reactors with a net capacity of 100,350 megawatts.</p>' + '<p>    <u>Development:</u><b>  In 1953, President Dwight D Eisenhower announced Atoms for Peace </b>and in 1958 the first ' + 'commercial nuclear power plant was built in the US. The industry continued to grow throughout the 1960s ever since. Price-Anderson ' + 'Act in 1975 then was introduced to protect private companies from liabilities of these accidents to encourage the development of nuclear power.</p>' + '<p>    <u>Emergence:</u><b> In the 1970s, the growth of the nuclear industry occured in the US as the environmental movement was being formed ' + '</b>was being formed and people saw the advantage of nuclear power in reducing air pollution.</p>' + '<p>    <u>Opposition:</u><b> In 1979  three Mile Island Accident that caused radiation leak </b><b> The protests then preceded the shutdown of over ' + 'a dozen nuclear power plants in the states.</b> that further leads to almost 200 thousands of people attending protests against nuclear power.</p>' + '<p>    <u>Overcommitments to Nuclear Power:</u><b> From 1953 to 2008, 48 percent of the ordered nuclear plants were canceled. </b> By 1983, cost overruns ' + 'and delays along with slowing of electricity demand growth. <b> In 1985 the Atomic Energy Act encouraged private corporations to build nuclear reactors </b> ' + 'and a significant learning phase followed with many early partial nuclear reactor accidents at experimental reactors and research facilities. </p>';
-document.getElementById("america-text").innerHTML = '<h2>Nuclear power in the USA</h2>' + usaContent;
 var japan = '    Prior to the 2011 Tohoku earthquake, Japan had generated 30% of its electrical power' + ' from nuclear reactors from 9 reactors. In 1954, Japan budgeted 230 million yen for nuclear energy, marking the beginning of Japan\'s ' + 'nuclear program. Three Mile Island accident or the Chernobyl disaster did not hit Japan as hard as it did in other countries. ' + 'Constructions of new nuclear plants continued to be strong through 1980s, 1990s and up to today. Despite the Bombing of Hiroshima ' + 'and Nagasaki and Fukushima disaster, Japan recognized nuclear power as the country’s most important power source as it aims for a ' + 'realistic and balanced energy structure.';
 var france = '    France derives about 75% of its electricity from nuclear energy. As a direct result of the 1973 oil crisis,' + ' Prime Minister Pierre Messmer announced Messmer Plan to reach 170 plants by 2000 as a response to the lack of oil sources.  In 2018, based on energy security, ' + 'the government policy is to reduce this to 50% by 2035 and increase its wind, biomass and solar power electricity output.';
 var china = '    China is one of the largest producers of nuclear power in the world. Nuclear power contributed 4.9% of the total chinese ' + 'electricity production in 2019 with 45 reactors. Most of the nuclear plants are on the coast and use seawater for cooling. In 1955, the China National Nuclear ' + 'Corporation was established. In 1970, China issued its first nuclear power plan. Since then, it has Energy Development Strategy Action Plan 2014-2020 to have a ' + '58 GWe capacity by 2020 with 30 GWe more under construction.';
-var australia = '    Australia has never had a nuclear power station. In the meantime, Australia hosts 33% of the world’s uranium ' + 'deposits and is the world’s largest producer of uranium after Kazakhstan and Canada. With its low-cost coal and natural gas reserves, Australia has been able ' + 'to avoid nuclear power. Since the 1950s, the Liberty Party has advocated for the development of nuclear power. And since the 1970s, anti-nuclear movements ' + 'developed in Australia. ';
+var australia = '    Australia has never had a nuclear power station. In the meantime, Australia hosts 33% of the world’s uranium ' + 'deposits and is the world’s largest producer of uranium after Kazakhstan and Canada. With its low-cost coal and natural gas reserves, Australia has been able ' + 'to avoid nuclear power. Since the 1950s, the Liberty Party has advocated for the development of nuclear power. And since the 1970s, anti-nuclear movements ' + 'developed in Australia. '; //document.getElementById("america-text").innerHTML = '<h2>Nuclear power in the USA</h2>' + usaContent;
+
+document.getElementById("china-content").innerHTML = china;
+document.getElementById("japan-content").innerHTML = japan;
+document.getElementById("france-content").innerHTML = france;
+document.getElementById("australia-content").innerHTML = australia;
 },{"d3":"../node_modules/d3/index.js","./country_nuclear_status.json":"country_nuclear_status.json","./nuclear-only.json":"nuclear-only.json","./country_map.js":"country_map.js","./dashboard.js":"dashboard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -34776,7 +34834,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57863" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58802" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
