@@ -23,7 +23,7 @@
     .prev, .next {
       cursor: pointer;
       position: absolute;
-      top: 50%;
+      top: 300px;
       width: auto;
       padding: 16px;
       margin-top: -22px;
@@ -74,6 +74,13 @@
 
     h1, p {
       color: aliceblue;
+    }
+
+    .nav {
+      position: absolute;
+      bottom: 0;
+      display: inline-block;
+      left: 45%;
     }
 
     /* The dots/bullets/indicators */
@@ -178,7 +185,7 @@
 </div>
 <br>
 
-<div style="text-align:center" style=" width: 100%; height: 100%;">
+<div class="nav" style="text-align:center" style=" width: 100%; height: 100%;">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
