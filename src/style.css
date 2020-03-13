@@ -315,6 +315,12 @@ a {
     width: 25px;
 }
 
+.map-plant-image {
+    width: 25px;
+    z-index: 5;
+    position: absolute;
+}
+
 
 .w3-section {
     width: 100%;
