@@ -176,11 +176,12 @@ class CountryMap {
                 kangaroos
                     .attr('y', function (d) { return d[1]; })
                     .transition()
-                    .duration(500)
+                    //.delay(function (d, i) { return i * 1000; })
+                    .duration(400)
                     .ease(d3.easeLinear)
                     .attr('y', function (d) { return d[1] - 40; })
                     .transition()
-                    .duration(500)
+                    .duration(400)
                     .ease(d3.easeLinear)
                     .attr('y', function (d) { return d[1]; })
                     .on('end', jumping);

@@ -186,7 +186,7 @@ document.getElementById("australia").addEventListener("click", function () {
     'a dozen nuclear power plants in the states.</b> that further leads to almost 200 thousands of people attending protests against nuclear power.</p>' +
     '<p>    <u>Overcommitments to Nuclear Power:</u><b> From 1953 to 2008, 48 percent of the ordered nuclear plants were canceled. </b> By 1983, cost overruns ' +
     'and delays along with slowing of electricity demand growth. <b> In 1985 the Atomic Energy Act encouraged private corporations to build nuclear reactors </b> ' +
-    'and a significant learning phase followed with many early partial nuclear reactor accidents at experimental reactors and research facilities. </p>';*/
+    'and a significant learning phase followed with many early partial nuclear reactor accidents at experimental reactors and research facilities. </p>';
 
 
 var japan = '    Prior to the 2011 Tohoku earthquake, Japan had generated 30% of its electrical power' +
@@ -214,4 +214,4 @@ var australia = '    Australia has never had a nuclear power station. In the mea
 document.getElementById("china-content").innerHTML = china;
 document.getElementById("japan-content").innerHTML = japan;
 document.getElementById("france-content").innerHTML = france;
-document.getElementById("australia-content").innerHTML = australia;
+document.getElementById("australia-content").innerHTML = australia;*/
