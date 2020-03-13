@@ -142,6 +142,7 @@ class CountryMap {
                 let dot_coords = [this.projection([d.longitude,d.latitude])];
 
                 this.svg.selectAll('image')
+                    .remove()
                     .data(dot_coords)
                     .enter()
                     .append('image')
