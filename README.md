@@ -1,4 +1,4 @@
-## Note: This is best viewed on monitors size 13in or up. If everything looks a little cramped, we recommend you zoom out 10% (or 20%)!
+## Note: This is best viewed on monitors size 13in or up. If everything looks a little cramped, we recommend you zoom out 10% (or 20%) and then refresh!
 ### Link to website: https://uw-cse442-wi20.github.io/FP-global-nuclear-power-plant/
 
 # Final Project Starter template
