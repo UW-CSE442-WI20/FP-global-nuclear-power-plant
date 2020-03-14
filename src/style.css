@@ -21,7 +21,8 @@ h1 {
     font-size: 65px;
 }
 
-p { font-size: .9em; }
+/* CHange this back */
+/* p { font-size: .9em; } */
 
 a {
     text-decoration: none;
@@ -353,11 +354,11 @@ a {
 
 }
 
-/*.border {
+.border {
     border-style: solid;
     border-color: white;
     padding: 6%;
-}*/
+}
 
 .nuclear-intro-container iframe {
     display: block;
