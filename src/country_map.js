@@ -210,13 +210,12 @@ class CountryMap {
                 kangaroos
                     .attr('y', function (d) { return d[1]; })
                     .transition()
-                    //.delay(function (d, i) { return i * 1000; })
                     .duration(400)
-                    .ease(d3.easeLinear)
+                    .ease(d3.easeQuadOut)
                     .attr('y', function (d) { return d[1] - 40; })
                     .transition()
                     .duration(400)
-                    .ease(d3.easeLinear)
+                    .ease(d3.easeQuadIn)
                     .attr('y', function (d) { return d[1]; })
                     .on('end', jumping);
             };
