@@ -21,6 +21,8 @@ h1 {
     font-size: 65px;
 }
 
+p { font-size: .9em; }
+
 a {
     text-decoration: none;
 }
@@ -30,6 +32,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .parallax {
@@ -49,7 +52,7 @@ a {
 }
 
 .one {
-    background: url("../static/simpsons-64.jpg") no-repeat fixed;
+    background: url("../static/simpsons-64-black.jpg") no-repeat fixed;
     /* background-size: 100% 100%; */
     background-size: cover;
 }
@@ -64,7 +67,7 @@ a {
 }
 
 .two {
-    background: url("../static/simpsons-64.jpg") no-repeat fixed;
+    background: url("../static/simpsons-64-black.jpg") no-repeat fixed;
     /* background-size: 100% 100%; */
     background-size: cover;
 }
@@ -142,7 +145,7 @@ a {
     z-index: 3;
     font-size: 200%;
     padding: 16px;
-    padding-top: 350px;
+    margin-top: calc(50vh - 44px);
 }
 
 .w3-right {
@@ -174,7 +177,7 @@ a {
 #dashboard {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 546px auto;
+    grid-template-rows: auto;
     height: 100vh;
     padding: 20px 0 20px 20px;
     box-sizing: border-box;
@@ -308,10 +311,6 @@ a {
     font-size: 120%;
 }
 
-#america-text, #china-text, #australia-text, #japan-text, #france-text {
-    padding: 5%;
-}
-
 #america-text {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -354,11 +353,11 @@ a {
 
 }
 
-.border {
+/*.border {
     border-style: solid;
     border-color: white;
     padding: 6%;
-}
+}*/
 
 .nuclear-intro-container iframe {
     display: block;
@@ -368,11 +367,12 @@ a {
 }
 
 .info-text {
-    padding: 5%;
+    padding: 5.5%;
     width: 100%;
     height: 100vh;
     text-align: center;
-    vertical-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .info-text h2 {
@@ -400,7 +400,9 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: url("../static/simpsons-64.jpg") no-repeat fixed;
+    background: url("../static/simpsons-64-black.jpg") no-repeat fixed;
+    background-size: cover;
+    color: white;
 }
 
 #dashboard-intro > * { text-align: center; }
@@ -414,4 +416,8 @@ a {
 
 .w3-badge, .w3-tag {
     background-color: rgba(255, 255, 255, .5);
+}
+
+#dashboard-intro img {
+    height: 300px;
 }
