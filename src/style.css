@@ -398,16 +398,16 @@ a {
 }
 
 #dashboard-intro {
-    flex-wrap: wrap;
+    
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background: url("../static/simpsons-64-black.jpg") no-repeat fixed;
     background-size: cover;
     color: white;
 }
 
-#dashboard-intro > * { text-align: center; }
-#dashboard-intro > h1 { min-width: 100%; }
+#dashboard-intro > * { text-align: center; margin: 20px 0; }
 
 /* Arrows */ 
 
