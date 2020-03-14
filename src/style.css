@@ -400,3 +400,7 @@ a {
 
 #dashboard-intro > * { text-align: center; }
 #dashboard-intro > h1 { min-width: 100%; }
+
+#dashboard-intro img {
+    height: 300px;
+}
