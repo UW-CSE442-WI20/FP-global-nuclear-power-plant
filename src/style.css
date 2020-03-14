@@ -304,10 +304,6 @@ a {
     font-size: 120%;
 }
 
-#america-text, #china-text, #australia-text, #japan-text, #france-text {
-    padding: 5%;
-}
-
 #america-text {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -350,11 +346,11 @@ a {
 
 }
 
-.border {
+/*.border {
     border-style: solid;
     border-color: white;
     padding: 6%;
-}
+}*/
 
 .nuclear-intro-container iframe {
     display: block;
@@ -364,7 +360,7 @@ a {
 }
 
 .info-text {
-    padding: 5%;
+    padding: 5.5%;
     width: 100%;
     height: 100vh;
     text-align: center;
@@ -388,7 +384,7 @@ a {
 }
 
 #japan-text *, #france-text *, #australia-text *, #china-text * {
-    padding-bottom: 5%;
+    padding-bottom: 4%;
 }
 
 #dashboard-intro {
