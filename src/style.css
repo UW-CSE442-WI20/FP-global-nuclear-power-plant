@@ -140,7 +140,7 @@ a {
     z-index: 3;
     font-size: 200%;
     padding: 16px;
-    padding-top: 350px;
+    margin-top: calc(50vh - 44px);
 }
 
 .w3-right {
@@ -364,7 +364,8 @@ a {
     width: 100%;
     height: 100vh;
     text-align: center;
-    vertical-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .info-text h2 {
