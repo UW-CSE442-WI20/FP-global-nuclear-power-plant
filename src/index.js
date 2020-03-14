@@ -52,19 +52,22 @@ var visitedAustralia = false;
 
 window.onscroll = function (e) {
     var ratio = document.scrollingElement.scrollTop / document.body.scrollHeight;
+    console.log(ratio)
     var temp;
-    if (ratio < 0.14) {
+    if (ratio < 0.13) {
         temp = 1;
-    } else if (ratio < 0.31) {
+    } else if (ratio < 0.27) {
         temp = 2;
-    } else if (ratio < 0.47) {
+    } else if (ratio < 0.41) {
         temp = 3;
-    } else if (ratio < 0.64) {
+    } else if (ratio < 0.55) {
         temp = 4;
-    } else if (ratio < 0.82) {
+    } else if (ratio < 0.70) {
         temp = 5;
-    } else {
+    } else if (ratio < 0.85) {
         temp = 6;
+    } else {
+        temp = 7;
     }
     if (temp != currentPage) {
         currentPage = temp;
