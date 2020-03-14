@@ -34071,7 +34071,7 @@ function () {
       var path = d3.geoPath().projection(this.projection);
       this.svg.selectAll("path").data(topojson.feature(worldmap_geo_json, worldmap_geo_json.objects.countries).features.filter(function (d) {
         return this.country_name === d.properties.name;
-      }.bind(this))).enter().append("path").attr("d", path).attr("fill", "#aaaaaa"); // this.plotPlants();
+      }.bind(this))).enter().append("path").attr("d", path).attr("fill", "#bbbbbb"); // this.plotPlants();
     }
   }, {
     key: "plotPlants",
@@ -34109,18 +34109,33 @@ function () {
         return d3.ascending(x.commissioning_year, y.commissioning_year);
       });
       console.log(powerplants);
-      var tooltip = d3.select(this.container).append("div").attr("class", "tooltip").style("opacity", 0);
+      var tooltip = d3.select(this.container).append("div").attr("class", "tooltip").style("opacity", 0).style("color", '#000');
       console.log(tooltip);
+      var plantImage = d3.select(this.container).append('img').attr('src', './SimpsonsPowerplant.png').attr('class', "map-plant-image").style('opacity', 0);
       var circles = this.svg.selectAll(".pin").data(powerplants).enter().append("circle", ".pin").attr("r", 5).attr("id", this.dotsID).attr("transform", function (d) {
         return "translate(" + this.projection([d.longitude, 800]) + ")";
       }.bind(this)).style("fill", "#000000").style("stroke", "#add8e6").style("stroke-width", 2).on("mouseover", function (d) {
-        tooltip.transition().duration(175).style("opacity", 1);
+        console.log(this.pageX);
+        tooltip.style("top", d3.event.pageY - 10 + "px").style("left", d3.event.pageX + 10 + "px").transition().duration(175).style("opacity", 1);
         tooltip.html(d.name);
-      }).on("mousemove", function (d) {
-        return tooltip.style("top", d3.event.pageY - 10 + "px").style("left", d3.event.pageX + 10 + "px");
-      }).on("mouseout", function (d) {
-        tooltip.transition().duration(500).style("opacity", 0);
-      });
+        var dot_coords = [this.projection([d.longitude, d.latitude])];
+        this.svg.selectAll('image').remove().data(dot_coords).enter().append('image').attr('xlink:href', './SimpsonsPowerplant.png').attr('width', 20).attr('height', 30).attr('x', function (d) {
+          return d[0] - 10;
+        }).attr('y', function (d) {
+          return d[1] - 15;
+        }).on('mousemove', function (d) {
+          tooltip.style("top", d3.event.pageY - 10 + "px").style("left", d3.event.pageX + 10 + "px");
+        }).on('mouseout', function () {
+          tooltip.transition().duration(500).style("opacity", 0);
+          this.svg.selectAll('image').remove();
+        }.bind(this));
+      }.bind(this)).on("mousemove", function (d) {// tooltip
+        //     .style("top", (d3.event.pageY - 10) + "px")
+        //     .style("left", (d3.event.pageX + 10) + "px");
+      }).on("mouseout", function (d) {// tooltip.transition()
+        //     .duration(500)
+        //     .style("opacity", 0);
+      }.bind(this));
       var all_years = [];
       circles.transition().delay(function (d, i) {
         return i * 200;
@@ -34133,9 +34148,9 @@ function () {
         var jumping = function jumping() {
           kangaroos.attr('y', function (d) {
             return d[1];
-          }).transition().duration(500).ease(d3.easeLinear).attr('y', function (d) {
+          }).transition().duration(400).ease(d3.easeQuadOut).attr('y', function (d) {
             return d[1] - 40;
-          }).transition().duration(500).ease(d3.easeLinear).attr('y', function (d) {
+          }).transition().duration(400).ease(d3.easeQuadIn).attr('y', function (d) {
             return d[1];
           }).on('end', jumping);
         };
@@ -34653,18 +34668,20 @@ window.onscroll = function (e) {
   var ratio = document.scrollingElement.scrollTop / document.body.scrollHeight;
   var temp;
 
-  if (ratio < 0.14) {
+  if (ratio < 0.13) {
     temp = 1;
-  } else if (ratio < 0.31) {
+  } else if (ratio < 0.27) {
     temp = 2;
-  } else if (ratio < 0.47) {
+  } else if (ratio < 0.41) {
     temp = 3;
-  } else if (ratio < 0.64) {
+  } else if (ratio < 0.55) {
     temp = 4;
-  } else if (ratio < 0.82) {
+  } else if (ratio < 0.70) {
     temp = 5;
-  } else {
+  } else if (ratio < 0.85) {
     temp = 6;
+  } else {
+    temp = 7;
   }
 
   if (temp != currentPage) {
@@ -34687,7 +34704,8 @@ var slideIndex = 1;
 showDivs(slideIndex, true);
 
 function plusDivs(n) {
-  showDivs(slideIndex += n, false);
+  slideIndex = slideIndex + n == 0 ? 4 : slideIndex + n;
+  showDivs(slideIndex, false);
 }
 
 function currentDiv(n) {
@@ -34695,6 +34713,8 @@ function currentDiv(n) {
 }
 
 function showDivs(n, first_china) {
+  console.log("HERE" + slideIndex);
+
   if (!first_china) {
     switch (n) {
       case 1:
@@ -34785,27 +34805,6 @@ document.getElementById("france").addEventListener("click", function () {
 document.getElementById("australia").addEventListener("click", function () {
   currentDiv(4);
 });
-/*var usaContent = '<p>Nuclear power in the USA is provided by 98 commercial reactors with a net capacity of 100,350 megawatts.</p>' +
-    '<p>    <u>Development:</u><b>  In 1953, President Dwight D Eisenhower announced Atoms for Peace </b>and in 1958 the first ' +
-    'commercial nuclear power plant was built in the US. The industry continued to grow throughout the 1960s ever since. Price-Anderson ' +
-    'Act in 1975 then was introduced to protect private companies from liabilities of these accidents to encourage the development of nuclear power.</p>' +
-    '<p>    <u>Emergence:</u><b> In the 1970s, the growth of the nuclear industry occured in the US as the environmental movement was being formed ' +
-    '</b>was being formed and people saw the advantage of nuclear power in reducing air pollution.</p>' +
-    '<p>    <u>Opposition:</u><b> In 1979  three Mile Island Accident that caused radiation leak </b><b> The protests then preceded the shutdown of over ' +
-    'a dozen nuclear power plants in the states.</b> that further leads to almost 200 thousands of people attending protests against nuclear power.</p>' +
-    '<p>    <u>Overcommitments to Nuclear Power:</u><b> From 1953 to 2008, 48 percent of the ordered nuclear plants were canceled. </b> By 1983, cost overruns ' +
-    'and delays along with slowing of electricity demand growth. <b> In 1985 the Atomic Energy Act encouraged private corporations to build nuclear reactors </b> ' +
-    'and a significant learning phase followed with many early partial nuclear reactor accidents at experimental reactors and research facilities. </p>';*/
-
-var japan = '    Prior to the 2011 Tohoku earthquake, Japan had generated 30% of its electrical power' + ' from nuclear reactors from 9 reactors. In 1954, Japan budgeted 230 million yen for nuclear energy, marking the beginning of Japan\'s ' + 'nuclear program. Three Mile Island accident or the Chernobyl disaster did not hit Japan as hard as it did in other countries. ' + 'Constructions of new nuclear plants continued to be strong through 1980s, 1990s and up to today. Despite the Bombing of Hiroshima ' + 'and Nagasaki and Fukushima disaster, Japan recognized nuclear power as the country’s most important power source as it aims for a ' + 'realistic and balanced energy structure.';
-var france = '    France derives about 75% of its electricity from nuclear energy. As a direct result of the 1973 oil crisis,' + ' Prime Minister Pierre Messmer announced Messmer Plan to reach 170 plants by 2000 as a response to the lack of oil sources.  In 2018, based on energy security, ' + 'the government policy is to reduce this to 50% by 2035 and increase its wind, biomass and solar power electricity output.';
-var china = '    China is one of the largest producers of nuclear power in the world. Nuclear power contributed 4.9% of the total chinese ' + 'electricity production in 2019 with 45 reactors. Most of the nuclear plants are on the coast and use seawater for cooling. In 1955, the China National Nuclear ' + 'Corporation was established. In 1970, China issued its first nuclear power plan. Since then, it has Energy Development Strategy Action Plan 2014-2020 to have a ' + '58 GWe capacity by 2020 with 30 GWe more under construction.';
-var australia = '    Australia has never had a nuclear power station. In the meantime, Australia hosts 33% of the world’s uranium ' + 'deposits and is the world’s largest producer of uranium after Kazakhstan and Canada. With its low-cost coal and natural gas reserves, Australia has been able ' + 'to avoid nuclear power. Since the 1950s, the Liberty Party has advocated for the development of nuclear power. And since the 1970s, anti-nuclear movements ' + 'developed in Australia. '; //document.getElementById("america-text").innerHTML = '<h2>Nuclear power in the USA</h2>' + usaContent;
-
-document.getElementById("china-content").innerHTML = china;
-document.getElementById("japan-content").innerHTML = japan;
-document.getElementById("france-content").innerHTML = france;
-document.getElementById("australia-content").innerHTML = australia;
 },{"d3":"../node_modules/d3/index.js","./country_nuclear_status.json":"country_nuclear_status.json","./nuclear-only.json":"nuclear-only.json","./country_map.js":"country_map.js","./dashboard.js":"dashboard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -34834,7 +34833,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58802" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59325" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
