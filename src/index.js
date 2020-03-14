@@ -52,7 +52,6 @@ var visitedAustralia = false;
 
 window.onscroll = function (e) {
     var ratio = document.scrollingElement.scrollTop / document.body.scrollHeight;
-    console.log(ratio)
     var temp;
     if (ratio < 0.13) {
         temp = 1;
