@@ -72,6 +72,8 @@ a {
 #america-container {
     height: 100vh;
     display: flex;
+    background-color: #5772af;
+    color: white;
 }
 
 .map {
@@ -102,25 +104,25 @@ a {
 
 .slide1 {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(191, 94, 94);
     height: 100vh;
 }
 
 .slide2 {
     width: 100%;
-    background-color: rgba(243, 125, 125, 0.75);
+    background-color: #af9818;
     height: 100vh;
 }
 
 .slide3 {
     width: 100%;
-    background-color: rgba(236, 165, 118, 0.75);
+    background-color: #7B847E;
     height: 100vh;
 }
 
 .slide4 {
     width: 100%;
-    background-color: rgba(191, 236, 118, 0.75);
+    background-color:  #40bf80;
     height: 100vh;
 }
 
@@ -158,9 +160,11 @@ a {
 }
 
 .more:link, .more:visited {
-    padding: 10px;
+    padding: 10px 20px;
     background-color: brown;
     color: white;
+    border-radius: 5px;
+    transition: .2s all ease-in-out;
 }
 
 .more:hover {
@@ -341,7 +345,7 @@ a {
     margin-left: 5%;
     position: absolute;
     font-size: 45px;
-    color: #222222;
+    color: white;
 }
 
 .nuclear-intro-container {
@@ -389,6 +393,7 @@ a {
 
 #japan-text *, #france-text *, #australia-text *, #china-text * {
     padding-bottom: 5%;
+    color: white!important;
 }
 
 #dashboard-intro {
@@ -400,3 +405,13 @@ a {
 
 #dashboard-intro > * { text-align: center; }
 #dashboard-intro > h1 { min-width: 100%; }
+
+/* Arrows */ 
+
+.w3-left, .w3-right {
+    color: white;
+}
+
+.w3-badge, .w3-tag {
+    background-color: rgba(255, 255, 255, .5);
+}

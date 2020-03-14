@@ -104,7 +104,8 @@ class CountryMap {
         let tooltip = d3.select(this.container)
             .append("div")
             .attr("class", "tooltip")
-            .style("opacity", 0);
+            .style("opacity", 0)
+            .style("color", '#000');
         console.log(tooltip)
 
         let plantImage = d3.select(this.container)
