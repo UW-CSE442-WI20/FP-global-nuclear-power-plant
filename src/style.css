@@ -249,6 +249,8 @@ a {
     margin-top: 20px;
     text-align: center;
     padding: 10px;
+    border-style: solid;
+    border-color: cyan;
 }
 
 #country-text {
