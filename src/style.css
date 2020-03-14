@@ -32,6 +32,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .parallax {
@@ -51,7 +52,7 @@ a {
 }
 
 .one {
-    background: url("../static/simpsons-64.jpg") no-repeat fixed;
+    background: url("../static/simpsons-64-black.jpg") no-repeat fixed;
     /* background-size: 100% 100%; */
     background-size: cover;
 }
@@ -66,7 +67,7 @@ a {
 }
 
 .two {
-    background: url("../static/simpsons-64.jpg") no-repeat fixed;
+    background: url("../static/simpsons-64-black.jpg") no-repeat fixed;
     /* background-size: 100% 100%; */
     background-size: cover;
 }
@@ -394,8 +395,9 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: url("../static/simpsons-64.jpg") no-repeat fixed;
+    background: url("../static/simpsons-64-black.jpg") no-repeat fixed;
     background-size: cover;
+    color: white;
 }
 
 #dashboard-intro > * { text-align: center; }
