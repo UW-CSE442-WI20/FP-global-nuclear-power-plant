@@ -40,15 +40,8 @@ a {
     background-position: center;
 }
 
-.one {
+.one, .two {
     height: 100vh;
-}
-
-.two {
-    height: 100vh;
-}
-
-.one {
     background: url("../static/simpsons-64.jpg") no-repeat fixed;
     /* background-size: 100% 100%; */
     background-size: cover;
