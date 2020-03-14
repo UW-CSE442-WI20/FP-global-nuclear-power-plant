@@ -382,3 +382,12 @@ a {
 #japan-text *, #france-text *, #australia-text *, #china-text * {
     padding-bottom: 5%;
 }
+
+#dashboard-intro {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#dashboard-intro > * { text-align: center; }
+#dashboard-intro > h1 { min-width: 100%; }
