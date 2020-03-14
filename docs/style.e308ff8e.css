@@ -11,15 +11,18 @@ html {
 }
 
 body {
-    /* font-family: "Myriad Pro", Arial, Helvetica, sans-serif; */
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     margin: 0;
     padding: 0;
+    min-width: 1300px;
 }
 
 h1 {
     font-size: 65px;
 }
+
+/* CHange this back */
+/* p { font-size: .9em; } */
 
 a {
     text-decoration: none;
@@ -30,6 +33,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .parallax {
@@ -37,123 +41,119 @@ a {
     /* height: 300px; */
     /* text-indent: -9999px; */
     background-attachment: fixed;
-    background-position:  center;
-  }
+    background-position: center;
+}
 
-   .one{
+.one {
     height: 100vh;
-  }
+}
 
-   .two {
+.two {
     height: 100vh;
-  }
+}
 
-   .one {
-    background: 
-    url("/Familyguysimpsons0.250ff678.jpg") 
-    no-repeat fixed;
+.one {
+    background: url("/simpsons-64-black.272f13eb.jpg") no-repeat fixed;
     /* background-size: 100% 100%; */
     background-size: cover;
-  }
-    .menu {
-      background: 
-        url("/nuclear_plant.32cade17.jpg") 
-        no-repeat fixed;
+}
+
+.menu {
+    background: url("/nuclear_plant.32cade17.jpg") no-repeat fixed;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center
-  }
+}
 
-   .two {
-    background: 
-    url("/Springfield.753ccae1.jpeg") 
-    no-repeat fixed;
+.two {
+    background: url("/simpsons-64-black.272f13eb.jpg") no-repeat fixed;
     /* background-size: 100% 100%; */
     background-size: cover;
-  }
+}
 
-   #america-container {
-    background-color: lightblue;
+#america-container {
     height: 100vh;
     display: flex;
-  }
+    background-color: #5772af;
+    color: white;
+}
 
-  .map {
-    background-color: rgba(255, 0, 0, 0.315);
+.map {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
-  }
+}
 
-  .info-text {
-    background-color: rgba(255, 166, 0, 0.301);
-    width: 100%;
+.nuclear-intro-container {
+    background-color: black;
     height: 100vh;
-  }
+    color: white;
+}
 
-  .nuclear-intro-container {
-      background-color: black;
-      height: 100vh;
-      color: white;
-  }
+.country-button {
+    margin: 10px;
+}
 
+.countries-container {
+    background-color: gray;
+    height: 100vh;
+}
 
+.slide {
+    display: none;
+}
 
-  .country-button {
-      margin: 10px;
-  }
-
-  .countries-container {
-      background-color: gray;
-      height: 100vh;
-  }
-
-  .slide {
-      display: none;
-  }
-
-  .slide1 {
+.slide1 {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.75);
-    height:100vh;
-  }
+    background-color: rgb(191, 94, 94);
+    height: 100vh;
+}
 
-  .slide2 {
+.slide2 {
     width: 100%;
-    background-color: rgba(243, 125, 125, 0.75);
-    height:100vh;
-  }
+    background-color: #af9818;
+    height: 100vh;
+}
 
-  .slide3 {
+.slide3 {
     width: 100%;
-    background-color: rgba(236, 165, 118, 0.75);
-    height:100vh;
-  }
+    background-color: #7B847E;
+    height: 100vh;
+}
 
-  .slide4 {
+.slide4 {
     width: 100%;
-    background-color: rgba(191, 236, 118, 0.75);
-    height:100vh;
-  }
+    background-color:  #40bf80;
+    height: 100vh;
+}
 
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
+.w3-left, .w3-right, .w3-badge {
+    cursor: pointer
+}
+
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0
+}
+
 .w3-left, .w3-right {
     display: inline-block;
     position: absolute;
     z-index: 3;
     font-size: 200%;
     padding: 16px;
-    padding-top: 350px;
+    margin-top: calc(50vh - 44px);
 }
 
 .w3-right {
     right: 0;
 }
-  .header {
+
+.header {
     position: relative;
     margin: -5em 0 0 0;
     padding: 1em;
@@ -161,13 +161,14 @@ a {
     font-size: 2em;
     color: #333;
     background-color: rgba(255, 255, 255, 0.75);
-  }
-
+}
 
 .more:link, .more:visited {
-    padding: 10px;
+    padding: 10px 20px;
     background-color: brown;
     color: white;
+    border-radius: 5px;
+    transition: .2s all ease-in-out;
 }
 
 .more:hover {
@@ -177,10 +178,10 @@ a {
 #dashboard {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 546px auto;
+    grid-template-rows: auto;
     height: 100vh;
     padding: 20px 0 20px 20px;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 #map-container {
@@ -189,12 +190,15 @@ a {
     grid-row: 1 / 2;
     overflow: hidden;
 }
+
 #map-container>svg>path {
     cursor: pointer;
 }
+
 #map-container .active {
     fill: #98f5ff;
 }
+
 #map-container #map-legend {
     position: absolute;
     bottom: 0;
@@ -202,9 +206,11 @@ a {
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.9);
 }
+
 #map-legend table {
     border-spacing: 10px;
 }
+
 #map-legend table td.color {
     height: 10px;
     width: 10px;
@@ -215,16 +221,19 @@ a {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }
+
 #map-control table {
     text-align: center;
     margin: 10px 0 0;
     width: 100%;
 }
+
 #map-control td:first-child {
     width: 130px;
     text-align: right;
     font-weight: bold;
 }
+
 #map-control td span {
     padding: 2px 6px;
     cursor: pointer;
@@ -232,6 +241,7 @@ a {
     border: 1px solid black;
     border-radius: 6px;
 }
+
 #map-control td span.selected {
     opacity: 1;
 }
@@ -241,35 +251,42 @@ a {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
 }
+
 #info-text {
     margin-top: 20px;
     text-align: center;
     padding: 10px;
 }
+
 #country-text {
     font-weight: bold;
     font-size: 35px;
 }
+
 #percentage-text {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #lightbulbs {
     margin: 20px 0 30px;
     text-align: center;
 }
+
 #lightbulbs img {
-    width: 17%; /* 5 bulbs across */
+    width: 17%;
+    /* 5 bulbs across */
 }
 
 #plants-info {
     margin: 0 10px;
     text-align: center;
 }
+
 #plants-info td {
     width: 33%;
     font-size: 16pt;
 }
+
 #plants-info td img {
     width: 50%;
 }
@@ -280,24 +297,19 @@ a {
     padding: 2px;
     background: transparent;
     font-weight: 700;
-    
-    position: absolute!important;           
+    position: absolute!important;
     text-align: center;
-    background: #ffffff;   
+    background: #ffffff;
     z-index: 10;
-    pointer-events: none;  
+    pointer-events: none;
 }
 
 #intro {
-    padding: 5%;
+    padding: 30px;
     padding-left: 0;
     padding-right: 0;
     float: inline-start;
     font-size: 120%;
-}
-
-#america-text, #china-text, #australia-text, #japan-text, #france-text {
-    padding: 5%;
 }
 
 #america-text {
@@ -315,6 +327,11 @@ a {
     width: 25px;
 }
 
+.map-plant-image {
+    width: 25px;
+    z-index: 5;
+    position: absolute;
+}
 
 .w3-section {
     width: 100%;
@@ -328,11 +345,82 @@ a {
     margin-left: 5%;
     position: absolute;
     font-size: 45px;
-    color: #222222;
+    color: white;
 }
 
-.nuclear-intro-container {display: block; padding: 6%;}
-.nuclear-intro-container iframe {display: block; width: 100%; height: 100%; border: none;}
+.nuclear-intro-container {
+    display: block;
+    padding: 0;
 
+}
+
+.border {
+    border-style: solid;
+    border-color: white;
+    padding: 6%;
+}
+
+.nuclear-intro-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.info-text {
+    padding: 5.5%;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.info-text h2 {
+    font-weight: 600;
+}
+
+.info-text b {
+    font-size: 18px;
+}
+
+.info-text p {
+    font-weight: 475;
+}
+
+#america-text * {
+    padding-bottom: 3%;
+}
+
+#japan-text *, #france-text *, #australia-text *, #china-text * {
+    padding-bottom: 5%;
+    color: white!important;
+}
+
+#dashboard-intro {
+    
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: url("/simpsons-64-black.272f13eb.jpg") no-repeat fixed;
+    background-size: cover;
+    color: white;
+}
+
+#dashboard-intro > * { text-align: center; margin: 20px 0; }
+
+/* Arrows */ 
+
+.w3-left, .w3-right {
+    color: white;
+}
+
+.w3-badge, .w3-tag {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+#dashboard-intro img {
+    height: 300px;
+}
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
