@@ -14,7 +14,7 @@
     "parcel-plugin-static-files-copy": "^2.3.1"
   },
   "dependencies": {
-    "d3": "^5.15.0",
+    "d3": "^7.6.1",
     "d3-geo": "^1.11.9",
     "topojson": "^3.0.2"
   }
